@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Flooring Calculator — How Much Laminate, Vinyl Plank & Hardwood Flooring Do I Need?</title>
+<meta name="description" content="Flooring calculator: how many boxes of laminate, vinyl plank or hardwood flooring you need for a room, with 10% waste built in. Works for any box size.">
+<link rel="canonical" href="https://builditcalculators.com/flooring.html">
+<meta property="og:title" content="Flooring Calculator — How Much Laminate, Vinyl Plank &amp; Hardwood Flooring Do I Need?">
+<meta property="og:description" content="Flooring calculator: how many boxes of laminate, vinyl plank or hardwood flooring you need for a room, with 10% waste built in. Works for any box size.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://builditcalculators.com/flooring.html">
+<link rel="stylesheet" href="style.css">
+<script src="calculator.js" defer></script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Flooring Calculator",
+  "url": "https://builditcalculators.com/flooring.html",
+  "description": "Flooring calculator: how many boxes of laminate, vinyl plank or hardwood flooring you need for a room, with 10% waste built in. Works for any box size.",
+  "applicationCategory": "UtilitiesApplication",
+  "operatingSystem": "Any",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How much flooring do I need for a 12x12 room?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "144 square feet, and 159 with 10% waste — 8 boxes of laminate at 20 square feet a box."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How much extra flooring should I buy?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "10% for a straight lay in a rectangular room. Use 15% for diagonal layouts or rooms with lots of corners, and 20% for herringbone."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How many square feet are in a box of flooring?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It varies by brand — laminate is usually about 20, vinyl plank about 24, hardwood about 20, and engineered hardwood about 22. The exact number is printed on the box."
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<header class="site">
+  <div class="wrap">
+    <p class="site-title"><a href="index.html">Home &amp; Garden Calculators</a></p>
+    <p class="tagline">Plain-English calculators for American homeowners. No sign-up, no sales pitch.</p>
+    <nav class="main" aria-label="Main navigation">
+      <a href="index.html">Calculators</a>
+      <a href="concrete.html">Concrete</a>
+      <a href="paint.html">Paint</a>
+      <a href="mulch.html">Mulch</a>
+      <a href="topsoil.html">Topsoil & Gravel</a>
+      <a href="tile.html">Tile</a>
+      <a href="flooring.html" class="current">Flooring</a>
+      <a href="drywall.html">Drywall</a>
+      <a href="fence.html">Fence</a>
+      <a href="deck.html">Deck</a>
+      <a href="about.html">About</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<div class="ad-slot" data-ad-slot="leaderboard"><!-- Future AdSense slot - code goes here when approved --></div>
+
+<main>
+  <div class="wrap">
+
+    <section class="page-hero">
+      <p class="eyebrow">Flooring calculator</p>
+      <h1>How much flooring do I need?</h1>
+      <p class="lede">Measure the room, pick the flooring, and the calculator tells you how many square feet to order and how many boxes to buy. A 12 by 15 foot room takes 198 square feet with 10% waste — 10 boxes of laminate at 20 square feet a box.</p>
+    </section>
+
+    <div class="calc-layout">
+      <section class="calc-box" id="calculator" aria-label="Flooring calculator">
+        <h2>Your room</h2>
+        <p class="sub">Fill in your numbers — the answer updates as you type.</p>
+        <div class="field-row">
+          <div class="field">
+            <label for="floor-length">Room length (feet)</label>
+            <input type="number" id="floor-length" value="12" min="0" step="0.5" inputmode="decimal">
+          </div>
+          <div class="field">
+            <label for="floor-width">Room width (feet)</label>
+            <input type="number" id="floor-width" value="15" min="0" step="0.5" inputmode="decimal">
+          </div>
+        </div>
+        <div class="field-row">
+          <div class="field">
+            <label for="floor-type">Flooring type</label>
+            <select id="floor-type">
+              <option value="laminate" selected>Laminate — 20 sq ft per box</option>
+              <option value="vinyl">Luxury vinyl plank — 24 sq ft per box</option>
+              <option value="hardwood">Solid hardwood — 20 sq ft per box</option>
+              <option value="engineered">Engineered hardwood — 22 sq ft per box</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="floor-per-box">Square feet per box</label>
+            <input type="number" id="floor-per-box" value="20" min="1" step="0.5" inputmode="decimal">
+            <span class="hint">Printed on the box — check it before you buy.</span>
+          </div>
+        </div>
+        <div class="field-row">
+          <div class="field">
+            <label for="floor-waste">Extra for waste (%)</label>
+            <input type="number" id="floor-waste" value="10" min="0" step="1" inputmode="decimal">
+            <span class="hint">10% for straight rows; 15% for diagonal patterns or rooms with lots of corners.</span>
+          </div>
+        </div>
+      </section>
+
+      <div class="results-col">
+        <div class="results" id="results">
+          <p class="big-label">Buy</p>
+          <p class="big" id="floor-big">—</p>
+          <p class="big-sub" id="floor-area">—</p>
+          <dl>
+            <div class="row">
+              <dt>Square feet to order</dt>
+              <dd id="floor-order">—</dd>
+            </div>
+            <div class="row">
+              <dt>Underlayment rolls</dt>
+              <dd id="floor-underlayment">—</dd>
+            </div>
+          </dl>
+        </div>
+      </div>
+    </div>
+
+    <div class="sticky-bar" id="floor-sticky-bar" style="display:none"><span>Buy</span><strong id="floor-sticky">—</strong></div>
+
+<div class="ad-slot" data-ad-slot="in-content"><!-- Future AdSense slot - code goes here when approved --></div>
+
+    <section class="example" aria-label="Worked example">
+      <h3>Worked example</h3>
+      <dl>
+        <dt>A 12 by 15 foot room</dt>
+        <dd><strong>180 sq ft</strong></dd>
+        <dt>With 10% waste</dt>
+        <dd><strong>198 sq ft to order</strong></dd>
+        <dt>Laminate, 20 sq ft per box</dt>
+        <dd><strong>10 boxes</strong></dd>
+        <dt>Vinyl plank, 24 sq ft per box</dt>
+        <dd><strong>9 boxes</strong></dd>
+        <dt>Underlayment, 100 sq ft per roll</dt>
+        <dd><strong>2 rolls</strong></dd>
+      </dl>
+    </section>
+
+    <h2>How the maths works</h2>
+    <h3>Area, then add waste</h3>
+    <p>Room area is length times width. Add 10% for a straight lay — it covers the cuts at the walls, a plank or two that arrives damaged, and the odd mistake. Go to 15% for diagonal layouts or rooms with lots of corners and closets, and 20% for herringbone or chevron.</p>
+    <h3>Boxes: divide and round up</h3>
+    <p>Flooring is sold by the box, not by the square foot, so divide what you need to order by the coverage on the box and round up. Coverage varies by brand — laminate is usually about 20 square feet a box, vinyl plank about 24, hardwood about 20 — so check the label and type the exact number in.</p>
+    <h3>Underlayment and acclimation</h3>
+    <p>Laminate and floating hardwood need underlayment between the planks and the subfloor — it softens footsteps and blocks moisture. Rolls usually cover 100 square feet. Vinyl plank with an attached pad often needs none. Let wood flooring sit in the room for at least 48 hours before you lay it — solid hardwood up to 7 days — so it adjusts to your home's temperature and humidity.</p>
+
+    <h2>Common questions</h2>
+    <h3>How much flooring do I need for a 12×12 room?</h3>
+    <p>144 square feet, and 159 with 10% waste — 8 boxes of laminate at 20 square feet a box.</p>
+    <h3>How much extra flooring should I buy?</h3>
+    <p>10% for a straight lay in a rectangular room. Use 15% for diagonal layouts or rooms with lots of corners, and 20% for herringbone.</p>
+    <h3>How many square feet are in a box of flooring?</h3>
+    <p>It varies by brand — laminate is usually about 20, vinyl plank about 24, hardwood about 20, and engineered hardwood about 22. The exact number is printed on the box.</p>
+    <p class="note">Figures verified November 2026. Box coverage varies by brand — the label wins. This page is an estimate for planning only.</p>
+
+  </div>
+</main>
+
+<div class="ad-slot" data-ad-slot="footer"><!-- Future AdSense slot - code goes here when approved --></div>
+
+<footer class="site">
+  <div class="wrap">
+    <nav aria-label="Footer navigation">
+      <a href="index.html">Calculators</a>
+      <a href="concrete.html">Concrete</a>
+      <a href="paint.html">Paint</a>
+      <a href="mulch.html">Mulch</a>
+      <a href="topsoil.html">Topsoil & Gravel</a>
+      <a href="tile.html">Tile</a>
+      <a href="flooring.html">Flooring</a>
+      <a href="drywall.html">Drywall</a>
+      <a href="fence.html">Fence</a>
+      <a href="deck.html">Deck</a>
+      <a href="about.html">About</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <p>Home &amp; Garden Calculators — an educational calculator site, not professional advice. Figures verified November 2026; prices and local rules change, so confirm them with your supplier or contractor before you buy.</p>
+  </div>
+</footer>
+</body>
+</html>

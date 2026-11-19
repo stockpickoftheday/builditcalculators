@@ -12,7 +12,7 @@ How much concrete do I need? How many gallons of paint? How many bags of mulch? 
 
  - ✓ Nothing leaves your browser
 
- - ✓ 8 calculators
+ - ✓ 9 calculators
 
 ## Featured: how much concrete do I need?
 
@@ -65,6 +65,7 @@ Calculator | What it answers |
  Topsoil & gravel calculator | Cubic yards and tons of topsoil, gravel, sand or mulch | 
 
  Tile calculator | How many floor tiles and boxes, with 10% waste built in | 
+ Flooring calculator | How many boxes of laminate, vinyl plank or hardwood flooring, with 10% waste built in | 
 
  Drywall calculator | Sheets, screws, joint compound and tape for a room | 
 
@@ -683,6 +684,89 @@ Yes. Tile dye lots change between batches, and a matching box is hard to find la
 
 Figures verified November 2026. Tile coverage varies by brand and by grout joint width — the box label wins. This page is an estimate for planning only.
 
+
+## Flooring Calculator — How Much Laminate, Vinyl Plank & Hardwood Flooring Do I Need? (https://builditcalculators.com/flooring.html)
+
+Flooring calculator
+
+# How much flooring do I need?
+
+Measure the room, pick the flooring, and the calculator tells you how many square feet to order and how many boxes to buy. A 12 by 15 foot room takes 198 square feet with 10% waste — 10 boxes of laminate at 20 square feet a box.
+
+## Your room
+
+Fill in your numbers — the answer updates as you type.
+
+ Room length (feet) 
+
+ Room width (feet) 
+
+ Flooring type 
+
+ Square feet per box 
+
+ Printed on the box — check it before you buy. 
+
+ Extra for waste (%) 
+
+ 10% for straight rows; 15% for diagonal patterns or rooms with lots of corners. 
+
+Buy
+
+—
+
+—
+
+ Square feet to order 
+ — 
+
+ Underlayment rolls 
+ — 
+
+ Buy — 
+
+### Worked example
+
+ A 12 by 15 foot room 
+ 180 sq ft 
+ With 10% waste 
+ 198 sq ft to order 
+ Laminate, 20 sq ft per box 
+ 10 boxes 
+ Vinyl plank, 24 sq ft per box 
+ 9 boxes 
+ Underlayment, 100 sq ft per roll 
+ 2 rolls 
+
+## How the maths works
+
+### Area, then add waste
+
+Room area is length times width. Add 10% for a straight lay — it covers the cuts at the walls, a plank or two that arrives damaged, and the odd mistake. Go to 15% for diagonal layouts or rooms with lots of corners and closets, and 20% for herringbone or chevron.
+
+### Boxes: divide and round up
+
+Flooring is sold by the box, not by the square foot, so divide what you need to order by the coverage on the box and round up. Coverage varies by brand — laminate is usually about 20 square feet a box, vinyl plank about 24, hardwood about 20 — so check the label and type the exact number in.
+
+### Underlayment and acclimation
+
+Laminate and floating hardwood need underlayment between the planks and the subfloor — it softens footsteps and blocks moisture. Rolls usually cover 100 square feet. Vinyl plank with an attached pad often needs none. Let wood flooring sit in the room for at least 48 hours before you lay it — solid hardwood up to 7 days — so it adjusts to your home's temperature and humidity.
+
+## Common questions
+
+### How much flooring do I need for a 12x12 room?
+
+144 square feet, and 159 with 10% waste — 8 boxes of laminate at 20 square feet a box.
+
+### How much extra flooring should I buy?
+
+10% for a straight lay in a rectangular room. Use 15% for diagonal layouts or rooms with lots of corners, and 20% for herringbone.
+
+### How many square feet are in a box of flooring?
+
+It varies by brand — laminate is usually about 20, vinyl plank about 24, hardwood about 20, and engineered hardwood about 22. The exact number is printed on the box.
+
+Figures verified November 2026. Box coverage varies by brand — the label wins. This page is an estimate for planning only.
 
 ## Drywall Calculator — Sheets, Screws, Mud & Tape (https://builditcalculators.com/drywall.html)
 

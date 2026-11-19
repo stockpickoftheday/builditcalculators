@@ -235,6 +235,25 @@
     };
   }
 
+  /* ---------- flooring ---------- */
+  /* Flooring is sold by the box: order = area + waste, boxes =
+     ceil(order / sq ft per box). Box coverage varies by brand —
+     laminate ~20 sq ft, vinyl plank ~24, hardwood ~20, engineered
+     ~22 (several flooring calculators, Nov 2026). Underlayment
+     rolls usually cover 100 sq ft. Waste: 10% straight lay,
+     15% diagonal or lots of corners, 20% herringbone. */
+  function flooringCalc(areaSqFt, boxSqFt, wastePct) {
+    var area = num(areaSqFt);
+    var order = Math.round(area * (1 + num(wastePct, 10) / 100) * 100) / 100;
+    var perBox = num(boxSqFt, 20) || 20;
+    return {
+      area: area,
+      order: order,
+      boxes: Math.ceil(order / perBox),
+      underlayment: Math.ceil(order / 100)
+    };
+  }
+
   /* ---------- shared exports (Node tests) ---------- */
   var api = {
     concreteSlab: concreteSlab,
@@ -248,6 +267,7 @@
     drywallRoom: drywallRoom,
     fenceCalc: fenceCalc,
     deckCalc: deckCalc,
+    flooringCalc: flooringCalc,
     BAG_YIELD: BAG_YIELD,
     PAINT_COVERAGE: PAINT_COVERAGE,
     MATERIAL_LB_PER_YD: MATERIAL_LB_PER_YD
@@ -416,7 +436,24 @@
     show('deck-sticky-bar', true);
   }
 
+  /* --- flooring page --- */
+  var FLOOR_COVERAGE = { laminate: 20, vinyl: 24, hardwood: 20, engineered: 22 };
+  function updateFlooring() {
+    var area = val('floor-length', 12) * val('floor-width', 15);
+    var r = flooringCalc(area, val('floor-per-box', 20), val('floor-waste', 10));
+    var orderText = (r.order % 1 === 0 ? fmtInt(r.order) : fmt(r.order)) + ' sq ft';
+    setText('floor-big', fmtInt(r.boxes) + ' boxes');
+    setText('floor-area', orderText + ' to order');
+    setText('floor-order', orderText);
+    setText('floor-underlayment', fmtInt(r.underlayment) + ' rolls (100 sq ft each)');
+    setText('floor-sticky', fmtInt(r.boxes) + ' boxes');
+    show('floor-sticky-bar', true);
+  }
+
   document.addEventListener('DOMContentLoaded', function () {
+    /* Keep the current page's nav pill visible in the scrolling nav. */
+    var cur = document.querySelector('nav.main a.current');
+    if (cur) cur.scrollIntoView({ inline: 'center', block: 'nearest' });
     if ($('conc-length')) {
       wire(['conc-mode', 'conc-length', 'conc-width', 'conc-depth', 'conc-hole-dia', 'conc-hole-depth', 'conc-holes', 'conc-waste'], updateConcrete);
     }
@@ -440,6 +477,15 @@
     }
     if ($('deck-length')) {
       wire(['deck-length', 'deck-width', 'deck-board', 'deck-gap', 'deck-joist'], updateDeck);
+    }
+    if ($('floor-length')) {
+      wire(['floor-length', 'floor-width', 'floor-type', 'floor-per-box', 'floor-waste'], updateFlooring);
+      var floorType = $('floor-type');
+      if (floorType) floorType.addEventListener('change', function () {
+        var c = FLOOR_COVERAGE[floorType.value];
+        if (c) { var pb = $('floor-per-box'); if (pb) pb.value = c; }
+        updateFlooring();
+      });
     }
   });
 })();
