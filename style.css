@@ -123,17 +123,6 @@ main { padding: 20px 0 64px; }
 .page-hero h1 { margin-bottom: 10px; }
 .page-hero .lede { margin-bottom: 0; }
 
-@media (max-width: 640px) {
-  .hero { padding: 22px 20px 132px; background-size: 900px auto, cover; }
-  .page-hero { padding: 20px 18px 88px; background-size: 640px auto, cover; }
-  .example { padding: 18px; }
-  .example dl { grid-template-columns: 1fr; gap: 0; }
-  .example dl dt { padding: 10px 0 2px; }
-  .example dl dd { margin: 0; padding: 0 0 10px; border-top: none; white-space: normal; text-align: left; }
-  table { font-size: 0.88rem; }
-  th, td { padding: 8px 8px 8px 0; }
-  th:first-child, td:first-child { padding-left: 8px; }
-}
 
 .eyebrow {
   margin: 0 0 10px;
@@ -455,4 +444,16 @@ footer.site p { margin: 0; }
   .sticky-bar { display: none !important; }
 
   .field-row .field { flex-basis: 0; }
+}
+
+@media (max-width: 640px) {
+  .hero { padding: 22px 20px 132px; background-size: 900px auto, cover; }
+  .page-hero { padding: 20px 18px 88px; background-size: 640px auto, cover; }
+  .example { padding: 18px; }
+  .example dl { grid-template-columns: 1fr; gap: 0; }
+  .example dl dt { padding: 10px 0 2px; }
+  .example dl dd { margin: 0; padding: 0 0 10px; border-top: none; white-space: normal; text-align: left; }
+  table { font-size: 0.88rem; }
+  th, td { padding: 8px 8px 8px 0; }
+  th:first-child, td:first-child { padding-left: 8px; }
 }
