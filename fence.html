@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fence Calculator — Posts, Pickets, Rails & Concrete</title>
+<meta name="description" content="Fence calculator: how many posts, pickets, rails and bags of concrete for a wood fence, at 6 or 8 ft post spacing.">
+<link rel="stylesheet" href="style.css">
+<script src="calculator.js" defer></script>
+</head>
+<body>
+<header class="site">
+  <div class="wrap">
+    <p class="site-title"><a href="index.html">Home &amp; Garden Calculators</a></p>
+    <p class="tagline">Plain-English calculators for American homeowners. No sign-up, no sales pitch.</p>
+    <nav class="main" aria-label="Main navigation">
+      <a href="index.html">Calculators</a>
+      <a href="concrete.html">Concrete</a>
+      <a href="paint.html">Paint</a>
+      <a href="mulch.html">Mulch</a>
+      <a href="topsoil.html">Topsoil & Gravel</a>
+      <a href="tile.html">Tile</a>
+      <a href="drywall.html">Drywall</a>
+      <a href="fence.html" class="current">Fence</a>
+      <a href="deck.html">Deck</a>
+      <a href="about.html">About</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<div class="ad-slot" data-ad-slot="leaderboard"><!-- Future AdSense slot - code goes here when approved --></div>
+
+<main>
+  <div class="wrap">
+
+    <section class="page-hero">
+      <p class="eyebrow">Fence calculator</p>
+      <h1>How much fencing do I need?</h1>
+      <p class="lede">Posts every 8 feet, pickets 5.5 inches wide, 2 to 3 rails per section, and one bag of concrete per post. Type in your fence length and height and get the whole materials list.</p>
+    </section>
+
+    <div class="calc-layout">
+      <section class="calc-box" id="calculator" aria-label="Fence calculator">
+        <h2>Your fence</h2>
+        <p class="sub">Fill in your numbers — the answer updates as you type.</p>
+        <div class="field-row">
+          <div class="field">
+            <label for="fence-length">Fence length (feet)</label>
+            <input type="number" id="fence-length" value="100" min="0" step="1" inputmode="decimal">
+          </div>
+          <div class="field">
+            <label for="fence-height">Fence height (feet)</label>
+            <input type="number" id="fence-height" value="6" min="0" step="0.5" inputmode="decimal">
+            <span class="hint">Check your local height limit — 6 feet is the usual maximum for a backyard fence.</span>
+          </div>
+        </div>
+        <div class="field-row">
+          <div class="field">
+            <label for="fence-spacing">Post spacing</label>
+            <select id="fence-spacing">
+              <option value="8" selected>8 ft — standard</option>
+              <option value="6">6 ft — stronger, for wind or heavy boards</option>
+            </select>
+            <span class="hint">8 feet matches 8 ft rail stock exactly, so there is no cutting waste.</span>
+          </div>
+          <div class="field">
+            <label for="fence-picket">Picket width</label>
+            <select id="fence-picket">
+              <option value="5.5" selected>1×6 pickets (actually 5.5 in wide)</option>
+              <option value="3.5">1×4 pickets (actually 3.5 in wide)</option>
+            </select>
+            <span class="hint">A "6 inch" picket is never 6 inches wide — it is milled to 5.5.</span>
+          </div>
+        </div>
+        <div class="field-row">
+          <div class="field">
+            <label for="fence-gap">Gap between pickets (inches)</label>
+            <input type="number" id="fence-gap" value="0" min="0" step="0.25" inputmode="decimal">
+            <span class="hint">0 for a solid privacy fence; about 2.5 inches for a classic spaced picket look.</span>
+          </div>
+          <div class="field">
+            <label for="fence-waste">Extra for waste (%)</label>
+            <input type="number" id="fence-waste" value="10" min="0" step="1" inputmode="decimal">
+          </div>
+        </div>
+      </section>
+
+      <div class="results-col">
+        <div class="results" id="results">
+          <p class="big-label">You need</p>
+          <p class="big" id="fence-big">—</p>
+          <p class="big-sub" id="fence-sections">—</p>
+          <dl>
+            <div class="row">
+              <dt>Pickets</dt>
+              <dd id="fence-pickets">—</dd>
+            </div>
+            <div class="row">
+              <dt>Rails</dt>
+              <dd id="fence-rails">—</dd>
+            </div>
+            <div class="row">
+              <dt>Concrete</dt>
+              <dd id="fence-concrete">—</dd>
+            </div>
+          </dl>
+        </div>
+      </div>
+    </div>
+
+    <div class="sticky-bar" id="fence-sticky-bar" style="display:none"><span>You need</span><strong id="fence-sticky">—</strong></div>
+
+<div class="ad-slot" data-ad-slot="in-content"><!-- Future AdSense slot - code goes here when approved --></div>
+
+    <section class="example" aria-label="Worked example">
+      <h3>Worked example — see the maths</h3>
+      <dl>
+        <dt>100 feet of 6 foot privacy fence, 8 ft post spacing</dt>
+        <dd><strong>13 sections</strong> — and <strong>14 posts</strong> (sections plus one for the end)</dd>
+        <dt>Pickets, 5.5 in wide, no gap, 10% waste</dt>
+        <dd><strong>241 pickets</strong> (2.2 per foot before waste)</dd>
+        <dt>Rails (3 per section for a 6 ft fence)</dt>
+        <dd><strong>39 rails</strong> — 8 ft 2×4s</dd>
+        <dt>Concrete (one 80 lb bag per post)</dt>
+        <dd><strong>14 bags</strong></dd>
+        <dt>Same fence at 6 ft spacing</dt>
+        <dd>17 sections, 18 posts — four extra holes, but a fence that handles wind better</dd>
+      </dl>
+    </section>
+
+    <h2>How the maths works</h2>
+    <h3>Posts: length divided by spacing, plus one</h3>
+    <p>Eight feet on center is the standard — it matches 8 foot rail stock with no waste, and it is the practical maximum for a wood fence. Drop to 6 feet in exposed positions, with heavy solid boards, or on soft ground. Whatever the spacing, add one post at the end: it is the post everyone forgets.</p>
+    <h3>Pickets: 2.2 per foot, not 2</h3>
+    <p>This is the mistake that leaves people short. A nominal 1×6 picket is actually 5.5 inches wide, so 12 ÷ 5.5 = 2.2 pickets per foot. Dividing by 6 inches instead gives 200 pickets for a 100 foot fence — 19 short of the 219 you actually need.</p>
+    <h3>Rails: 2, 3 or 4 per section</h3>
+    <p>Fences under 5 feet tall need 2 rails per section. Five to 7 feet — the common 6 foot privacy fence — needs 3. An 8 foot fence needs 4, and 6×6 posts instead of 4×4.</p>
+    <h3>Concrete: one bag per post</h3>
+    <p>For a 4×4 post in a 10 to 12 inch hole, 24 inches deep, one 80 lb bag is the usual rule. Use the <a href="concrete.html">concrete calculator</a> if your holes are a different size — it works out post holes exactly.</p>
+
+    <p class="note">Figures verified November 2026 against several fence calculators and lumber guides. Post depth should be at least a third of the post's height and below your local frost line. Check your property line and local rules before you dig — call 811 first. This page is an estimate for planning only.</p>
+
+  </div>
+</main>
+
+<div class="ad-slot" data-ad-slot="footer"><!-- Future AdSense slot - code goes here when approved --></div>
+
+<footer class="site">
+  <div class="wrap">
+    <nav aria-label="Footer navigation">
+      <a href="index.html">Calculators</a>
+      <a href="concrete.html">Concrete</a>
+      <a href="paint.html">Paint</a>
+      <a href="mulch.html">Mulch</a>
+      <a href="topsoil.html">Topsoil & Gravel</a>
+      <a href="tile.html">Tile</a>
+      <a href="drywall.html">Drywall</a>
+      <a href="fence.html">Fence</a>
+      <a href="deck.html">Deck</a>
+      <a href="about.html">About</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <p>Home &amp; Garden Calculators — an educational calculator site, not professional advice. Figures verified November 2026; prices and local rules change, so confirm them with your supplier or contractor before you buy.</p>
+  </div>
+</footer>
+</body>
+</html>

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tile Calculator — How Many Floor Tiles & Boxes Do I Need?</title>
+<meta name="description" content="Tile calculator: how many floor tiles and boxes you need, with 10% waste built in. Works for any tile size.">
+<link rel="stylesheet" href="style.css">
+<script src="calculator.js" defer></script>
+</head>
+<body>
+<header class="site">
+  <div class="wrap">
+    <p class="site-title"><a href="index.html">Home &amp; Garden Calculators</a></p>
+    <p class="tagline">Plain-English calculators for American homeowners. No sign-up, no sales pitch.</p>
+    <nav class="main" aria-label="Main navigation">
+      <a href="index.html">Calculators</a>
+      <a href="concrete.html">Concrete</a>
+      <a href="paint.html">Paint</a>
+      <a href="mulch.html">Mulch</a>
+      <a href="topsoil.html">Topsoil & Gravel</a>
+      <a href="tile.html" class="current">Tile</a>
+      <a href="drywall.html">Drywall</a>
+      <a href="fence.html">Fence</a>
+      <a href="deck.html">Deck</a>
+      <a href="about.html">About</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<div class="ad-slot" data-ad-slot="leaderboard"><!-- Future AdSense slot - code goes here when approved --></div>
+
+<main>
+  <div class="wrap">
+
+    <section class="page-hero">
+      <p class="eyebrow">Tile calculator</p>
+      <h1>How many floor tiles do I need?</h1>
+      <p class="lede">Divide your floor area by one tile's area, then add 10% for cuts and breakage. A 10 by 12 foot room takes 120 twelve-inch tiles — 132 with waste — which is 14 boxes of 10.</p>
+    </section>
+
+    <div class="calc-layout">
+      <section class="calc-box" id="calculator" aria-label="Tile calculator">
+        <h2>Your floor</h2>
+        <p class="sub">Fill in your numbers — the answer updates as you type.</p>
+        <div class="field-row">
+          <div class="field">
+            <label for="tile-length">Room length (feet)</label>
+            <input type="number" id="tile-length" value="10" min="0" step="0.5" inputmode="decimal">
+          </div>
+          <div class="field">
+            <label for="tile-width">Room width (feet)</label>
+            <input type="number" id="tile-width" value="12" min="0" step="0.5" inputmode="decimal">
+          </div>
+        </div>
+        <div class="field-row">
+          <div class="field">
+            <label for="tile-w">Tile width (inches)</label>
+            <input type="number" id="tile-w" value="12" min="0" step="0.5" inputmode="decimal">
+          </div>
+          <div class="field">
+            <label for="tile-l">Tile length (inches)</label>
+            <input type="number" id="tile-l" value="12" min="0" step="0.5" inputmode="decimal">
+            <span class="hint">12 × 12 is the common square tile; 12 × 24 is the popular plank size.</span>
+          </div>
+        </div>
+        <div class="field-row">
+          <div class="field">
+            <label for="tile-waste">Extra for waste (%)</label>
+            <input type="number" id="tile-waste" value="10" min="0" step="1" inputmode="decimal">
+            <span class="hint">10% for straight rows; 15% for diagonal patterns or rooms with lots of corners.</span>
+          </div>
+          <div class="field">
+            <label for="tile-per-box">Tiles per box</label>
+            <input type="number" id="tile-per-box" value="10" min="1" step="1" inputmode="decimal">
+            <span class="hint">Printed on the box — check it before you buy.</span>
+          </div>
+        </div>
+      </section>
+
+      <div class="results-col">
+        <div class="results" id="results">
+          <p class="big-label">Buy</p>
+          <p class="big" id="tile-big">—</p>
+          <p class="big-sub" id="tile-area">—</p>
+          <dl>
+            <div class="row">
+              <dt>Tiles, with waste</dt>
+              <dd id="tile-tiles">—</dd>
+            </div>
+            <div class="row">
+              <dt>Tiles before waste</dt>
+              <dd id="tile-net">—</dd>
+            </div>
+          </dl>
+        </div>
+      </div>
+    </div>
+
+    <div class="sticky-bar" id="tile-sticky-bar" style="display:none"><span>Buy</span><strong id="tile-sticky">—</strong></div>
+
+<div class="ad-slot" data-ad-slot="in-content"><!-- Future AdSense slot - code goes here when approved --></div>
+
+    <section class="example" aria-label="Worked example">
+      <h3>Worked example — see the maths</h3>
+      <dl>
+        <dt>A 10 by 12 foot room</dt>
+        <dd><strong>120 sq ft</strong> of floor</dd>
+        <dt>12 × 12 inch tiles (1 sq ft each)</dt>
+        <dd><strong>120 tiles</strong> before waste</dd>
+        <dt>With 10% waste</dt>
+        <dd><strong>132 tiles</strong></dd>
+        <dt>Boxes of 10</dt>
+        <dd><strong>14 boxes</strong></dd>
+        <dt>Same room, 12 × 24 inch tiles (2 sq ft each)</dt>
+        <dd>60 tiles — 66 with waste — 7 boxes</dd>
+        <dt>Same room, 6 × 6 inch tiles</dt>
+        <dd>480 tiles before waste</dd>
+      </dl>
+    </section>
+
+    <h2>How the maths works</h2>
+    <h3>One tile's area, then divide</h3>
+    <p>A 12 by 12 inch tile covers 1 square foot. A 12 by 24 inch tile covers 2. Divide your floor area by one tile's area and you have the tile count before waste. The calculator does the inches-to-feet conversion for you — just type the tile size in inches.</p>
+    <h3>Always add waste</h3>
+    <p>Tiles get cut at the edges, around door frames and around pipes, and a few always break. Ten percent is the standard allowance for straight rows. Go to 15% for diagonal patterns, herringbone, or rooms with lots of corners and angles.</p>
+    <h3>Buy a spare box</h3>
+    <p>Tile dye lots change between batches, and a box from a different lot can look slightly off. Buying one spare box now — same lot, same color — is far easier than hunting for a match in two years when one tile cracks.</p>
+
+    <p class="note">Figures verified November 2026. Tile coverage varies by brand and by grout joint width — the box label wins. This page is an estimate for planning only.</p>
+
+  </div>
+</main>
+
+<div class="ad-slot" data-ad-slot="footer"><!-- Future AdSense slot - code goes here when approved --></div>
+
+<footer class="site">
+  <div class="wrap">
+    <nav aria-label="Footer navigation">
+      <a href="index.html">Calculators</a>
+      <a href="concrete.html">Concrete</a>
+      <a href="paint.html">Paint</a>
+      <a href="mulch.html">Mulch</a>
+      <a href="topsoil.html">Topsoil & Gravel</a>
+      <a href="tile.html">Tile</a>
+      <a href="drywall.html">Drywall</a>
+      <a href="fence.html">Fence</a>
+      <a href="deck.html">Deck</a>
+      <a href="about.html">About</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <p>Home &amp; Garden Calculators — an educational calculator site, not professional advice. Figures verified November 2026; prices and local rules change, so confirm them with your supplier or contractor before you buy.</p>
+  </div>
+</footer>
+</body>
+</html>

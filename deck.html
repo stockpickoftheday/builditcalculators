@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Deck Calculator — Decking Boards, Joists & Screws</title>
+<meta name="description" content="Deck calculator: how many linear feet of decking boards, joists and screws for a wood deck.">
+<link rel="stylesheet" href="style.css">
+<script src="calculator.js" defer></script>
+</head>
+<body>
+<header class="site">
+  <div class="wrap">
+    <p class="site-title"><a href="index.html">Home &amp; Garden Calculators</a></p>
+    <p class="tagline">Plain-English calculators for American homeowners. No sign-up, no sales pitch.</p>
+    <nav class="main" aria-label="Main navigation">
+      <a href="index.html">Calculators</a>
+      <a href="concrete.html">Concrete</a>
+      <a href="paint.html">Paint</a>
+      <a href="mulch.html">Mulch</a>
+      <a href="topsoil.html">Topsoil & Gravel</a>
+      <a href="tile.html">Tile</a>
+      <a href="drywall.html">Drywall</a>
+      <a href="fence.html">Fence</a>
+      <a href="deck.html" class="current">Deck</a>
+      <a href="about.html">About</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<div class="ad-slot" data-ad-slot="leaderboard"><!-- Future AdSense slot - code goes here when approved --></div>
+
+<main>
+  <div class="wrap">
+
+    <section class="page-hero">
+      <p class="eyebrow">Deck calculator</p>
+      <h1>How much decking do I need?</h1>
+      <p class="lede">A 5.5 inch wide deck board covers about 5⅝ inches of deck once you leave a small gap — so one square foot of deck takes about 2.13 linear feet of board. A 12 by 16 foot deck needs about 410 linear feet of decking.</p>
+    </section>
+
+    <div class="calc-layout">
+      <section class="calc-box" id="calculator" aria-label="Deck calculator">
+        <h2>Your deck</h2>
+        <p class="sub">Fill in your numbers — the answer updates as you type.</p>
+        <div class="field-row">
+          <div class="field">
+            <label for="deck-length">Deck length (feet)</label>
+            <input type="number" id="deck-length" value="16" min="0" step="0.5" inputmode="decimal">
+          </div>
+          <div class="field">
+            <label for="deck-width">Deck width (feet)</label>
+            <input type="number" id="deck-width" value="12" min="0" step="0.5" inputmode="decimal">
+          </div>
+        </div>
+        <div class="field-row">
+          <div class="field">
+            <label for="deck-board">Deck board width</label>
+            <select id="deck-board">
+              <option value="5.5" selected>5/4×6 boards (actually 5.5 in wide)</option>
+              <option value="3.5">2×4 boards (actually 3.5 in wide)</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="deck-gap">Gap between boards (inches)</label>
+            <input type="number" id="deck-gap" value="0.125" min="0" step="0.0625" inputmode="decimal">
+            <span class="hint">⅛ inch is standard — it lets rain through and gives boards room to swell.</span>
+          </div>
+        </div>
+        <div class="field">
+          <label for="deck-joist">Joist spacing (inches)</label>
+          <select id="deck-joist">
+            <option value="16" selected>16 in on center — standard</option>
+            <option value="12">12 in on center — stiffer, for diagonal boards</option>
+          </select>
+        </div>
+      </section>
+
+      <div class="results-col">
+        <div class="results" id="results">
+          <p class="big-label">You need</p>
+          <p class="big" id="deck-big">—</p>
+          <p class="big-sub" id="deck-area">—</p>
+          <dl>
+            <div class="row">
+              <dt>Joists</dt>
+              <dd id="deck-joists">—</dd>
+            </div>
+            <div class="row">
+              <dt>Screws</dt>
+              <dd id="deck-screws">—</dd>
+            </div>
+          </dl>
+        </div>
+      </div>
+    </div>
+
+    <div class="sticky-bar" id="deck-sticky-bar" style="display:none"><span>You need</span><strong id="deck-sticky">—</strong></div>
+
+<div class="ad-slot" data-ad-slot="in-content"><!-- Future AdSense slot - code goes here when approved --></div>
+
+    <section class="example" aria-label="Worked example">
+      <h3>Worked example — see the maths</h3>
+      <dl>
+        <dt>A 12 by 16 foot deck</dt>
+        <dd><strong>192 sq ft</strong></dd>
+        <dt>Decking, 5.5 in boards with a ⅛ in gap</dt>
+        <dd>192 × 12 ÷ 5.625 = <strong>410 linear feet</strong></dd>
+        <dt>Joists at 16 in on center</dt>
+        <dd><strong>13 joists</strong>, 12 feet long each (156 linear feet)</dd>
+        <dt>Screws (about 3.5 per sq ft)</dt>
+        <dd><strong>672 screws</strong></dd>
+        <dt>A 10 by 10 foot deck</dt>
+        <dd>100 sq ft — 213 linear feet of decking</dd>
+      </dl>
+    </section>
+
+    <h2>How the maths works</h2>
+    <h3>Board coverage: width plus gap</h3>
+    <p>Each board covers its own width plus the gap beside it. A 5.5 inch board with a ⅛ inch gap covers 5.625 inches, so one square foot of deck takes 12 ÷ 5.625 = 2.13 linear feet of board. Narrower boards take more: a 3.5 inch board with the same gap needs 3.3 linear feet per square foot.</p>
+    <h3>Joists: one every 16 inches, plus one</h3>
+    <p>Joists run under the decking every 16 inches on center — that is the standard for 5/4 decking. Count them the same way as fence posts: length divided by spacing, plus one at the end. For a 16 foot deck that is 13 joists.</p>
+    <h3>Screws: two per board at every joist</h3>
+    <p>Each deck board gets two screws where it crosses each joist. That works out to about 350 screws per 100 square feet of deck — 3.5 per square foot. Buy stainless or coated deck screws; ordinary screws rust and stain the wood.</p>
+    <h3>Do not forget the frame</h3>
+    <p>This calculator covers decking, joists and screws. A real deck also needs beams, posts, footings, ledger board, flashing and railing. Footings and posts depend on your local frost depth and building code — check both before you build.</p>
+
+    <p class="note">Figures verified November 2026 against lumber guides and several deck calculators. Board widths are actual milled sizes, not nominal labels. This page is an estimate for planning only, not structural advice — decks are governed by local building codes.</p>
+
+  </div>
+</main>
+
+<div class="ad-slot" data-ad-slot="footer"><!-- Future AdSense slot - code goes here when approved --></div>
+
+<footer class="site">
+  <div class="wrap">
+    <nav aria-label="Footer navigation">
+      <a href="index.html">Calculators</a>
+      <a href="concrete.html">Concrete</a>
+      <a href="paint.html">Paint</a>
+      <a href="mulch.html">Mulch</a>
+      <a href="topsoil.html">Topsoil & Gravel</a>
+      <a href="tile.html">Tile</a>
+      <a href="drywall.html">Drywall</a>
+      <a href="fence.html">Fence</a>
+      <a href="deck.html">Deck</a>
+      <a href="about.html">About</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <p>Home &amp; Garden Calculators — an educational calculator site, not professional advice. Figures verified November 2026; prices and local rules change, so confirm them with your supplier or contractor before you buy.</p>
+  </div>
+</footer>
+</body>
+</html>

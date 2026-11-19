@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mulch Calculator — How Much Mulch Do I Need? (Yards & Bags)</title>
+<meta name="description" content="Mulch calculator: cubic yards and bags of mulch for a bed at any depth. One cubic yard covers 108 sq ft at 3 inches deep.">
+<link rel="stylesheet" href="style.css">
+<script src="calculator.js" defer></script>
+</head>
+<body>
+<header class="site">
+  <div class="wrap">
+    <p class="site-title"><a href="index.html">Home &amp; Garden Calculators</a></p>
+    <p class="tagline">Plain-English calculators for American homeowners. No sign-up, no sales pitch.</p>
+    <nav class="main" aria-label="Main navigation">
+      <a href="index.html">Calculators</a>
+      <a href="concrete.html">Concrete</a>
+      <a href="paint.html">Paint</a>
+      <a href="mulch.html" class="current">Mulch</a>
+      <a href="topsoil.html">Topsoil & Gravel</a>
+      <a href="tile.html">Tile</a>
+      <a href="drywall.html">Drywall</a>
+      <a href="fence.html">Fence</a>
+      <a href="deck.html">Deck</a>
+      <a href="about.html">About</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<div class="ad-slot" data-ad-slot="leaderboard"><!-- Future AdSense slot - code goes here when approved --></div>
+
+<main>
+  <div class="wrap">
+
+    <section class="page-hero">
+      <p class="eyebrow">Mulch calculator</p>
+      <h1>How much mulch do I need?</h1>
+      <p class="lede">Multiply your bed's area by the depth, and you have the volume. One cubic yard covers 108 square feet at 3 inches deep — the standard depth for a planting bed.</p>
+    </section>
+
+    <div class="calc-layout">
+      <section class="calc-box" id="calculator" aria-label="Mulch calculator">
+        <h2>Your bed</h2>
+        <p class="sub">Fill in your numbers — the answer updates as you type.</p>
+        <div class="field-row">
+          <div class="field">
+            <label for="mulch-length">Bed length (feet)</label>
+            <input type="number" id="mulch-length" value="20" min="0" step="0.5" inputmode="decimal">
+          </div>
+          <div class="field">
+            <label for="mulch-width">Bed width (feet)</label>
+            <input type="number" id="mulch-width" value="10" min="0" step="0.5" inputmode="decimal">
+          </div>
+        </div>
+        <div class="field-row">
+          <div class="field">
+            <label for="mulch-depth">Depth (inches)</label>
+            <input type="number" id="mulch-depth" value="3" min="0" step="0.5" inputmode="decimal">
+            <span class="hint">2 to 3 inches for most beds; 4 inches for a deep barrier around trees.</span>
+          </div>
+          <div class="field">
+            <label for="mulch-bag">Bag size</label>
+            <select id="mulch-bag">
+              <option value="2" selected>2 cu ft bags (most common)</option>
+              <option value="1.5">1.5 cu ft bags</option>
+              <option value="3">3 cu ft bags</option>
+            </select>
+          </div>
+        </div>
+      </section>
+
+      <div class="results-col">
+        <div class="results" id="results">
+          <p class="big-label">You need</p>
+          <p class="big" id="mulch-big">—</p>
+          <p class="big-sub" id="mulch-area">—</p>
+          <dl>
+            <div class="row">
+              <dt>Cubic feet</dt>
+              <dd id="mulch-cuft">—</dd>
+            </div>
+            <div class="row">
+              <dt>Bags</dt>
+              <dd id="mulch-bags">—</dd>
+            </div>
+          </dl>
+        </div>
+      </div>
+    </div>
+
+    <div class="sticky-bar" id="mulch-sticky-bar" style="display:none"><span>You need</span><strong id="mulch-sticky">—</strong></div>
+
+<div class="ad-slot" data-ad-slot="in-content"><!-- Future AdSense slot - code goes here when approved --></div>
+
+    <section class="example" aria-label="Worked example">
+      <h3>Worked example — see the maths</h3>
+      <dl>
+        <dt>A 10 by 20 foot bed, 3 inches deep</dt>
+        <dd>200 sq ft × 3 in ÷ 324 = <strong>1.85 cubic yards</strong></dd>
+        <dt>In 2 cu ft bags</dt>
+        <dd>1.85 × 13.5 = <strong>25 bags</strong></dd>
+        <dt>A 10 by 10 foot bed, 3 inches deep</dt>
+        <dd><strong>0.93 cubic yards — 13 bags</strong> (rounds up to 1 yard)</dd>
+        <dt>One cubic yard covers</dt>
+        <dd><strong>108 sq ft at 3 in</strong>, 162 sq ft at 2 in, 81 sq ft at 4 in</dd>
+      </dl>
+    </section>
+
+    <h2>How the maths works</h2>
+    <h3>Cubic yards = area × depth ÷ 324</h3>
+    <p>That is the shortcut from the Texas A&amp;M AgriLife Extension: square feet times depth in inches, divided by 324, gives cubic yards. It works because one cubic yard is 27 cubic feet, and 27 × 12 = 324.</p>
+    <h3>How deep should mulch be?</h3>
+    <p>Two to three inches is right for most flower and shrub beds — enough to hold moisture and block weeds, thin enough that the soil underneath can still breathe. Four inches is for a deep barrier around trees. More than 4 inches can suffocate roots, so do not overdo it.</p>
+    <h3>Bags or bulk?</h3>
+    <p>One cubic yard is 13.5 bags of 2 cubic feet. For a small bed, bags are easy to carry and store. For anything over about 2 cubic yards, bulk delivery is usually much cheaper per yard — and far less plastic to throw away.</p>
+
+    <p class="note">Figures verified November 2026 against Texas A&amp;M AgriLife Extension and several mulch calculators. Bag sizes and coverage vary by brand — check the label. This page is an estimate for planning only.</p>
+
+  </div>
+</main>
+
+<div class="ad-slot" data-ad-slot="footer"><!-- Future AdSense slot - code goes here when approved --></div>
+
+<footer class="site">
+  <div class="wrap">
+    <nav aria-label="Footer navigation">
+      <a href="index.html">Calculators</a>
+      <a href="concrete.html">Concrete</a>
+      <a href="paint.html">Paint</a>
+      <a href="mulch.html">Mulch</a>
+      <a href="topsoil.html">Topsoil & Gravel</a>
+      <a href="tile.html">Tile</a>
+      <a href="drywall.html">Drywall</a>
+      <a href="fence.html">Fence</a>
+      <a href="deck.html">Deck</a>
+      <a href="about.html">About</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <p>Home &amp; Garden Calculators — an educational calculator site, not professional advice. Figures verified November 2026; prices and local rules change, so confirm them with your supplier or contractor before you buy.</p>
+  </div>
+</footer>
+</body>
+</html>

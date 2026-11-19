@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Drywall Calculator — Sheets, Screws, Mud & Tape</title>
+<meta name="description" content="Drywall calculator: how many 4x8 sheets, screws, joint compound and tape you need for a room, with 10% waste built in.">
+<link rel="stylesheet" href="style.css">
+<script src="calculator.js" defer></script>
+</head>
+<body>
+<header class="site">
+  <div class="wrap">
+    <p class="site-title"><a href="index.html">Home &amp; Garden Calculators</a></p>
+    <p class="tagline">Plain-English calculators for American homeowners. No sign-up, no sales pitch.</p>
+    <nav class="main" aria-label="Main navigation">
+      <a href="index.html">Calculators</a>
+      <a href="concrete.html">Concrete</a>
+      <a href="paint.html">Paint</a>
+      <a href="mulch.html">Mulch</a>
+      <a href="topsoil.html">Topsoil & Gravel</a>
+      <a href="tile.html">Tile</a>
+      <a href="drywall.html" class="current">Drywall</a>
+      <a href="fence.html">Fence</a>
+      <a href="deck.html">Deck</a>
+      <a href="about.html">About</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<div class="ad-slot" data-ad-slot="leaderboard"><!-- Future AdSense slot - code goes here when approved --></div>
+
+<main>
+  <div class="wrap">
+
+    <section class="page-hero">
+      <p class="eyebrow">Drywall calculator</p>
+      <h1>How much drywall do I need?</h1>
+      <p class="lede">A 4 by 8 foot sheet covers 32 square feet. Divide your wall and ceiling area by 32, add 10% for cuts, and you have the sheet count — plus the screws, joint compound and tape to finish the job.</p>
+    </section>
+
+    <div class="calc-layout">
+      <section class="calc-box" id="calculator" aria-label="Drywall calculator">
+        <h2>Your room</h2>
+        <p class="sub">Fill in your numbers — the answer updates as you type.</p>
+        <div class="field-row">
+          <div class="field">
+            <label for="dry-length">Room length (feet)</label>
+            <input type="number" id="dry-length" value="12" min="0" step="0.5" inputmode="decimal">
+          </div>
+          <div class="field">
+            <label for="dry-width">Room width (feet)</label>
+            <input type="number" id="dry-width" value="12" min="0" step="0.5" inputmode="decimal">
+          </div>
+        </div>
+        <div class="field-row">
+          <div class="field">
+            <label for="dry-height">Ceiling height (feet)</label>
+            <input type="number" id="dry-height" value="8" min="0" step="0.5" inputmode="decimal">
+          </div>
+          <div class="field">
+            <label for="dry-sheet">Sheet size</label>
+            <select id="dry-sheet">
+              <option value="8" selected>4 × 8 ft (32 sq ft)</option>
+              <option value="10">4 × 10 ft (40 sq ft)</option>
+              <option value="12">4 × 12 ft (48 sq ft)</option>
+            </select>
+            <span class="hint">Bigger sheets mean fewer joints on long walls, but they are heavy — a 4 × 12 sheet takes two people.</span>
+          </div>
+        </div>
+        <div class="field-row">
+          <div class="field">
+            <label for="dry-doors">Doors</label>
+            <input type="number" id="dry-doors" value="1" min="0" step="1" inputmode="decimal">
+            <span class="hint">Each door counts as 21 sq ft (3 × 7 ft).</span>
+          </div>
+          <div class="field">
+            <label for="dry-windows">Windows</label>
+            <input type="number" id="dry-windows" value="2" min="0" step="1" inputmode="decimal">
+            <span class="hint">Each window counts as 15 sq ft (3 × 5 ft).</span>
+          </div>
+        </div>
+        <div class="field-row">
+          <div class="field">
+            <label for="dry-waste">Extra for waste (%)</label>
+            <input type="number" id="dry-waste" value="10" min="0" step="1" inputmode="decimal">
+          </div>
+          <div class="field">
+            <label class="check"><input type="checkbox" id="dry-ceiling" checked> Include the ceiling</label>
+          </div>
+        </div>
+      </section>
+
+      <div class="results-col">
+        <div class="results" id="results">
+          <p class="big-label">You need</p>
+          <p class="big" id="dry-big">—</p>
+          <p class="big-sub" id="dry-area">—</p>
+          <dl>
+            <div class="row">
+              <dt>Screws</dt>
+              <dd id="dry-screws">—</dd>
+            </div>
+            <div class="row">
+              <dt>Joint compound</dt>
+              <dd id="dry-compound">—</dd>
+            </div>
+            <div class="row">
+              <dt>Joint tape</dt>
+              <dd id="dry-tape">—</dd>
+            </div>
+          </dl>
+        </div>
+      </div>
+    </div>
+
+    <div class="sticky-bar" id="dry-sticky-bar" style="display:none"><span>You need</span><strong id="dry-sticky">—</strong></div>
+
+<div class="ad-slot" data-ad-slot="in-content"><!-- Future AdSense slot - code goes here when approved --></div>
+
+    <section class="example" aria-label="Worked example">
+      <h3>Worked example — see the maths</h3>
+      <dl>
+        <dt>A 12 by 12 foot room, 8 foot ceilings</dt>
+        <dd>Walls 384 sq ft − 51 sq ft of openings = <strong>333 sq ft</strong></dd>
+        <dt>Plus the ceiling</dt>
+        <dd>333 + 144 = <strong>477 sq ft</strong> of board</dd>
+        <dt>4 × 8 sheets (32 sq ft each), 10% waste</dt>
+        <dd>477 × 1.10 ÷ 32 = <strong>17 sheets</strong></dd>
+        <dt>Screws (32 per sheet)</dt>
+        <dd><strong>544 screws</strong></dd>
+        <dt>Joint compound (1 gallon per 100 sq ft)</dt>
+        <dd><strong>5 gallons</strong></dd>
+        <dt>Paper tape (0.37 ft per sq ft)</dt>
+        <dd><strong>176 feet</strong></dd>
+      </dl>
+    </section>
+
+    <h2>How the maths works</h2>
+    <h3>Sheets: area divided by 32, plus waste</h3>
+    <p>Wall area is the room's perimeter times its height, minus doors and windows. Add the ceiling if you are boarding it too. Divide by the sheet size — 32 square feet for a 4 by 8 — and add 10% for cuts around outlets, corners and angles.</p>
+    <h3>Finishing materials come per sheet</h3>
+    <p>The estimating guides from the gypsum manufacturers work out to about the same numbers on every calculator: <strong>32 screws per wall sheet</strong> (about one per square foot), <strong>1 gallon of joint compound per 100 square feet</strong> for a three-coat finish, and <strong>0.37 feet of paper tape per square foot</strong> of board. Ceilings take about half again as many screws as walls, because gravity is working against the board.</p>
+    <h3>One pound of screws goes a long way</h3>
+    <p>A 1 lb box of 1¼ inch drywall screws holds roughly 200 screws — about 6 sheets' worth. A 5 lb box covers about 30 sheets. Buy screws by the box, not by the handful.</p>
+
+    <p class="note">Figures verified November 2026 against USG's installation guide, the Gypsum Construction Handbook and several drywall calculators. Actual amounts vary with framing spacing and finish level — confirm with your supplier. This page is an estimate for planning only.</p>
+
+  </div>
+</main>
+
+<div class="ad-slot" data-ad-slot="footer"><!-- Future AdSense slot - code goes here when approved --></div>
+
+<footer class="site">
+  <div class="wrap">
+    <nav aria-label="Footer navigation">
+      <a href="index.html">Calculators</a>
+      <a href="concrete.html">Concrete</a>
+      <a href="paint.html">Paint</a>
+      <a href="mulch.html">Mulch</a>
+      <a href="topsoil.html">Topsoil & Gravel</a>
+      <a href="tile.html">Tile</a>
+      <a href="drywall.html">Drywall</a>
+      <a href="fence.html">Fence</a>
+      <a href="deck.html">Deck</a>
+      <a href="about.html">About</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <p>Home &amp; Garden Calculators — an educational calculator site, not professional advice. Figures verified November 2026; prices and local rules change, so confirm them with your supplier or contractor before you buy.</p>
+  </div>
+</footer>
+</body>
+</html>

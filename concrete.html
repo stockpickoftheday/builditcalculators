@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Concrete Calculator — How Much Concrete Do I Need? (Yards & Bags)</title>
+<meta name="description" content="Concrete calculator: how much concrete do I need for a slab or fence post holes, in cubic yards and 40, 60 and 80 lb bags, with 10% waste built in.">
+<link rel="stylesheet" href="style.css">
+<script src="calculator.js" defer></script>
+</head>
+<body>
+<header class="site">
+  <div class="wrap">
+    <p class="site-title"><a href="index.html">Home &amp; Garden Calculators</a></p>
+    <p class="tagline">Plain-English calculators for American homeowners. No sign-up, no sales pitch.</p>
+    <nav class="main" aria-label="Main navigation">
+      <a href="index.html">Calculators</a>
+      <a href="concrete.html" class="current">Concrete</a>
+      <a href="paint.html">Paint</a>
+      <a href="mulch.html">Mulch</a>
+      <a href="topsoil.html">Topsoil & Gravel</a>
+      <a href="tile.html">Tile</a>
+      <a href="drywall.html">Drywall</a>
+      <a href="fence.html">Fence</a>
+      <a href="deck.html">Deck</a>
+      <a href="about.html">About</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<div class="ad-slot" data-ad-slot="leaderboard"><!-- Future AdSense slot - code goes here when approved --></div>
+
+<main>
+  <div class="wrap">
+
+    <section class="page-hero">
+      <p class="eyebrow">Concrete calculator</p>
+      <h1>How much concrete do I need?</h1>
+      <p class="lede">For a slab, multiply length by width by thickness — then divide by 27 to get cubic yards. For fence post holes, work out one hole and multiply. The calculator does both, and tells you how many bags to buy.</p>
+    </section>
+
+    <div class="calc-layout">
+      <section class="calc-box" id="calculator" aria-label="Concrete calculator">
+        <h2>Your project</h2>
+        <p class="sub">Fill in your numbers — the answer updates as you type.</p>
+        <div class="field">
+          <label for="conc-mode">What are you pouring?</label>
+          <select id="conc-mode">
+            <option value="slab" selected>A slab (patio, walkway, driveway)</option>
+            <option value="post">Fence post holes</option>
+          </select>
+        </div>
+        <div id="conc-slab-fields">
+          <div class="field-row">
+            <div class="field">
+              <label for="conc-length">Length (feet)</label>
+              <input type="number" id="conc-length" value="10" min="0" step="0.5" inputmode="decimal">
+            </div>
+            <div class="field">
+              <label for="conc-width">Width (feet)</label>
+              <input type="number" id="conc-width" value="10" min="0" step="0.5" inputmode="decimal">
+            </div>
+          </div>
+          <div class="field-row">
+            <div class="field">
+              <label for="conc-depth">Thickness (inches)</label>
+              <input type="number" id="conc-depth" value="4" min="0" step="0.5" inputmode="decimal">
+              <span class="hint">4 inches is standard for a patio or walkway; 6 inches for a driveway.</span>
+            </div>
+            <div class="field">
+              <label for="conc-waste">Extra for waste (%)</label>
+              <input type="number" id="conc-waste" value="10" min="0" step="1" inputmode="decimal">
+              <span class="hint">10% covers spillage and uneven ground.</span>
+            </div>
+          </div>
+        </div>
+        <div id="conc-post-fields" style="display:none">
+          <div class="field-row">
+            <div class="field">
+              <label for="conc-hole-dia">Hole diameter (inches)</label>
+              <input type="number" id="conc-hole-dia" value="12" min="0" step="1" inputmode="decimal">
+              <span class="hint">10 to 12 inches is normal for a 4x4 post.</span>
+            </div>
+            <div class="field">
+              <label for="conc-hole-depth">Hole depth (inches)</label>
+              <input type="number" id="conc-hole-depth" value="24" min="0" step="1" inputmode="decimal">
+              <span class="hint">At least a third of the post goes underground, and below your frost line.</span>
+            </div>
+          </div>
+          <div class="field">
+            <label for="conc-holes">Number of holes</label>
+            <input type="number" id="conc-holes" value="4" min="0" step="1" inputmode="decimal">
+          </div>
+        </div>
+      </section>
+
+      <div class="results-col">
+        <div class="results" id="results">
+          <p class="big-label">You need</p>
+          <p class="big" id="conc-big">—</p>
+          <p class="big-sub" id="conc-cuft">—</p>
+          <dl>
+            <div class="row">
+              <dt>Before waste</dt>
+              <dd id="conc-net">—</dd>
+            </div>
+            <div class="row">
+              <dt>80 lb bags</dt>
+              <dd id="conc-bags80">—</dd>
+            </div>
+            <div class="row">
+              <dt>60 lb bags</dt>
+              <dd id="conc-bags60">—</dd>
+            </div>
+            <div class="row">
+              <dt>40 lb bags</dt>
+              <dd id="conc-bags40">—</dd>
+            </div>
+          </dl>
+        </div>
+      </div>
+    </div>
+
+    <div class="sticky-bar" id="conc-sticky-bar" style="display:none"><span>You need</span><strong id="conc-sticky">—</strong></div>
+
+<div class="ad-slot" data-ad-slot="in-content"><!-- Future AdSense slot - code goes here when approved --></div>
+
+    <section class="example" aria-label="Worked example">
+      <h3>Worked example — see the maths</h3>
+      <dl>
+        <dt>A 10 by 10 foot patio slab, 4 inches thick</dt>
+        <dd><strong>1.23 cubic yards</strong> before waste</dd>
+        <dt>With 10% waste added</dt>
+        <dd><strong>1.36 cubic yards</strong> (36.67 cubic feet)</dd>
+        <dt>80 lb bags</dt>
+        <dd><strong>62 bags</strong> — published tables say 61, because they round the yardage first; we round up so you do not run short</dd>
+        <dt>60 lb bags</dt>
+        <dd>82 bags</dd>
+        <dt>40 lb bags</dt>
+        <dd>123 bags</dd>
+        <dt>One fence post hole, 12 inches wide and 24 inches deep</dt>
+        <dd><strong>1.57 cubic feet — 3 bags of 80 lb mix</strong></dd>
+        <dt>Ready-mix or bags?</dt>
+        <dd>Past about 1 cubic yard (45 bags of 80 lb mix), a truck is usually cheaper and far less work</dd>
+      </dl>
+    </section>
+
+    <h2>How the maths works</h2>
+    <h3>Slabs: length × width × thickness, divided by 27</h3>
+    <p>A cubic yard is 27 cubic feet — a cube 3 feet on every side. So a slab 10 feet by 10 feet at 4 inches thick is 10 × 10 × (4 ÷ 12) = 33.33 cubic feet, and 33.33 ÷ 27 = 1.23 cubic yards. The 10% waste allowance takes it to 1.36 cubic yards.</p>
+    <h3>Bags: divide by what one bag makes</h3>
+    <p>Bag yields are printed on the bag and are the same across the big brands: an 80 lb bag makes 0.60 cubic feet (45 bags per yard), a 60 lb bag makes 0.45 cubic feet (60 per yard), and a 40 lb bag makes 0.30 cubic feet (90 per yard). So 36.67 cubic feet ÷ 0.60 = 61.1 — we round up to 62 bags.</p>
+    <h3>Post holes: the cylinder formula</h3>
+    <p>A round hole is a cylinder: π × radius² × depth. A 12-inch hole, 24 inches deep, is π × 0.5² × 2 = 1.57 cubic feet. That is 3 bags of 80 lb mix per hole. The <a href="fence.html">fence calculator</a> works out the concrete for a whole fence line at once.</p>
+    <h3>Common slab sizes</h3>
+    <div class="table-scroll"><table>
+      <tr><th>Slab</th><th class="num">Cubic yards (+10%)</th><th class="num">80 lb bags</th></tr>
+      <tr><td>10 × 10 ft at 4 in</td><td class="num">1.36</td><td class="num">62</td></tr>
+      <tr><td>12 × 12 ft at 4 in</td><td class="num">1.96</td><td class="num">89</td></tr>
+      <tr><td>10 × 20 ft at 4 in</td><td class="num">2.72</td><td class="num">123</td></tr>
+      <tr><td>20 × 30 ft driveway at 6 in</td><td class="num">12.22</td><td class="num">550</td></tr>
+    </table></div>
+
+    <p class="note">Figures verified November 2026 against Quikrete's published bag yields and several concrete calculators. Yields vary slightly by brand — check the bag. This page is an estimate for planning only, not engineering advice; structural pours and anything governed by building codes should be sized by a qualified professional.</p>
+
+  </div>
+</main>
+
+<div class="ad-slot" data-ad-slot="footer"><!-- Future AdSense slot - code goes here when approved --></div>
+
+<footer class="site">
+  <div class="wrap">
+    <nav aria-label="Footer navigation">
+      <a href="index.html">Calculators</a>
+      <a href="concrete.html">Concrete</a>
+      <a href="paint.html">Paint</a>
+      <a href="mulch.html">Mulch</a>
+      <a href="topsoil.html">Topsoil & Gravel</a>
+      <a href="tile.html">Tile</a>
+      <a href="drywall.html">Drywall</a>
+      <a href="fence.html">Fence</a>
+      <a href="deck.html">Deck</a>
+      <a href="about.html">About</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <p>Home &amp; Garden Calculators — an educational calculator site, not professional advice. Figures verified November 2026; prices and local rules change, so confirm them with your supplier or contractor before you buy.</p>
+  </div>
+</footer>
+</body>
+</html>

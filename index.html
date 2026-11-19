@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Home & Garden Calculators — Concrete, Paint, Mulch, Tile & More</title>
+<meta name="description" content="Free plain-English home and garden calculators for Americans: concrete, paint, mulch, topsoil and gravel, tile, drywall, fence and deck. Type in your measurements and get the answer in seconds.">
+<link rel="stylesheet" href="style.css">
+<script src="calculator.js" defer></script>
+</head>
+<body>
+<header class="site">
+  <div class="wrap">
+    <p class="site-title"><a href="index.html">Home &amp; Garden Calculators</a></p>
+    <p class="tagline">Plain-English calculators for American homeowners. No sign-up, no sales pitch.</p>
+    <nav class="main" aria-label="Main navigation">
+      <a href="index.html" class="current">Calculators</a>
+      <a href="concrete.html">Concrete</a>
+      <a href="paint.html">Paint</a>
+      <a href="mulch.html">Mulch</a>
+      <a href="topsoil.html">Topsoil & Gravel</a>
+      <a href="tile.html">Tile</a>
+      <a href="drywall.html">Drywall</a>
+      <a href="fence.html">Fence</a>
+      <a href="deck.html">Deck</a>
+      <a href="about.html">About</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<div class="ad-slot" data-ad-slot="leaderboard"><!-- Future AdSense slot - code goes here when approved --></div>
+
+<main>
+  <div class="wrap">
+
+    <section class="hero">
+      <p class="eyebrow">United States &middot; Imperial units — feet, gallons, cubic yards</p>
+      <h1>Home and garden calculators that speak plain English</h1>
+      <p class="lede">How much concrete do I need? How many gallons of paint? How many bags of mulch? Type in your measurements and get the answer in seconds — with the maths shown, so you can check it yourself. Everything runs in your browser. Nothing you type is sent anywhere.</p>
+      <ul class="chips">
+        <li>&#10003; No sign-up</li>
+        <li>&#10003; Nothing leaves your browser</li>
+        <li>&#10003; 8 calculators</li>
+      </ul>
+    </section>
+
+    <div class="calc-layout">
+      <section class="calc-box" id="calculator" aria-label="Concrete calculator">
+        <h2>Featured: how much concrete do I need?</h2>
+        <p class="sub">The question we hear most. A 10 by 10 foot patio slab, 4 inches thick, takes about 1.36 cubic yards — 62 bags of 80 lb mix. Try your own numbers.</p>
+        <div class="field-row">
+          <div class="field">
+            <label for="conc-length">Slab length (feet)</label>
+            <input type="number" id="conc-length" value="10" min="0" step="0.5" inputmode="decimal">
+          </div>
+          <div class="field">
+            <label for="conc-width">Slab width (feet)</label>
+            <input type="number" id="conc-width" value="10" min="0" step="0.5" inputmode="decimal">
+          </div>
+        </div>
+        <div class="field-row">
+          <div class="field">
+            <label for="conc-depth">Thickness (inches)</label>
+            <input type="number" id="conc-depth" value="4" min="0" step="0.5" inputmode="decimal">
+            <span class="hint">4 inches is standard for a patio or walkway; 6 inches for a driveway.</span>
+          </div>
+          <div class="field">
+            <label for="conc-waste">Extra for waste (%)</label>
+            <input type="number" id="conc-waste" value="10" min="0" step="1" inputmode="decimal">
+            <span class="hint">10% covers spillage and uneven ground.</span>
+          </div>
+        </div>
+        <p><a href="concrete.html">Open the full concrete calculator — fence post holes included</a></p>
+      </section>
+
+      <div class="results-col">
+        <div class="results" id="results">
+          <p class="big-label">You need</p>
+          <p class="big" id="conc-big">—</p>
+          <p class="big-sub" id="conc-cuft">—</p>
+          <dl>
+            <div class="row">
+              <dt>Before waste</dt>
+              <dd id="conc-net">—</dd>
+            </div>
+            <div class="row">
+              <dt>80 lb bags</dt>
+              <dd id="conc-bags80">—</dd>
+            </div>
+            <div class="row">
+              <dt>60 lb bags</dt>
+              <dd id="conc-bags60">—</dd>
+            </div>
+            <div class="row">
+              <dt>40 lb bags</dt>
+              <dd id="conc-bags40">—</dd>
+            </div>
+          </dl>
+        </div>
+      </div>
+    </div>
+
+    <div class="sticky-bar" id="conc-sticky-bar" style="display:none"><span>You need</span><strong id="conc-sticky">—</strong></div>
+
+<div class="ad-slot" data-ad-slot="in-content"><!-- Future AdSense slot - code goes here when approved --></div>
+
+    <h2>All the calculators</h2>
+    <div class="table-scroll"><table>
+      <tr><th>Calculator</th><th>What it answers</th></tr>
+      <tr><td><a href="concrete.html">Concrete calculator</a></td><td>How much concrete do I need — slabs and fence post holes, in cubic yards and bags</td></tr>
+      <tr><td><a href="paint.html">Paint calculator</a></td><td>How many gallons of paint for a room, minus doors and windows, for one or two coats</td></tr>
+      <tr><td><a href="mulch.html">Mulch calculator</a></td><td>Cubic yards and bags of mulch for a bed, at any depth</td></tr>
+      <tr><td><a href="topsoil.html">Topsoil &amp; gravel calculator</a></td><td>Cubic yards and tons of topsoil, gravel, sand or mulch</td></tr>
+      <tr><td><a href="tile.html">Tile calculator</a></td><td>How many floor tiles and boxes, with 10% waste built in</td></tr>
+      <tr><td><a href="drywall.html">Drywall calculator</a></td><td>Sheets, screws, joint compound and tape for a room</td></tr>
+      <tr><td><a href="fence.html">Fence calculator</a></td><td>Posts, pickets, rails and concrete for a wood fence</td></tr>
+      <tr><td><a href="deck.html">Deck calculator</a></td><td>Decking boards, joists and screws for a wood deck</td></tr>
+    </table></div>
+
+    <h2>How to measure a project</h2>
+    <h3>Measure twice, in feet</h3>
+    <p>Every calculator on this site works in feet and inches. Measure the longest side first, then the other side, and write both down before you start typing. For a room, measure each wall at floor level — walls are rarely as square as they look, so take the biggest number if the two ends differ.</p>
+    <h3>Depth matters as much as area</h3>
+    <p>A patio is not just 10 by 10 feet — it is 10 by 10 feet <em>at 4 inches thick</em>. The same area at 6 inches takes half as much material again. The calculators ask for depth wherever it matters: concrete thickness, mulch depth, topsoil depth.</p>
+    <h3>Always add a little extra</h3>
+    <p>Every calculator here adds a waste allowance by default — usually 10%. It covers spillage, uneven ground, cut-offs and the odd mistake. Running out halfway through a pour or a paint job costs far more than one extra bag or gallon.</p>
+    <h3>When the numbers get big, call a truck</h3>
+    <p>Once a concrete job passes about one cubic yard — 45 bags of 80 lb mix — ready-mix delivered by truck is usually cheaper and far less work than mixing bags by hand. The concrete calculator tells you when you have crossed that line.</p>
+
+    <p class="note">These calculators are estimates for planning only. They are not professional advice, and a supplier's own figures win over anything here. Confirm quantities with your supplier before you order, and check your local building code before you build anything structural.</p>
+
+  </div>
+</main>
+
+<div class="ad-slot" data-ad-slot="footer"><!-- Future AdSense slot - code goes here when approved --></div>
+
+<footer class="site">
+  <div class="wrap">
+    <nav aria-label="Footer navigation">
+      <a href="index.html">Calculators</a>
+      <a href="concrete.html">Concrete</a>
+      <a href="paint.html">Paint</a>
+      <a href="mulch.html">Mulch</a>
+      <a href="topsoil.html">Topsoil & Gravel</a>
+      <a href="tile.html">Tile</a>
+      <a href="drywall.html">Drywall</a>
+      <a href="fence.html">Fence</a>
+      <a href="deck.html">Deck</a>
+      <a href="about.html">About</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <p>Home &amp; Garden Calculators — an educational calculator site, not professional advice. Figures verified November 2026; prices and local rules change, so confirm them with your supplier or contractor before you buy.</p>
+  </div>
+</footer>
+</body>
+</html>

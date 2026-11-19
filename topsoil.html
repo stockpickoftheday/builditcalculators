@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Topsoil Calculator & Gravel Calculator — Yards, Tons & Bags</title>
+<meta name="description" content="Topsoil calculator and gravel calculator: cubic yards and tons of topsoil, gravel, sand or mulch for any area and depth.">
+<link rel="stylesheet" href="style.css">
+<script src="calculator.js" defer></script>
+</head>
+<body>
+<header class="site">
+  <div class="wrap">
+    <p class="site-title"><a href="index.html">Home &amp; Garden Calculators</a></p>
+    <p class="tagline">Plain-English calculators for American homeowners. No sign-up, no sales pitch.</p>
+    <nav class="main" aria-label="Main navigation">
+      <a href="index.html">Calculators</a>
+      <a href="concrete.html">Concrete</a>
+      <a href="paint.html">Paint</a>
+      <a href="mulch.html">Mulch</a>
+      <a href="topsoil.html" class="current">Topsoil & Gravel</a>
+      <a href="tile.html">Tile</a>
+      <a href="drywall.html">Drywall</a>
+      <a href="fence.html">Fence</a>
+      <a href="deck.html">Deck</a>
+      <a href="about.html">About</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<div class="ad-slot" data-ad-slot="leaderboard"><!-- Future AdSense slot - code goes here when approved --></div>
+
+<main>
+  <div class="wrap">
+
+    <section class="page-hero">
+      <p class="eyebrow">Topsoil &amp; gravel calculator</p>
+      <h1>How much topsoil or gravel do I need?</h1>
+      <p class="lede">Same maths as mulch — area times depth — but these materials are sold by weight too, so the calculator gives you cubic yards <em>and</em> tons. A yard of topsoil weighs about a ton; a yard of gravel weighs about 1.4 tons.</p>
+    </section>
+
+    <div class="calc-layout">
+      <section class="calc-box" id="calculator" aria-label="Topsoil and gravel calculator">
+        <h2>Your area</h2>
+        <p class="sub">Fill in your numbers — the answer updates as you type.</p>
+        <div class="field-row">
+          <div class="field">
+            <label for="top-length">Length (feet)</label>
+            <input type="number" id="top-length" value="10" min="0" step="0.5" inputmode="decimal">
+          </div>
+          <div class="field">
+            <label for="top-width">Width (feet)</label>
+            <input type="number" id="top-width" value="10" min="0" step="0.5" inputmode="decimal">
+          </div>
+        </div>
+        <div class="field-row">
+          <div class="field">
+            <label for="top-depth">Depth (inches)</label>
+            <input type="number" id="top-depth" value="6" min="0" step="0.5" inputmode="decimal">
+            <span class="hint">6 inches is a good depth for a new lawn or garden bed.</span>
+          </div>
+          <div class="field">
+            <label for="top-material">Material</label>
+            <select id="top-material">
+              <option value="topsoil" selected>Topsoil</option>
+              <option value="gravel">Gravel / crushed stone</option>
+              <option value="sand">Sand</option>
+              <option value="mulch">Mulch</option>
+            </select>
+          </div>
+        </div>
+      </section>
+
+      <div class="results-col">
+        <div class="results" id="results">
+          <p class="big-label">You need</p>
+          <p class="big" id="top-big">—</p>
+          <p class="big-sub" id="top-area">—</p>
+          <dl>
+            <div class="row">
+              <dt>Weight</dt>
+              <dd id="top-weight">—</dd>
+            </div>
+            <div class="row">
+              <dt>Cubic feet</dt>
+              <dd id="top-cuft">—</dd>
+            </div>
+          </dl>
+        </div>
+      </div>
+    </div>
+
+    <div class="sticky-bar" id="top-sticky-bar" style="display:none"><span>You need</span><strong id="top-sticky">—</strong></div>
+
+<div class="ad-slot" data-ad-slot="in-content"><!-- Future AdSense slot - code goes here when approved --></div>
+
+    <section class="example" aria-label="Worked example">
+      <h3>Worked example — see the maths</h3>
+      <dl>
+        <dt>A 10 by 10 foot area, 6 inches deep</dt>
+        <dd>100 sq ft × 6 in ÷ 324 = <strong>1.85 cubic yards</strong> (50 cubic feet)</dd>
+        <dt>As topsoil</dt>
+        <dd>1.85 × 2,000 lb = <strong>3,704 lb — 1.85 tons</strong></dd>
+        <dt>As gravel</dt>
+        <dd>1.85 × 2,800 lb = <strong>5,185 lb — 2.59 tons</strong></dd>
+        <dt>As sand</dt>
+        <dd>1.85 × 2,700 lb = <strong>5,000 lb — 2.50 tons</strong></dd>
+        <dt>Watch your truck</dt>
+        <dd>A yard of gravel weighs about 2,800 lb — more than many half-ton pickups are rated to carry in one load</dd>
+      </dl>
+    </section>
+
+    <h2>How the maths works</h2>
+    <h3>Volume first, weight second</h3>
+    <p>Volume is the same for every material: area in square feet times depth in inches, divided by 324, gives cubic yards. Then weight is cubic yards times the material's weight per yard. That is where materials differ — a yard of mulch weighs about 500 lb, a yard of gravel about 2,800 lb.</p>
+    <h3>Weight per cubic yard (dry, planning figures)</h3>
+    <div class="table-scroll"><table>
+      <tr><th>Material</th><th class="num">Pounds per yard</th><th class="num">Tons per yard</th></tr>
+      <tr><td>Topsoil</td><td class="num">about 2,000</td><td class="num">1.00</td></tr>
+      <tr><td>Gravel / crushed stone</td><td class="num">about 2,800</td><td class="num">1.40</td></tr>
+      <tr><td>Sand (dry)</td><td class="num">about 2,700</td><td class="num">1.35</td></tr>
+      <tr><td>Mulch</td><td class="num">about 500</td><td class="num">0.25</td></tr>
+    </table></div>
+    <p>Wet material weighs more — wet topsoil can reach 2,800 to 3,200 lb per yard. If you are ordering by the ton or hauling it yourself, ask your supplier what their material weighs. Their scale ticket wins over any calculator.</p>
+    <h3>How deep?</h3>
+    <p>Six inches of topsoil is a good depth for a new lawn or a garden bed. For top-dressing an existing lawn, 1 to 2 inches is enough. For a gravel driveway or path, 3 to 4 inches of compacted gravel holds up well.</p>
+
+    <p class="note">Figures verified November 2026 against The Calculator Site, US Army FM 5-434 material weights and several yard calculators. Weights are dry planning figures and vary with moisture and compaction. This page is an estimate for planning only.</p>
+
+  </div>
+</main>
+
+<div class="ad-slot" data-ad-slot="footer"><!-- Future AdSense slot - code goes here when approved --></div>
+
+<footer class="site">
+  <div class="wrap">
+    <nav aria-label="Footer navigation">
+      <a href="index.html">Calculators</a>
+      <a href="concrete.html">Concrete</a>
+      <a href="paint.html">Paint</a>
+      <a href="mulch.html">Mulch</a>
+      <a href="topsoil.html">Topsoil & Gravel</a>
+      <a href="tile.html">Tile</a>
+      <a href="drywall.html">Drywall</a>
+      <a href="fence.html">Fence</a>
+      <a href="deck.html">Deck</a>
+      <a href="about.html">About</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <p>Home &amp; Garden Calculators — an educational calculator site, not professional advice. Figures verified November 2026; prices and local rules change, so confirm them with your supplier or contractor before you buy.</p>
+  </div>
+</footer>
+</body>
+</html>
