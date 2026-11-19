@@ -1,0 +1,1052 @@
+# Home & Garden Calculators — full site text
+
+## Free Home & Garden Calculators — Concrete, Mulch, Paint, Tile & More (https://builditcalculators.com/)
+
+United States · Imperial units — feet, gallons, cubic yards
+
+# Home and garden calculators that speak plain English
+
+How much concrete do I need? How many gallons of paint? How many bags of mulch? Type in your measurements and get the answer in seconds — with the maths shown, so you can check it yourself. Everything runs in your browser. Nothing you type is sent anywhere.
+
+ - ✓ No sign-up
+
+ - ✓ Nothing leaves your browser
+
+ - ✓ 8 calculators
+
+## Featured: how much concrete do I need?
+
+The question we hear most. A 10 by 10 foot patio slab, 4 inches thick, takes about 1.36 cubic yards — 62 bags of 80 lb mix. Try your own numbers.
+
+ Slab length (feet) 
+
+ Slab width (feet) 
+
+ Thickness (inches) 
+
+ 4 inches is standard for a patio or walkway; 6 inches for a driveway. 
+
+ Extra for waste (%) 
+
+ 10% covers spillage and uneven ground. 
+
+ Open the full concrete calculator — fence post holes included 
+
+You need
+
+—
+
+—
+
+ Before waste 
+ — 
+
+ 80 lb bags 
+ — 
+
+ 60 lb bags 
+ — 
+
+ 40 lb bags 
+ — 
+
+ You need — 
+
+## All the calculators
+
+Calculator | What it answers | 
+
+ Concrete calculator | How much concrete do I need — slabs and fence post holes, in cubic yards and bags | 
+
+ Paint calculator | How many gallons of paint for a room, minus doors and windows, for one or two coats | 
+
+ Mulch calculator | Cubic yards and bags of mulch for a bed, at any depth | 
+
+ Topsoil & gravel calculator | Cubic yards and tons of topsoil, gravel, sand or mulch | 
+
+ Tile calculator | How many floor tiles and boxes, with 10% waste built in | 
+
+ Drywall calculator | Sheets, screws, joint compound and tape for a room | 
+
+ Fence calculator | Posts, pickets, rails and concrete for a wood fence | 
+
+ Deck calculator | Decking boards, joists and screws for a wood deck | 
+
+## How to measure a project
+
+### Measure twice, in feet
+
+Every calculator on this site works in feet and inches. Measure the longest side first, then the other side, and write both down before you start typing. For a room, measure each wall at floor level — walls are rarely as square as they look, so take the biggest number if the two ends differ.
+
+### Depth matters as much as area
+
+A patio is not just 10 by 10 feet — it is 10 by 10 feet at 4 inches thick . The same area at 6 inches takes half as much material again. The calculators ask for depth wherever it matters: concrete thickness, mulch depth, topsoil depth.
+
+### Always add a little extra
+
+Every calculator here adds a waste allowance by default — usually 10%. It covers spillage, uneven ground, cut-offs and the odd mistake. Running out halfway through a pour or a paint job costs far more than one extra bag or gallon.
+
+### When the numbers get big, call a truck
+
+Once a concrete job passes about one cubic yard — 45 bags of 80 lb mix — ready-mix delivered by truck is usually cheaper and far less work than mixing bags by hand. The concrete calculator tells you when you have crossed that line.
+
+These calculators are estimates for planning only. They are not professional advice, and a supplier's own figures win over anything here. Confirm quantities with your supplier before you order, and check your local building code before you build anything structural.
+
+
+## Concrete Calculator — How Much Concrete Do I Need? (Yards & Bags) (https://builditcalculators.com/concrete.html)
+
+Concrete calculator
+
+# How much concrete do I need?
+
+For a slab, multiply length by width by thickness — then divide by 27 to get cubic yards. For fence post holes, work out one hole and multiply. The calculator does both, and tells you how many bags to buy.
+
+## Your project
+
+Fill in your numbers — the answer updates as you type.
+
+ What are you pouring? 
+
+ A slab (patio, walkway, driveway) 
+ Fence post holes 
+
+ Length (feet) 
+
+ Width (feet) 
+
+ Thickness (inches) 
+
+ 4 inches is standard for a patio or walkway; 6 inches for a driveway. 
+
+ Extra for waste (%) 
+
+ 10% covers spillage and uneven ground. 
+
+ Hole diameter (inches) 
+
+ 10 to 12 inches is normal for a 4x4 post. 
+
+ Hole depth (inches) 
+
+ At least a third of the post goes underground, and below your frost line. 
+
+ Number of holes 
+
+You need
+
+—
+
+—
+
+ Before waste 
+ — 
+
+ 80 lb bags 
+ — 
+
+ 60 lb bags 
+ — 
+
+ 40 lb bags 
+ — 
+
+ You need — 
+
+### Worked example — see the maths
+
+ A 10 by 10 foot patio slab, 4 inches thick 
+ 1.23 cubic yards before waste 
+ With 10% waste added 
+ 1.36 cubic yards (36.67 cubic feet) 
+ 80 lb bags 
+ 62 bags — published tables say 61, because they round the yardage first; we round up so you do not run short 
+ 60 lb bags 
+ 82 bags 
+ 40 lb bags 
+ 123 bags 
+ One fence post hole, 12 inches wide and 24 inches deep 
+ 1.57 cubic feet — 3 bags of 80 lb mix 
+ Ready-mix or bags? 
+ Past about 1 cubic yard (45 bags of 80 lb mix), a truck is usually cheaper and far less work 
+
+## How the maths works
+
+### Slabs: length × width × thickness, divided by 27
+
+A cubic yard is 27 cubic feet — a cube 3 feet on every side. So a slab 10 feet by 10 feet at 4 inches thick is 10 × 10 × (4 ÷ 12) = 33.33 cubic feet, and 33.33 ÷ 27 = 1.23 cubic yards. The 10% waste allowance takes it to 1.36 cubic yards.
+
+### Bags: divide by what one bag makes
+
+Bag yields are printed on the bag and are the same across the big brands: an 80 lb bag makes 0.60 cubic feet (45 bags per yard), a 60 lb bag makes 0.45 cubic feet (60 per yard), and a 40 lb bag makes 0.30 cubic feet (90 per yard). So 36.67 cubic feet ÷ 0.60 = 61.1 — we round up to 62 bags.
+
+### Post holes: the cylinder formula
+
+A round hole is a cylinder: π × radius² × depth. A 12-inch hole, 24 inches deep, is π × 0.5² × 2 = 1.57 cubic feet. That is 3 bags of 80 lb mix per hole. The fence calculator works out the concrete for a whole fence line at once.
+
+### Common slab sizes
+
+Slab | Cubic yards (+10%) | 80 lb bags | 
+
+10 × 10 ft at 4 in | 1.36 | 62 | 
+
+12 × 12 ft at 4 in | 1.96 | 89 | 
+
+10 × 20 ft at 4 in | 2.72 | 123 | 
+
+20 × 30 ft driveway at 6 in | 12.22 | 550 | 
+
+## Types of concrete — and the temperatures they work in
+
+Not all bagged concrete is the same. The mix you pick decides how fast it sets and how strong it ends up.
+
+Type | Best for | Temperature notes | 
+
+General-purpose mix | Slabs, footings, driveways | The standard all-rounder. Works from 50 to 90°F. | 
+
+Fast-setting mix | Fence posts, small repairs | Sets in 20 to 40 minutes. Above 85°F it can set in under 10 minutes — work fast, or wait for a cool day. | 
+
+High-strength mix (5,000 PSI) | Driveways, heavy loads | Same temperature range, but needs a full 28 days to reach full strength — longer in the cold. | 
+
+Ready-mix (by truck) | Anything over about half a cubic yard | The plant adjusts the mix for hot or cold weather. The cheapest way to pour big. | 
+
+ Temperature matters more than the bag. The sweet spot is 50 to 90°F (10 to 32°C), ideally 65 to 75°F. Below 40°F the chemical reaction slows right down, and if fresh concrete freezes before it has gained strength it can be permanently damaged — keep it above 50°F for the first week, with blankets if you have to. Above 90°F it sets too fast, gets hard to work, and loses strength; above 95°F it is outside the industry standard (ACI 305) and should not be poured. Hot day? Pour early in the morning, keep the mix shaded, and have everything ready before the truck arrives.
+
+## Mixing concrete at home — in a wheelbarrow
+
+For small jobs, a wheelbarrow and a hoe beat renting a mixer. One to three 80 lb bags per batch is the working limit — a full 6 cubic foot barrow could hold more, but three bags of wet mix already weigh about 250 lb.
+
+ - Mix where you pour. A loaded barrow is too heavy to push far.
+
+ - Measure the water. About 3 quarts (0.75 gallons) per 80 lb bag. Pour about two-thirds of it into the barrow first.
+
+ - Add the dry mix. Tip the bag in rather than shaking it, to keep the dust down.
+
+ - Chop and fold with a hoe for 3 to 5 minutes until the colour is even and there are no dry pockets hiding in the corners.
+
+ - Add the last water a little at a time. Stop when a squeezed handful holds its shape. One extra quart in an 80 lb bag can cost up to 40% of the strength.
+
+ - Place it straight away. Do not add water once it starts to stiffen. Rinse the barrow before the mix sets.
+
+Wet concrete burns skin — wear gloves and eye protection, and wash off any splashes right away.
+
+## Common questions
+
+### How much concrete do I need for a 10×10 slab?
+
+1.36 cubic yards with the 10% waste allowance, or 62 bags of 80 lb mix.
+
+### How many 80 lb bags of concrete are in a cubic yard?
+
+45 bags.
+
+### Can I pour concrete when it is cold?
+
+Below 40°F the chemical reaction slows right down, and fresh concrete can be permanently damaged if it freezes. Do not pour on frozen ground, and keep the concrete above 50°F for the first week.
+
+Figures verified November 2026 against Quikrete's published bag yields and several concrete calculators. Yields vary slightly by brand — check the bag. This page is an estimate for planning only, not engineering advice; structural pours and anything governed by building codes should be sized by a qualified professional.
+
+
+## Paint Calculator — How Many Gallons of Paint Do I Need? (https://builditcalculators.com/paint.html)
+
+Paint calculator
+
+# How many gallons of paint do I need?
+
+Measure the walls, subtract the doors and windows, multiply by the number of coats, and divide by what one gallon covers. One gallon covers about 350 square feet per coat on a smooth wall.
+
+## Your room
+
+Fill in your numbers — the answer updates as you type.
+
+ Room length (feet) 
+
+ Room width (feet) 
+
+ Ceiling height (feet) 
+
+ Coats 
+
+ Two coats is the standard for an even finish. 
+
+ Doors 
+
+ Each door counts as 21 sq ft (3 × 7 ft). 
+
+ Windows 
+
+ Each window counts as 15 sq ft (3 × 5 ft). 
+
+ Include the ceiling 
+ Ceilings take about the same paint as the walls of a small room — and they are usually painted flat white. 
+
+Buy
+
+—
+
+—
+
+ Paint needed, exactly 
+ — 
+
+ Whole gallons 
+ — 
+
+ Buy — 
+
+### Worked example — see the maths
+
+ A 12 by 12 foot room, 8 foot ceilings 
+ Walls: 2 × (12 + 12) × 8 = 384 sq ft 
+ Minus 1 door and 2 windows 
+ 384 − 21 − 30 = 333 sq ft to paint 
+ Two coats 
+ 333 × 2 = 666 sq ft of painting 
+ At 350 sq ft per gallon 
+ 666 ÷ 350 = 1.90 gallons 
+ Buy 
+ 2 gallons 
+ With the ceiling too 
+ 477 sq ft to paint — 2.73 gallons, buy 3 
+
+## How the maths works
+
+### Wall area is perimeter times height
+
+Walk around the room and add up the wall lengths — that is the perimeter. Multiply by the ceiling height and you have the wall area. A 12 by 12 foot room has a 48 foot perimeter; at 8 feet high that is 384 square feet of wall.
+
+### Subtract what you do not paint
+
+Doors and windows are not painted, so take them off: a standard door is 21 square feet, a typical window is 15. It is a small correction, but on a room with three windows it saves you nearly half a gallon.
+
+### One gallon covers about 350 square feet per coat
+
+That is the safe planning number for smooth, previously painted drywall. The label may say 400, but that assumes perfect conditions and a professional roller. Textured walls take more — plan for 250 to 300 square feet per gallon — and bare drywall drinks paint, so prime it first.
+
+### Two coats, not one
+
+Almost every interior job needs two coats for an even color. The only exception is repainting the same color on paint that is already in good shape. Buy the second coat now — matching the color later is harder than it sounds.
+
+## Paint grades — what the extra money buys
+
+Paint comes in three quality grades, and the price gap is bigger than it looks. The dearer paint usually covers better, so it needs fewer coats — which is where it pays for itself.
+
+Grade | Price per gallon | Coverage | Lasts | Best for | 
+
+Contractor / economy | $15–$28 | 200–300 sq ft | 2–4 years | Rentals, quick flips | 
+
+Mid-grade | $28–$45 | 350–400 sq ft | 5–10 years | Most homes | 
+
+Premium | $45–$80 | 400+ sq ft | 10–15+ years | A home you plan to stay in | 
+
+The difference is what is in the can: premium paint has more titanium dioxide (the white pigment that hides the old colour) and better acrylic binders, so it usually covers in two coats where economy paint takes three or four. On a whole house that can make the dearer paint cheaper per job, not dearer.
+
+### Water-based or oil-based?
+
+For about 95% of jobs, water-based latex paint is the right choice — it dries fast, has little smell, and cleans up with soap and water. Look for 100% acrylic on the label for exterior work: it flexes with temperature changes and resists moisture and sun. Oil-based (alkyd) paint is now mostly for trim, cabinets and metal, where its hard finish earns its keep — it smells strong, dries slowly and needs solvents to clean up.
+
+### Finishes, from flat to gloss
+
+Flat hides wall bumps best but marks easily and is hard to wash — good for ceilings and low-traffic rooms. Eggshell and satin are the middle ground: washable enough for living rooms, kitchens and hallways. Semi-gloss and high-gloss are the toughest and easiest to clean, so they suit doors, trim and bathrooms — but their shine shows every bump, so the surface underneath has to be smooth.
+
+## Common questions
+
+### How much paint do I need for a 12×12 room?
+
+The walls are 384 square feet, and one gallon covers about 350 square feet per coat — so about 2¼ gallons for two coats. Buy 3 gallons to be safe.
+
+### How many coats of paint do I need?
+
+Two, for almost every interior job. One coat rarely covers evenly.
+
+### Is expensive paint worth it?
+
+Usually yes. Premium paint covers in two coats where economy paint takes three or four, and lasts 10–15 years instead of 2–4.
+
+Figures verified November 2026 against manufacturer data sheets (Benjamin Moore, Sherwin-Williams, Behr) and several paint calculators. Coverage varies by brand, surface and color — the number on your can wins. This page is an estimate for planning only.
+
+
+## Mulch Calculator — How Much Mulch Do I Need? (Yards & Bags) (https://builditcalculators.com/mulch.html)
+
+Mulch calculator
+
+# How much mulch do I need?
+
+Multiply your bed's area by the depth, and you have the volume. One cubic yard covers 108 square feet at 3 inches deep — the standard depth for a planting bed.
+
+## Your bed
+
+Fill in your numbers — the answer updates as you type.
+
+ Bed length (feet) 
+
+ Bed width (feet) 
+
+ Depth (inches) 
+
+ 2 to 3 inches for most beds; 4 inches for a deep barrier around trees. 
+
+ Bag size 
+
+ 2 cu ft bags (most common) 
+ 1.5 cu ft bags 
+ 3 cu ft bags 
+
+You need
+
+—
+
+—
+
+ Cubic feet 
+ — 
+
+ Bags 
+ — 
+
+ You need — 
+
+### Worked example — see the maths
+
+ A 10 by 20 foot bed, 3 inches deep 
+ 200 sq ft × 3 in ÷ 324 = 1.85 cubic yards 
+ In 2 cu ft bags 
+ 1.85 × 13.5 = 25 bags 
+ A 10 by 10 foot bed, 3 inches deep 
+ 0.93 cubic yards — 13 bags (rounds up to 1 yard) 
+ One cubic yard covers 
+ 108 sq ft at 3 in , 162 sq ft at 2 in, 81 sq ft at 4 in 
+
+## How the maths works
+
+### Cubic yards = area × depth ÷ 324
+
+That is the shortcut from the Texas A&M AgriLife Extension: square feet times depth in inches, divided by 324, gives cubic yards. It works because one cubic yard is 27 cubic feet, and 27 × 12 = 324.
+
+### How deep should mulch be?
+
+Two to three inches is right for most flower and shrub beds — enough to hold moisture and block weeds, thin enough that the soil underneath can still breathe. Four inches is for a deep barrier around trees. More than 4 inches can suffocate roots, so do not overdo it.
+
+### Bags or bulk?
+
+One cubic yard is 13.5 bags of 2 cubic feet. For a small bed, bags are easy to carry and store. For anything over about 2 cubic yards, bulk delivery is usually much cheaper per yard — and far less plastic to throw away.
+
+## Types of mulch — which one for your climate
+
+Mulch comes in two families. Organic mulch is made from things that were once alive — bark, wood chips, straw, shredded leaves, compost, pine needles. It breaks down over time and feeds the soil, but you have to top it up every year or two. Inorganic mulch never breaks down — gravel, river rock, rubber chips, landscape fabric. It lasts for years but feeds the soil nothing.
+
+Most of the bagged mulch in a garden centre is shredded bark or wood — usually pine, cedar or hardwood bark.
+
+Climate | Best pick | Why | 
+
+Hot and dry | Light-coloured bark or straw, 3 to 4 in deep | Holds moisture and keeps roots cool. Gravel can get hot enough to scorch roots. | 
+
+Wet and humid | Coarse bark nuggets | Lets air through. Fine mulch stays soggy and breeds mould and slugs. | 
+
+Cold winters | Thick straw or coarse wood chips | Insulates roots and stops the soil heaving as it freezes and thaws. | 
+
+Windy or steep slopes | Heavy wood chips, or gravel | Light straw just blows away. | 
+
+Whatever the climate, keep mulch 2 to 3 inches deep and an inch or two away from plant stems — piled against a trunk it holds moisture and rots the bark.
+
+## Common questions
+
+### How much mulch do I need for a 100 sq ft bed?
+
+At 3 inches deep, about 0.93 cubic yards — around 13 bags of 2 cubic feet.
+
+### How deep should mulch be?
+
+Two to three inches for most flower and shrub beds, four inches around trees. More than 4 inches can suffocate roots.
+
+### What mulch is best for a hot, dry garden?
+
+Light-coloured bark or straw, 3 to 4 inches deep. It holds moisture and keeps roots cool; gravel can get hot enough to scorch roots.
+
+Figures verified November 2026 against Texas A&M AgriLife Extension and several mulch calculators. Bag sizes and coverage vary by brand — check the label. This page is an estimate for planning only.
+
+
+## Topsoil Calculator & Gravel Calculator — Yards, Tons & Bags (https://builditcalculators.com/topsoil.html)
+
+Topsoil & gravel calculator
+
+# How much topsoil or gravel do I need?
+
+Same maths as mulch — area times depth — but these materials are sold by weight too, so the calculator gives you cubic yards and tons. A yard of topsoil weighs about a ton; a yard of gravel weighs about 1.4 tons.
+
+## Your area
+
+Fill in your numbers — the answer updates as you type.
+
+ Length (feet) 
+
+ Width (feet) 
+
+ Depth (inches) 
+
+ 6 inches is a good depth for a new lawn or garden bed. 
+
+ Material 
+
+ Topsoil 
+ Gravel / crushed stone 
+ Sand 
+ Mulch 
+
+You need
+
+—
+
+—
+
+ Weight 
+ — 
+
+ Cubic feet 
+ — 
+
+ You need — 
+
+### Worked example — see the maths
+
+ A 10 by 10 foot area, 6 inches deep 
+ 100 sq ft × 6 in ÷ 324 = 1.85 cubic yards (50 cubic feet) 
+ As topsoil 
+ 1.85 × 2,000 lb = 3,704 lb — 1.85 tons 
+ As gravel 
+ 1.85 × 2,800 lb = 5,185 lb — 2.59 tons 
+ As sand 
+ 1.85 × 2,700 lb = 5,000 lb — 2.50 tons 
+ Watch your truck 
+ A yard of gravel weighs about 2,800 lb — more than many half-ton pickups are rated to carry in one load 
+
+## How the maths works
+
+### Volume first, weight second
+
+Volume is the same for every material: area in square feet times depth in inches, divided by 324, gives cubic yards. Then weight is cubic yards times the material's weight per yard. That is where materials differ — a yard of mulch weighs about 500 lb, a yard of gravel about 2,800 lb.
+
+### Weight per cubic yard (dry, planning figures)
+
+Material | Pounds per yard | Tons per yard | 
+
+Topsoil | about 2,000 | 1.00 | 
+
+Gravel / crushed stone | about 2,800 | 1.40 | 
+
+Sand (dry) | about 2,700 | 1.35 | 
+
+Mulch | about 500 | 0.25 | 
+
+Wet material weighs more — wet topsoil can reach 2,800 to 3,200 lb per yard. If you are ordering by the ton or hauling it yourself, ask your supplier what their material weighs. Their scale ticket wins over any calculator.
+
+### How deep?
+
+Six inches of topsoil is a good depth for a new lawn or a garden bed. For top-dressing an existing lawn, 1 to 2 inches is enough. For a gravel driveway or path, 3 to 4 inches of compacted gravel holds up well.
+
+## Three grades of gravel — and what each costs
+
+Gravel is sold by the ton, and the grade decides both the price and the job it suits. Prices are per ton delivered, typical US prices for 2026 — they vary a lot by region, and delivery often adds $50 to $150 a trip.
+
+Grade | Size | Best for | Price per ton | 
+
+Crusher run / road base (#21A) | ¾ in down to dust | Driveway base — the fines compact into a hard surface | $20–$40 | 
+
+#57 crushed stone | ¾ in, angular edges | Drainage, driveways, concrete mix | $25–$50 | 
+
+Pea gravel | ⅜ in, rounded | Paths, patios, decoration — smooth underfoot | $30–$60 | 
+
+Crusher run is the cheapest because it is just crushed rock with the dust left in — and that dust is exactly what makes it lock together. Pea gravel costs the most because it is screened, washed and rounded. Do not use pea gravel for a driveway: the round stones never lock together, so they shift under tires. One ton is roughly 0.7 cubic yards, so the calculator's cubic yards times 1.4 gives you the tons to order.
+
+## Types of topsoil — and which plants each suits
+
+"Topsoil" on a delivery ticket can mean several different soils. What it is made of decides what will grow well in it.
+
+Soil type | What it is like | Best plants | 
+
+Loam | A balanced mix of sand, silt and clay — the gardener's favourite | Almost everything: most vegetables, lawns, roses, shrubs | 
+
+Sandy | Drains fast, warms up early, low in nutrients | Carrots, radishes, potatoes, rosemary, thyme, lavender | 
+
+Clay | Heavy and sticky, rich in nutrients, holds water | Cabbage, broccoli, kale, beans, roses, hydrangeas | 
+
+Silty | Smooth and fertile, holds moisture well | Tomatoes, peppers, leafy greens, peonies, hostas | 
+
+Peaty (acidic) | Dark, spongy, low pH (4.5–5.5) | Blueberries, rhododendrons, azaleas, camellias, heather | 
+
+Chalky (alkaline) | Pale, free-draining, high pH (7.5–8.5) | Lavender, clematis, lilac, spinach, cabbage, kale | 
+
+If you are buying topsoil for a vegetable garden, ask for screened loam with compost mixed in — that is the safest all-rounder. And if you want blueberries, do not plant them in ordinary topsoil: they need acidic soil, and in heavy clay they will barely fruit. Mix in peat or use an ericaceous (acid-loving) compost instead.
+
+## Common questions
+
+### How many tons of gravel are in a cubic yard?
+
+About 1.4 tons.
+
+### Which gravel is cheapest?
+
+Crusher run (road base), about $20–$40 a ton delivered. Pea gravel costs the most, about $30–$60 a ton.
+
+### What soil is best for vegetables?
+
+Screened loam with compost mixed in. Blueberries are the exception — they need acidic soil, not ordinary topsoil.
+
+Figures verified November 2026 against The Calculator Site, US Army FM 5-434 material weights and several yard calculators. Weights are dry planning figures and vary with moisture and compaction. This page is an estimate for planning only.
+
+
+## Tile Calculator — How Many Floor Tiles & Boxes Do I Need? (https://builditcalculators.com/tile.html)
+
+Tile calculator
+
+# How many floor tiles do I need?
+
+Divide your floor area by one tile's area, then add 10% for cuts and breakage. A 10 by 12 foot room takes 120 twelve-inch tiles — 132 with waste — which is 14 boxes of 10.
+
+## Your floor
+
+Fill in your numbers — the answer updates as you type.
+
+ Room length (feet) 
+
+ Room width (feet) 
+
+ Tile width (inches) 
+
+ Tile length (inches) 
+
+ 12 × 12 is the common square tile; 12 × 24 is the popular plank size. 
+
+ Extra for waste (%) 
+
+ 10% for straight rows; 15% for diagonal patterns or rooms with lots of corners. 
+
+ Tiles per box 
+
+ Printed on the box — check it before you buy. 
+
+Buy
+
+—
+
+—
+
+ Tiles, with waste 
+ — 
+
+ Tiles before waste 
+ — 
+
+ Buy — 
+
+### Worked example — see the maths
+
+ A 10 by 12 foot room 
+ 120 sq ft of floor 
+ 12 × 12 inch tiles (1 sq ft each) 
+ 120 tiles before waste 
+ With 10% waste 
+ 132 tiles 
+ Boxes of 10 
+ 14 boxes 
+ Same room, 12 × 24 inch tiles (2 sq ft each) 
+ 60 tiles — 66 with waste — 7 boxes 
+ Same room, 6 × 6 inch tiles 
+ 480 tiles before waste 
+
+## How the maths works
+
+### One tile's area, then divide
+
+A 12 by 12 inch tile covers 1 square foot. A 12 by 24 inch tile covers 2. Divide your floor area by one tile's area and you have the tile count before waste. The calculator does the inches-to-feet conversion for you — just type the tile size in inches.
+
+### Always add waste
+
+Tiles get cut at the edges, around door frames and around pipes, and a few always break. Ten percent is the standard allowance for straight rows. Go to 15% for diagonal patterns, herringbone, or rooms with lots of corners and angles.
+
+### Buy a spare box
+
+Tile dye lots change between batches, and a box from a different lot can look slightly off. Buying one spare box now — same lot, same color — is far easier than hunting for a match in two years when one tile cracks.
+
+## Common questions
+
+### How many tiles do I need?
+
+Divide the floor area by one tile's area — a 12×12 inch tile covers 1 square foot — then add 10% waste.
+
+### How much extra tile should I buy?
+
+10% for straight rows, 15% for diagonal patterns, herringbone, or rooms with lots of corners.
+
+### Should I buy a spare box of tile?
+
+Yes. Tile dye lots change between batches, and a matching box is hard to find later when one tile cracks.
+
+Figures verified November 2026. Tile coverage varies by brand and by grout joint width — the box label wins. This page is an estimate for planning only.
+
+
+## Drywall Calculator — Sheets, Screws, Mud & Tape (https://builditcalculators.com/drywall.html)
+
+Drywall calculator
+
+# How much drywall do I need?
+
+A 4 by 8 foot sheet covers 32 square feet. Divide your wall and ceiling area by 32, add 10% for cuts, and you have the sheet count — plus the screws, joint compound and tape to finish the job.
+
+## Your room
+
+Fill in your numbers — the answer updates as you type.
+
+ Room length (feet) 
+
+ Room width (feet) 
+
+ Ceiling height (feet) 
+
+ Sheet size 
+
+ 4 × 8 ft (32 sq ft) 
+ 4 × 10 ft (40 sq ft) 
+ 4 × 12 ft (48 sq ft) 
+
+ Bigger sheets mean fewer joints on long walls, but they are heavy — a 4 × 12 sheet takes two people. 
+
+ Doors 
+
+ Each door counts as 21 sq ft (3 × 7 ft). 
+
+ Windows 
+
+ Each window counts as 15 sq ft (3 × 5 ft). 
+
+ Extra for waste (%) 
+
+ Include the ceiling 
+
+You need
+
+—
+
+—
+
+ Screws 
+ — 
+
+ Joint compound 
+ — 
+
+ Joint tape 
+ — 
+
+ You need — 
+
+### Worked example — see the maths
+
+ A 12 by 12 foot room, 8 foot ceilings 
+ Walls 384 sq ft − 51 sq ft of openings = 333 sq ft 
+ Plus the ceiling 
+ 333 + 144 = 477 sq ft of board 
+ 4 × 8 sheets (32 sq ft each), 10% waste 
+ 477 × 1.10 ÷ 32 = 17 sheets 
+ Screws (32 per sheet) 
+ 544 screws 
+ Joint compound (1 gallon per 100 sq ft) 
+ 5 gallons 
+ Paper tape (0.37 ft per sq ft) 
+ 176 feet 
+
+## How the maths works
+
+### Sheets: area divided by 32, plus waste
+
+Wall area is the room's perimeter times its height, minus doors and windows. Add the ceiling if you are boarding it too. Divide by the sheet size — 32 square feet for a 4 by 8 — and add 10% for cuts around outlets, corners and angles.
+
+### Finishing materials come per sheet
+
+The estimating guides from the gypsum manufacturers work out to about the same numbers on every calculator: 32 screws per wall sheet (about one per square foot), 1 gallon of joint compound per 100 square feet for a three-coat finish, and 0.37 feet of paper tape per square foot of board. Ceilings take about half again as many screws as walls, because gravity is working against the board.
+
+### One pound of screws goes a long way
+
+A 1 lb box of 1¼ inch drywall screws holds roughly 200 screws — about 6 sheets' worth. A 5 lb box covers about 30 sheets. Buy screws by the box, not by the handful.
+
+## Common questions
+
+### How many drywall sheets do I need for a room?
+
+Take the wall area (perimeter times height, minus doors and windows), divide by 32 square feet per 4×8 sheet, and add 10% for cuts.
+
+### How many screws per sheet of drywall?
+
+About 32 per wall sheet. Ceilings take about half again as many, because gravity works against the board.
+
+### How much joint compound do I need?
+
+About 1 gallon per 100 square feet for a three-coat finish.
+
+Figures verified November 2026 against USG's installation guide, the Gypsum Construction Handbook and several drywall calculators. Actual amounts vary with framing spacing and finish level — confirm with your supplier. This page is an estimate for planning only.
+
+
+## Fence Calculator — Posts, Pickets, Rails & Concrete (https://builditcalculators.com/fence.html)
+
+Fence calculator
+
+# How much fencing do I need?
+
+Posts every 8 feet, pickets 5.5 inches wide, 2 to 3 rails per section, and one bag of concrete per post. Type in your fence length and height and get the whole materials list.
+
+## Your fence
+
+Fill in your numbers — the answer updates as you type.
+
+ Fence length (feet) 
+
+ Fence height (feet) 
+
+ Check your local height limit — 6 feet is the usual maximum for a backyard fence. 
+
+ Post spacing 
+
+ 8 ft — standard 
+ 6 ft — stronger, for wind or heavy boards 
+
+ 8 feet matches 8 ft rail stock exactly, so there is no cutting waste. 
+
+ Picket width 
+
+ 1×6 pickets (actually 5.5 in wide) 
+ 1×4 pickets (actually 3.5 in wide) 
+
+ A "6 inch" picket is never 6 inches wide — it is milled to 5.5. 
+
+ Gap between pickets (inches) 
+
+ 0 for a solid privacy fence; about 2.5 inches for a classic spaced picket look. 
+
+ Extra for waste (%) 
+
+You need
+
+—
+
+—
+
+ Pickets 
+ — 
+
+ Rails 
+ — 
+
+ Concrete 
+ — 
+
+ You need — 
+
+### Worked example — see the maths
+
+ 100 feet of 6 foot privacy fence, 8 ft post spacing 
+ 13 sections — and 14 posts (sections plus one for the end) 
+ Pickets, 5.5 in wide, no gap, 10% waste 
+ 241 pickets (2.2 per foot before waste) 
+ Rails (3 per section for a 6 ft fence) 
+ 39 rails — 8 ft 2×4s 
+ Concrete (one 80 lb bag per post) 
+ 14 bags 
+ Same fence at 6 ft spacing 
+ 17 sections, 18 posts — four extra holes, but a fence that handles wind better 
+
+## How the maths works
+
+### Posts: length divided by spacing, plus one
+
+Eight feet on center is the standard — it matches 8 foot rail stock with no waste, and it is the practical maximum for a wood fence. Drop to 6 feet in exposed positions, with heavy solid boards, or on soft ground. Whatever the spacing, add one post at the end: it is the post everyone forgets.
+
+### Pickets: 2.2 per foot, not 2
+
+This is the mistake that leaves people short. A nominal 1×6 picket is actually 5.5 inches wide, so 12 ÷ 5.5 = 2.2 pickets per foot. Dividing by 6 inches instead gives 200 pickets for a 100 foot fence — 19 short of the 219 you actually need.
+
+### Rails: 2, 3 or 4 per section
+
+Fences under 5 feet tall need 2 rails per section. Five to 7 feet — the common 6 foot privacy fence — needs 3. An 8 foot fence needs 4, and 6×6 posts instead of 4×4.
+
+### Concrete: one bag per post
+
+For a 4×4 post in a 10 to 12 inch hole, 24 inches deep, one 80 lb bag is the usual rule. Use the concrete calculator if your holes are a different size — it works out post holes exactly.
+
+## Common questions
+
+### How many fence posts do I need?
+
+Divide the fence length by the post spacing — usually 8 feet — then add one post at the end.
+
+### How many pickets do I need for a 100 ft fence?
+
+219, with 1×6 pickets. They are really 5.5 inches wide, so it is 2.2 pickets per foot, not 2.
+
+### How much concrete per fence post?
+
+One 80 lb bag, for a 4×4 post in a 10 to 12 inch hole, 24 inches deep.
+
+Figures verified November 2026 against several fence calculators and lumber guides. Post depth should be at least a third of the post's height and below your local frost line. Check your property line and local rules before you dig — call 811 first. This page is an estimate for planning only.
+
+
+## Deck Calculator — Decking Boards, Joists & Screws (https://builditcalculators.com/deck.html)
+
+Deck calculator
+
+# How much decking do I need?
+
+A 5.5 inch wide deck board covers about 5⅝ inches of deck once you leave a small gap — so one square foot of deck takes about 2.13 linear feet of board. A 12 by 16 foot deck needs about 410 linear feet of decking.
+
+## Your deck
+
+Fill in your numbers — the answer updates as you type.
+
+ Deck length (feet) 
+
+ Deck width (feet) 
+
+ Deck board width 
+
+ 5/4×6 boards (actually 5.5 in wide) 
+ 2×4 boards (actually 3.5 in wide) 
+
+ Gap between boards (inches) 
+
+ ⅛ inch is standard — it lets rain through and gives boards room to swell. 
+
+ Joist spacing (inches) 
+
+ 16 in on center — standard 
+ 12 in on center — stiffer, for diagonal boards 
+
+You need
+
+—
+
+—
+
+ Joists 
+ — 
+
+ Screws 
+ — 
+
+ You need — 
+
+### Worked example — see the maths
+
+ A 12 by 16 foot deck 
+ 192 sq ft 
+ Decking, 5.5 in boards with a ⅛ in gap 
+ 192 × 12 ÷ 5.625 = 410 linear feet 
+ Joists at 16 in on center 
+ 13 joists , 12 feet long each (156 linear feet) 
+ Screws (about 3.5 per sq ft) 
+ 672 screws 
+ A 10 by 10 foot deck 
+ 100 sq ft — 213 linear feet of decking 
+
+## How the maths works
+
+### Board coverage: width plus gap
+
+Each board covers its own width plus the gap beside it. A 5.5 inch board with a ⅛ inch gap covers 5.625 inches, so one square foot of deck takes 12 ÷ 5.625 = 2.13 linear feet of board. Narrower boards take more: a 3.5 inch board with the same gap needs 3.3 linear feet per square foot.
+
+### Joists: one every 16 inches, plus one
+
+Joists run under the decking every 16 inches on center — that is the standard for 5/4 decking. Count them the same way as fence posts: length divided by spacing, plus one at the end. For a 16 foot deck that is 13 joists.
+
+### Screws: two per board at every joist
+
+Each deck board gets two screws where it crosses each joist. That works out to about 350 screws per 100 square feet of deck — 3.5 per square foot. Buy stainless or coated deck screws; ordinary screws rust and stain the wood.
+
+### Do not forget the frame
+
+This calculator covers decking, joists and screws. A real deck also needs beams, posts, footings, ledger board, flashing and railing. Footings and posts depend on your local frost depth and building code — check both before you build.
+
+## Common questions
+
+### How many deck screws do I need?
+
+About 350 screws per 100 square feet of deck — two per board at every joist.
+
+### How far apart should deck joists be?
+
+16 inches on center, which is the standard for 5/4 decking.
+
+### How many boards do I need for a deck?
+
+It depends on board width. A 5.5 inch board with a ⅛ inch gap covers 5.625 inches, so one square foot of deck takes 2.13 linear feet of board.
+
+Figures verified November 2026 against lumber guides and several deck calculators. Board widths are actual milled sizes, not nominal labels. This page is an estimate for planning only, not structural advice — decks are governed by local building codes.
+
+
+## About — Home & Garden Calculators (https://builditcalculators.com/about.html)
+
+# About Home & Garden Calculators
+
+Eight free calculators for American homeowners — concrete, paint, mulch, topsoil and gravel, tile, drywall, fence and deck. Type in your measurements, get the answer in seconds, and see the maths so you can check it yourself.
+
+## What this site is
+
+Every calculator on this site answers one question: how much material do I need? We use US units — feet, inches, gallons, cubic yards, pounds — and plain English, no jargon. Every formula is shown on the page, with a worked example using real numbers, so you can follow the maths yourself.
+
+## What it is not
+
+It is not professional advice. The numbers are estimates for planning: good enough to order materials and budget a job, not a substitute for a contractor, an engineer, or your local building code. Prices and local rules change — confirm them with your supplier before you buy.
+
+## How the numbers are worked out
+
+Every formula on this site was checked against published sources in November 2026 — manufacturer data sheets (Quikrete, USG), university extension guides (Texas A&M AgriLife), the US Army's earthmoving manual, and several independent calculators. Where sources disagree, the page says so and uses the safe planning number.
+
+## What is coming next
+
+We plan to add free printable project checklists you can download and take to the store — a shopping list for each calculator, so nothing gets forgotten. The calculators come first; the downloads will follow.
+
+This site is educational only. It is not financial advice and not professional construction advice.
+
+
+## Contact — Home & Garden Calculators (https://builditcalculators.com/contact.html)
+
+# Contact
+
+Questions, corrections, or a calculator you would like us to add? Write to us.
+
+ Email: hello@example.com 
+
+ Note for the site owner: hello@example.com is a placeholder — replace it with the site's real email address before launch.
+
+## What to tell us
+
+ - A number on the site that looks wrong — tell us the page and the numbers you typed, and we will check it.
+
+ - A calculator you wish existed — concrete and paint are here, but there are plenty of jobs we have not covered yet.
+
+ - A material or product whose weight or coverage we should add.
+
+We read every message. We do not share your email address with anyone.
+
+
+## Privacy Policy — Home & Garden Calculators (https://builditcalculators.com/privacy.html)
+
+# Privacy Policy
+
+We do not collect your measurements, your name, or anything else about you. The calculators run entirely in your browser — nothing you type leaves your device.
+
+## What we collect
+
+Nothing. There is no account, no sign-up, and no form that sends us your numbers. The calculators are plain JavaScript that runs on your own device.
+
+## Cookies and advertising
+
+We plan to show ads through Google AdSense in the future, once the site is approved. When that happens, Google may use cookies to show ads — including advertising cookies that remember which sites you visited. You can turn off personalized advertising in your Google ad settings at any time. We do not sell personal information, because we do not collect any.
+
+## Other services
+
+This site loads no external fonts, libraries, or tracking scripts. The only files it loads are its own pages, one stylesheet and one script.
+
+## Contact
+
+If you have a question about this policy, write to us at the address on the Contact page .
+
+Last updated November 2026.
+

@@ -1,0 +1,26 @@
+# Home & Garden Calculators
+
+> Free plain-English calculators for American homeowners. Type in your measurements and get the answer — cubic yards, bags, gallons, sheets, boards — with the maths shown so you can check it. No sign-up.
+
+## Calculators
+
+- [Concrete Calculator](https://builditcalculators.com/concrete.html): How much concrete for slabs and fence post holes, in cubic yards and 40, 60 and 80 lb bags, with 10% waste. Includes concrete types and pouring temperatures, and how to mix concrete in a wheelbarrow.
+- [Paint Calculator](https://builditcalculators.com/paint.html): How many gallons of paint for a room, minus doors and windows, for two coats. Includes paint grades and finishes.
+- [Mulch Calculator](https://builditcalculators.com/mulch.html): How much mulch for a bed, in cubic yards and bags. Includes mulch types and which climate each suits.
+- [Topsoil & Gravel Calculator](https://builditcalculators.com/topsoil.html): Topsoil, gravel, sand and mulch by cubic yards, tons and bags. Includes gravel grades with prices and soil types with the plants each suits.
+- [Tile Calculator](https://builditcalculators.com/tile.html): How many floor tiles and boxes, with 10% waste, for any tile size.
+- [Drywall Calculator](https://builditcalculators.com/drywall.html): How many 4x8 sheets, screws, joint compound and tape for a room.
+- [Fence Calculator](https://builditcalculators.com/fence.html): Posts, pickets, rails and bags of concrete for a wood fence.
+- [Deck Calculator](https://builditcalculators.com/deck.html): Decking boards, joists and screws for a wood deck.
+
+## Key facts
+
+- One cubic yard is 27 cubic feet. One 80 lb bag of concrete makes 0.60 cubic feet; 45 bags make a cubic yard.
+- One cubic yard of mulch is 13.5 bags of 2 cubic feet. Mulch goes 2–3 inches deep on beds.
+- One gallon of paint covers about 350 square feet per coat; most jobs need two coats.
+- Gravel weighs about 1.4 tons per cubic yard. Crusher run is the cheapest gravel at $20–$40 a ton delivered; pea gravel costs $30–$60.
+- Concrete pours best at 50–90°F. Below 40°F it sets very slowly and can be damaged by frost; above 95°F it is outside the industry standard.
+
+## Optional
+
+- [llms-full.txt](https://builditcalculators.com/llms-full.txt): the full text of every page on the site, in Markdown.
