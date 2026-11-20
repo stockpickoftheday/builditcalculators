@@ -1134,3 +1134,573 @@ If you have a question about this policy, write to us at the address on the Cont
 
 Last updated November 2026.
 
+## How much concrete do I need? (https://builditcalculators.com/how-much-concrete-do-i-need.html)
+
+A 10 by 10 foot patio slab, 4 inches thick, takes 1.36 cubic yards of concrete — 62 bags of 80 lb mix. The maths is simple: multiply length by width by thickness, then divide by 27 to get cubic yards. For fence post holes, work out one hole and multiply.
+### Worked example
+
+A 10 by 10 foot patio slab, 4 inches thick 1.23 cubic yards
+
+With 10% waste added 1.36 cubic yards
+
+80 lb bags 62 bags
+
+60 lb bags 82 bags
+
+40 lb bags 123 bags
+
+One fence post hole, 12 inches wide and 24 inches deep 3 bags of 80 lb mix
+
+## How the maths works
+
+### Slabs: length × width × thickness, divided by 27
+
+A cubic yard is 27 cubic feet — a cube 3 feet on every side. So a slab 10 feet by 10 feet at 4 inches thick is 10 × 10 × (4 ÷ 12) = 33.33 cubic feet, and 33.33 ÷ 27 = 1.23 cubic yards. The 10% waste allowance takes it to 1.36 cubic yards.
+
+### Bags: divide by what one bag makes
+
+Bag yields are printed on the bag and are the same across the big brands: an 80 lb bag makes 0.60 cubic feet (45 bags per yard), a 60 lb bag makes 0.45 cubic feet (60 per yard), and a 40 lb bag makes 0.30 cubic feet (90 per yard). So 36.67 cubic feet ÷ 0.60 = 61.1 — we round up to 62 bags.
+
+### Post holes: the cylinder formula
+
+A round hole is a cylinder: π × radius² × depth. A 12-inch hole, 24 inches deep, is π × 0.5² × 2 = 1.57 cubic feet. That is 3 bags of 80 lb mix per hole. The fence calculator works out the concrete for a whole fence line at once.
+
+### Common slab sizes
+
+ | Slab   | Cubic yards (+10%)   | 80 lb bags
+
+ | 10 × 10 ft at 4 in   | 1.36   | 62
+
+ | 12 × 12 ft at 4 in   | 1.96   | 89
+
+ | 10 × 20 ft at 4 in   | 2.72   | 123
+
+ | 20 × 30 ft driveway at 6 in   | 12.22   | 550
+
+## Bags or ready-mix?
+
+Once a job passes about one cubic yard — 45 bags of 80 lb mix — ready-mix delivered by truck is usually cheaper and far less work than mixing bags by hand. Bags make sense for small pours and post holes; anything bigger, call the truck.
+
+## Pouring temperatures
+
+Concrete pours best between 50 and 90°F. Below 40°F it sets very slowly and can be permanently damaged if it freezes; above 95°F it sets too fast, loses strength, and is outside the industry standard. The concrete calculator page has the full guide to concrete types and pouring temperatures.
+
+## Common questions
+
+### How much concrete do I need for a 10×10 slab?
+
+1.36 cubic yards with the 10% waste allowance, or 62 bags of 80 lb mix.
+
+### How many 80 lb bags of concrete are in a cubic yard?
+
+45 bags.
+
+### How much concrete do I need for one fence post hole?
+
+3 bags of 80 lb mix, for a hole 12 inches wide and 24 inches deep.
+
+### When should I order ready-mix instead of bags?
+
+Once a job passes about one cubic yard — 45 bags of 80 lb mix. Ready-mix delivered by truck is usually cheaper and far less work than mixing that many bags by hand.
+
+Figures verified November 2026 against Quikrete's published bag yields and several concrete calculators. Yields vary slightly by brand — check the bag. This page is an estimate for planning only, not engineering advice; structural pours and anything governed by building codes should be sized by a qualified professional.
+
+## How many deck boards do I need? (https://builditcalculators.com/how-many-deck-boards-do-i-need.html)
+
+A 12 by 16 foot deck takes about 410 linear feet of 5.5 inch decking — roughly 2.13 linear feet of board for every square foot of deck. Add joists at 16 inches on center and about 350 screws per 100 square feet, and you have the whole shopping list.
+### Worked example
+
+A 12 by 16 foot deck 192 sq ft
+
+Decking, 5.5 in boards 410 linear feet
+
+Joists at 16 in on center 13 joists
+
+Screws 672 screws
+
+A 10 by 10 foot deck 213 linear feet of decking
+
+## How the maths works
+
+### Decking boards: 2.13 linear feet per square foot
+
+A 5.5 inch board with a ⅛ inch gap covers 5.625 inches, so one square foot of deck takes 2.13 linear feet of board. Multiply your deck area by 2.13 to get the linear feet, then round up — and buy a couple of spare boards for cuts, because a board cut wrong is the most common waste on a deck.
+
+### Joists: 16 inches on center
+
+Joists run under the decking, 16 inches apart. Divide the deck's length by 16 inches and add one joist for the end. A 12 by 16 foot deck has 13 joists.
+
+### Screws: two per board at every joist
+
+Count about 350 screws per 100 square feet of deck — two screws where each board crosses each joist. A 12 by 16 foot deck takes 672 screws.
+
+### Common deck sizes
+
+ | Deck   | Area   | Decking (5.5 in boards)
+
+ | 10 × 10 ft   | 100 sq ft   | 213 linear feet
+
+ | 12 × 12 ft   | 144 sq ft   | about 307 linear feet
+
+ | 12 × 16 ft   | 192 sq ft   | 410 linear feet
+
+ | 16 × 20 ft   | 320 sq ft   | about 682 linear feet
+
+## What size boards?
+
+5.5 inch wide boards (sold as 1×6) are the standard for decking. Wider boards cover faster but cup more in the sun; narrower boards look busier and use more screws. The deck calculator works with 5.5 inch boards.
+
+## Common questions
+
+### How many deck boards do I need for a deck?
+
+It depends on board width. A 5.5 inch board with a ⅛ inch gap covers 5.625 inches, so one square foot of deck takes 2.13 linear feet of board.
+
+### How far apart should deck joists be?
+
+16 inches on center, which is the standard for 5/4 decking.
+
+### How many deck screws do I need?
+
+About 350 screws per 100 square feet of deck — two per board at every joist.
+
+### How much decking do I need for a 10×10 deck?
+
+213 linear feet of 5.5 inch decking.
+
+Figures verified November 2026 against supplier listings and several online calculators. These are estimates for planning only — confirm quantities with your supplier before you order.
+
+## How much drywall do I need? (https://builditcalculators.com/how-much-drywall-do-i-need.html)
+
+A 12 by 12 foot room with 8 foot ceilings takes 17 sheets of 4×8 drywall — plus 544 screws, 5 gallons of joint compound and 176 feet of paper tape. The maths is just area: work out the wall area, add the ceiling if you are boarding it, and divide by 32 square feet per sheet.
+### Worked example
+
+A 12 by 12 foot room, 8 foot ceilings 333 sq ft
+
+Plus the ceiling 477 sq ft of board
+
+4 × 8 sheets, 10% waste 17 sheets
+
+Screws 544 screws
+
+Joint compound 5 gallons
+
+Paper tape 176 feet
+
+## How the maths works
+
+### Wall area: perimeter × height, minus doors and windows
+
+Add up all four wall lengths, multiply by the ceiling height, then subtract about 21 sq ft for each door and 15 sq ft for each window. A 12 by 12 foot room with 8 foot ceilings has 384 sq ft of wall — 333 sq ft after one door and two windows.
+
+### Sheets: divide by 32, add 10%
+
+A 4×8 sheet covers 32 sq ft. Divide your total area by 32 and add 10% for cuts. The 12 by 12 room needs 477 sq ft of board with the ceiling — 477 ÷ 32 = 14.9, plus 10% is 16.4, so 17 sheets.
+
+### Screws: about 32 per sheet
+
+Budget about 32 screws per wall sheet. Ceilings take about half again as many, because gravity works against the board.
+
+### Joint compound and tape
+
+Allow about 1 gallon of joint compound per 100 sq ft for a three-coat finish, and enough paper tape to cover every seam — 176 feet for the 12 by 12 room.
+
+## Cutting waste down
+
+Hang sheets horizontally on walls — fewer seams to tape, and the long edges land on studs. Measure twice before you cut: a sheet cut short is the most common waste on a drywall job.
+
+## Common questions
+
+### How many drywall sheets do I need for a room?
+
+Take the wall area (perimeter times height, minus doors and windows), divide by 32 square feet per 4×8 sheet, and add 10% for cuts.
+
+### How many screws per sheet of drywall?
+
+About 32 per wall sheet. Ceilings take about half again as many, because gravity works against the board.
+
+### How much joint compound do I need?
+
+About 1 gallon per 100 square feet for a three-coat finish.
+
+### How much drywall do I need for a 12×12 room?
+
+17 sheets of 4×8 drywall with the ceiling, plus 544 screws, 5 gallons of joint compound and 176 feet of tape.
+
+Figures verified November 2026 against supplier listings and several online calculators. These are estimates for planning only — confirm quantities with your supplier before you order.
+
+## How many fence pickets and posts do I need? (https://builditcalculators.com/how-many-fence-pickets-and-posts-do-i-need.html)
+
+100 feet of 6 foot privacy fence takes 14 posts, 241 pickets and 39 rails — plus 14 bags of concrete, one per post. The trick is the pickets: a 1×6 picket is really only 5.5 inches wide, so it takes 2.2 pickets per foot, not 2.
+### Worked example
+
+100 feet of 6 foot privacy fence, 8 ft post spacing 13 sections — 14 posts
+
+Pickets, 10% waste 241 pickets
+
+Rails 39 rails
+
+Concrete 14 bags
+
+Same fence at 6 ft spacing 17 sections, 18 posts
+
+## How the maths works
+
+### Posts: length ÷ spacing, plus one
+
+Divide the fence length by the post spacing — usually 8 feet — then add one post at the end. 100 feet ÷ 8 = 12.5, so 13 sections and 14 posts.
+
+### Pickets: 2.2 per foot
+
+1×6 pickets are really 5.5 inches wide. That is 2.2 pickets per foot of fence — 219 pickets for 100 feet, 241 with 10% waste for cuts and the odd bad board.
+
+### Rails: 3 per section
+
+A 6 foot privacy fence needs three horizontal rails per section — top, middle and bottom. 13 sections × 3 rails = 39 rails.
+
+### Concrete: one bag per post
+
+One 80 lb bag sets a 4×4 post in a 10 to 12 inch hole, 24 inches deep. 14 posts means 14 bags. The concrete calculator works out post holes on their own.
+
+### Common fence lengths
+
+ | Fence   | Posts   | Pickets (+10%)   | Rails   | Concrete bags
+
+ | 50 ft   | 8   | 121   | 21   | 8
+
+ | 100 ft   | 14   | 241   | 39   | 14
+
+ | 150 ft   | 20   | 363   | 57   | 20
+
+## How deep should the posts go?
+
+At least a third of the post goes underground, and below your frost line — 24 inches deep is the usual minimum for a 6 foot fence. Go deeper in cold climates, where the frost line is lower.
+
+## Common questions
+
+### How many fence posts do I need?
+
+Divide the fence length by the post spacing — usually 8 feet — then add one post at the end.
+
+### How many pickets do I need for a 100 ft fence?
+
+219, with 1×6 pickets. They are really 5.5 inches wide, so it is 2.2 pickets per foot, not 2.
+
+### How much concrete per fence post?
+
+One 80 lb bag, for a 4×4 post in a 10 to 12 inch hole, 24 inches deep.
+
+### How deep should fence posts go?
+
+At least a third of the post goes underground, and below your frost line. 24 inches deep is the usual minimum for a 6 foot fence.
+
+Figures verified November 2026 against supplier listings and several online calculators. These are estimates for planning only — confirm quantities with your supplier before you order.
+
+## How much flooring do I need? (https://builditcalculators.com/how-much-flooring-do-i-need.html)
+
+A 12 by 15 foot room takes 198 square feet of flooring with 10% waste — 10 boxes of laminate at 20 square feet a box, or 9 boxes of vinyl plank at 24. Measure the room, add waste, and divide by what is in a box.
+### Worked example
+
+A 12 by 15 foot room 180 sq ft
+
+With 10% waste 198 sq ft to order
+
+Laminate, 20 sq ft per box 10 boxes
+
+Vinyl plank, 24 sq ft per box 9 boxes
+
+Underlayment, 100 sq ft per roll 2 rolls
+
+## How the maths works
+
+### Step 1: the room area
+
+Length × width. A 12 by 15 foot room is 180 square feet. Measure each room separately — flooring is ordered by the room, not the house.
+
+### Step 2: add waste
+
+Add 10% for a straight lay in a rectangular room, 15% for a diagonal layout or a room with lots of corners, and 20% for herringbone. The 12 by 15 room needs 198 square feet with 10% waste.
+
+### Step 3: divide by the box size
+
+Laminate is usually about 20 sq ft a box, vinyl plank about 24, hardwood about 20 and engineered hardwood about 22. The exact number is printed on the box. 198 ÷ 20 = 9.9, so 10 boxes of laminate; 198 ÷ 24 = 8.25, so 9 boxes of vinyl plank.
+
+### Underlayment
+
+Allow one roll of underlayment per 100 square feet — 2 rolls for the 12 by 15 room.
+
+### Common room sizes
+
+ | Room   | Area   | With 10% waste   | Laminate boxes   | Vinyl plank boxes
+
+ | 10 × 12 ft   | 120 sq ft   | 132 sq ft   | 7   | 6
+
+ | 12 × 12 ft   | 144 sq ft   | 159 sq ft   | 8   | 7
+
+ | 12 × 15 ft   | 180 sq ft   | 198 sq ft   | 10   | 9
+
+ | 15 × 20 ft   | 300 sq ft   | 330 sq ft   | 17   | 14
+
+## Common questions
+
+### How much flooring do I need for a 12×12 room?
+
+144 square feet, and 159 with 10% waste — 8 boxes of laminate at 20 square feet a box.
+
+### How much extra flooring should I buy?
+
+10% for a straight lay in a rectangular room. Use 15% for diagonal layouts or rooms with lots of corners, and 20% for herringbone.
+
+### How many square feet are in a box of flooring?
+
+It varies by brand — laminate is usually about 20, vinyl plank about 24, hardwood about 20, and engineered hardwood about 22. The exact number is printed on the box.
+
+### How much underlayment do I need?
+
+About one roll per 100 square feet — 2 rolls for a 12 by 15 foot room.
+
+Figures verified November 2026 against supplier listings and several online calculators. These are estimates for planning only — confirm quantities with your supplier before you order.
+
+## How much mulch do I need? (https://builditcalculators.com/how-much-mulch-do-i-need.html)
+
+A 10 by 20 foot bed, 3 inches deep, takes 1.85 cubic yards of mulch — 25 bags of 2 cubic feet. The maths is length × width × depth, divided by 27 to get cubic yards. One cubic yard covers 108 square feet at 3 inches deep.
+### Worked example
+
+A 10 by 20 foot bed, 3 inches deep 1.85 cubic yards
+
+In 2 cu ft bags 25 bags
+
+A 10 by 10 foot bed, 3 inches deep 0.93 cubic yards — 13 bags
+
+One cubic yard covers 108 sq ft at 3 in
+
+## How the maths works
+
+### Cubic yards: length × width × depth, divided by 27
+
+A cubic yard is 27 cubic feet. A 10 by 20 foot bed at 3 inches deep is 10 × 20 × (3 ÷ 12) = 50 cubic feet, and 50 ÷ 27 = 1.85 cubic yards.
+
+### Bags: divide by what one bag holds
+
+A 2 cubic foot bag holds 2 cubic feet, so 50 cubic feet ÷ 2 = 25 bags. One cubic yard is 13.5 bags of 2 cubic feet.
+
+### How deep?
+
+Two to three inches for most flower and shrub beds, four inches around trees. More than 4 inches can suffocate roots — and mulch piled against a trunk rots the bark, so keep it a few inches clear of the trunk.
+
+### Coverage at a glance
+
+ | Depth   | One cubic yard covers
+
+ | 2 inches   | 162 sq ft
+
+ | 3 inches   | 108 sq ft
+
+ | 4 inches   | 81 sq ft
+
+## Bulk or bags?
+
+Bags make sense up to about a cubic yard — 13 or 14 bags. Past that, bulk mulch delivered by the yard is usually much cheaper per cubic yard, and you skip hauling dozens of bags home.
+
+## Common questions
+
+### How much mulch do I need for a 100 sq ft bed?
+
+At 3 inches deep, about 0.93 cubic yards — around 13 bags of 2 cubic feet.
+
+### How deep should mulch be?
+
+Two to three inches for most flower and shrub beds, four inches around trees. More than 4 inches can suffocate roots.
+
+### What mulch is best for a hot, dry garden?
+
+Light-coloured bark or straw, 3 to 4 inches deep. It holds moisture and keeps roots cool; gravel can get hot enough to scorch roots.
+
+### How many bags of mulch are in a cubic yard?
+
+13.5 bags of 2 cubic feet.
+
+Figures verified November 2026 against supplier listings and several online calculators. These are estimates for planning only — confirm quantities with your supplier before you order.
+
+## How much paint do I need? (https://builditcalculators.com/how-much-paint-do-i-need.html)
+
+A 12 by 12 foot room with 8 foot ceilings takes 2 gallons of paint for two coats on the walls — 3 gallons if you paint the ceiling too. One gallon covers about 350 square feet per coat, and almost every interior job needs two coats.
+### Worked example
+
+A 12 by 12 foot room, 8 foot ceilings 384 sq ft of walls
+
+Minus 1 door and 2 windows 333 sq ft to paint
+
+Two coats 666 sq ft of painting
+
+At 350 sq ft per gallon 1.90 gallons
+
+Buy 2 gallons
+
+With the ceiling too Buy 3 gallons
+
+## How the maths works
+
+### Step 1: the wall area
+
+Add up all four wall lengths and multiply by the ceiling height. A 12 by 12 foot room with 8 foot ceilings has 384 square feet of wall.
+
+### Step 2: subtract doors and windows
+
+Take off about 21 square feet per door (3 × 7 ft) and 15 per window (3 × 5 ft). One door and two windows takes the 12 by 12 room from 384 to 333 square feet.
+
+### Step 3: multiply by the coats, divide by 350
+
+Two coats means 333 × 2 = 666 square feet of painting. At 350 square feet per gallon, that is 1.90 gallons — buy 2 gallons. Add the ceiling (144 sq ft, two coats) and it becomes 3 gallons.
+
+## How many coats?
+
+Two, for almost every interior job. One coat rarely covers evenly — especially over a darker colour, new drywall, or a repair. Primer counts as a coat on bare drywall or stained walls, but it is not a substitute for the second coat of paint.
+
+## Is expensive paint worth it?
+
+Usually yes. Premium paint covers in two coats where economy paint takes three or four, and lasts 10–15 years instead of 2–4. The dearer gallon is often the cheaper job.
+
+## Common questions
+
+### How much paint do I need for a 12×12 room?
+
+333 square feet of wall after doors and windows, two coats is 666 square feet, and at 350 square feet per gallon that is 1.90 gallons — buy 2 gallons, or 3 gallons with the ceiling.
+
+### How many coats of paint do I need?
+
+Two, for almost every interior job. One coat rarely covers evenly.
+
+### How much does a gallon of paint cover?
+
+About 350 square feet per coat on a smooth wall.
+
+### Is expensive paint worth it?
+
+Usually yes. Premium paint covers in two coats where economy paint takes three or four, and lasts 10–15 years instead of 2–4.
+
+Figures verified November 2026 against supplier listings and several online calculators. These are estimates for planning only — confirm quantities with your supplier before you order.
+
+## How much tile do I need? (https://builditcalculators.com/how-much-tile-do-i-need.html)
+
+A 10 by 12 foot room takes 132 twelve-inch tiles — 14 boxes of 10 — with 10% waste built in. Divide the floor area by one tile's area, add waste, and divide by the tiles per box.
+### Worked example
+
+A 10 by 12 foot room 120 sq ft
+
+12 × 12 inch tiles 120 tiles
+
+With 10% waste 132 tiles
+
+Boxes of 10 14 boxes
+
+Same room, 12 × 24 inch tiles 66 tiles — 7 boxes
+
+Same room, 6 × 6 inch tiles 480 tiles
+
+## How the maths works
+
+### Step 1: how many tiles
+
+Divide the floor area by one tile's area. A 12×12 inch tile covers 1 square foot, so a 120 square foot room takes 120 tiles. A 12×24 inch tile covers 2 square feet, so the same room takes 60.
+
+### Step 2: add waste
+
+Add 10% for straight rows, 15% for diagonal patterns, herringbone, or rooms with lots of corners. The 10 by 12 room needs 132 twelve-inch tiles with 10% waste.
+
+### Step 3: divide by the box
+
+Divide by the tiles per box and round up. 132 tiles in boxes of 10 is 13.2 — buy 14 boxes.
+
+### Tiles per square foot
+
+ | Tile size   | Area per tile   | Tiles per sq ft
+
+ | 6 × 6 in   | 0.25 sq ft   | 4
+
+ | 12 × 12 in   | 1 sq ft   | 1
+
+ | 12 × 24 in   | 2 sq ft   | 0.5
+
+ | 18 × 18 in   | 2.25 sq ft   | 0.44
+
+## Buy a spare box
+
+Tile dye lots change between batches, and a matching box is hard to find later when one tile cracks. One spare box in the garage is cheap insurance.
+
+## Common questions
+
+### How many tiles do I need?
+
+Divide the floor area by one tile's area — a 12×12 inch tile covers 1 square foot — then add 10% waste.
+
+### How much extra tile should I buy?
+
+10% for straight rows, 15% for diagonal patterns, herringbone, or rooms with lots of corners.
+
+### Should I buy a spare box of tile?
+
+Yes. Tile dye lots change between batches, and a matching box is hard to find later when one tile cracks.
+
+### How many tiles do I need for a 10×12 room?
+
+132 twelve-inch tiles with 10% waste — 14 boxes of 10.
+
+Figures verified November 2026 against supplier listings and several online calculators. These are estimates for planning only — confirm quantities with your supplier before you order.
+
+## How much topsoil or gravel do I need? (https://builditcalculators.com/how-much-topsoil-or-gravel-do-i-need.html)
+
+A 10 by 10 foot area, 6 inches deep, takes 1.85 cubic yards — 1.85 tons of topsoil or 2.59 tons of gravel. Suppliers sell topsoil by the cubic yard and gravel by the ton, so work out the volume first, then convert.
+### Worked example
+
+A 10 by 10 foot area, 6 inches deep 1.85 cubic yards
+
+As topsoil 1.85 tons
+
+As gravel 2.59 tons
+
+As sand 2.50 tons
+
+## How the maths works
+
+### Cubic yards: length × width × depth, divided by 27
+
+A 10 by 10 foot area at 6 inches deep is 10 × 10 × (6 ÷ 12) = 50 cubic feet, and 50 ÷ 27 = 1.85 cubic yards.
+
+### Tons: multiply by the weight per yard
+
+Topsoil weighs about 1 ton per cubic yard, gravel about 1.4 tons, and sand about 1.35 tons. So 1.85 cubic yards is 1.85 tons of topsoil, 2.59 tons of gravel, or 2.50 tons of sand.
+
+### Common sizes
+
+ | Area   | Cubic yards   | Tons of gravel
+
+ | 10 × 10 ft at 6 in   | 1.85   | 2.59
+
+ | 10 × 20 ft at 6 in   | 3.70   | 5.19
+
+ | 20 × 20 ft at 4 in   | 4.94   | 6.91
+
+## Which material?
+
+Topsoil for lawns and garden beds. Crusher run (road base) for driveways and paths — it packs down hard, and it is the cheapest gravel at $20–$40 a ton delivered. Pea gravel for paths and drainage at $30–$60 a ton. For vegetables, screened loam with compost mixed in; blueberries are the exception — they need acidic soil, not ordinary topsoil.
+
+## Common questions
+
+### How many tons of gravel are in a cubic yard?
+
+About 1.4 tons.
+
+### Which gravel is cheapest?
+
+Crusher run (road base), about $20–$40 a ton delivered. Pea gravel costs the most, about $30–$60 a ton.
+
+### What soil is best for vegetables?
+
+Screened loam with compost mixed in. Blueberries are the exception — they need acidic soil, not ordinary topsoil.
+
+### How much topsoil do I need for a 10×10 area, 6 inches deep?
+
+1.85 cubic yards — 1.85 tons of topsoil, or 2.59 tons if you are ordering gravel.
+
+Figures verified November 2026 against supplier listings and several online calculators. These are estimates for planning only — confirm quantities with your supplier before you order.

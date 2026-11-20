@@ -14,6 +14,18 @@
 - [Fence Calculator](https://builditcalculators.com/fence.html): Posts, pickets, rails and bags of concrete for a wood fence.
 - [Deck Calculator](https://builditcalculators.com/deck.html): Decking boards, joists and screws for a wood deck.
 
+## How-to guides
+
+- [How much concrete do I need?](https://builditcalculators.com/how-much-concrete-do-i-need.html): How much concrete for a slab or fence post holes — the maths, bag counts and when to order ready-mix.
+- [How many deck boards do I need?](https://builditcalculators.com/how-many-deck-boards-do-i-need.html): How many deck boards, joists and screws for a deck — the maths for any deck size.
+- [How much drywall do I need?](https://builditcalculators.com/how-much-drywall-do-i-need.html): How many drywall sheets, screws, joint compound and tape for a room.
+- [How many fence pickets and posts do I need?](https://builditcalculators.com/how-many-fence-pickets-and-posts-do-i-need.html): How many posts, pickets, rails and bags of concrete for a wood fence.
+- [How much flooring do I need?](https://builditcalculators.com/how-much-flooring-do-i-need.html): How many boxes of laminate, vinyl plank or hardwood flooring for a room.
+- [How much mulch do I need?](https://builditcalculators.com/how-much-mulch-do-i-need.html): How much mulch for a bed, in cubic yards and bags — and how deep it should be.
+- [How much paint do I need?](https://builditcalculators.com/how-much-paint-do-i-need.html): How many gallons of paint for a room — walls, ceiling, doors and windows.
+- [How much tile do I need?](https://builditcalculators.com/how-much-tile-do-i-need.html): How many floor tiles and boxes for a room, for any tile size.
+- [How much topsoil or gravel do I need?](https://builditcalculators.com/how-much-topsoil-or-gravel-do-i-need.html): How much topsoil, gravel or sand for an area, in cubic yards and tons.
+
 ## Key facts
 
 - One cubic yard is 27 cubic feet. One 80 lb bag of concrete makes 0.60 cubic feet; 45 bags make a cubic yard.
