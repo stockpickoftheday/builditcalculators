@@ -100,14 +100,19 @@
       <section class="calc-box" id="calculator" aria-label="Flooring calculator">
         <h2>Your room</h2>
         <p class="sub">Fill in your numbers — the answer updates as you type.</p>
+        <div class="field units-toggle" role="radiogroup" aria-label="Units">
+          <span class="units-label">Units:</span>
+          <label class="units-opt"><input type="radio" name="units" value="imperial" checked> Imperial (US)</label>
+          <label class="units-opt"><input type="radio" name="units" value="metric"> Metric</label>
+        </div>
         <div class="field-row">
           <div class="field">
-            <label for="floor-length">Room length (feet)</label>
-            <input type="number" id="floor-length" value="12" min="0" step="0.5" inputmode="decimal">
+            <label for="floor-length" data-imp="Room length (feet)" data-met="Room length (metres)">Room length (feet)</label>
+            <input type="number" id="floor-length" value="12" min="0" step="0.5" inputmode="decimal" data-dim="length">
           </div>
           <div class="field">
-            <label for="floor-width">Room width (feet)</label>
-            <input type="number" id="floor-width" value="15" min="0" step="0.5" inputmode="decimal">
+            <label for="floor-width" data-imp="Room width (feet)" data-met="Room width (metres)">Room width (feet)</label>
+            <input type="number" id="floor-width" value="15" min="0" step="0.5" inputmode="decimal" data-dim="length">
           </div>
         </div>
         <div class="field-row">
@@ -121,8 +126,8 @@
             </select>
           </div>
           <div class="field">
-            <label for="floor-per-box">Square feet per box</label>
-            <input type="number" id="floor-per-box" value="20" min="1" step="0.5" inputmode="decimal">
+            <label for="floor-per-box" data-imp="Square feet per box" data-met="Square metres per box">Square feet per box</label>
+            <input type="number" id="floor-per-box" value="20" min="1" step="0.5" inputmode="decimal" data-dim="area">
             <span class="hint">Printed on the box — check it before you buy.</span>
           </div>
         </div>
@@ -132,6 +137,11 @@
             <input type="number" id="floor-waste" value="10" min="0" step="1" inputmode="decimal">
             <span class="hint">10% for straight rows; 15% for diagonal patterns or rooms with lots of corners.</span>
           </div>
+        </div>
+
+        <div class="field">
+          <label for="floor-cost">Cost per box ($) (optional)</label>
+          <input type="number" id="floor-cost" value="" min="0" step="0.01" inputmode="decimal" placeholder="e.g. 150">
         </div>
       </section>
 
@@ -149,12 +159,15 @@
               <dt>Underlayment rolls</dt>
               <dd id="floor-underlayment">—</dd>
             </div>
+
+            <div class="row" id="floor-cost-row" style="display:none">
+              <dt>Estimated material cost</dt>
+              <dd id="floor-cost-total">—</dd>
+            </div>
           </dl>
         </div>
       </div>
     </div>
-
-    <div class="sticky-bar" id="floor-sticky-bar" style="display:none"><span>Buy</span><strong id="floor-sticky">—</strong></div>
 
 <div class="ad-slot" data-ad-slot="in-content"><!-- Future AdSense slot - code goes here when approved --></div>
 

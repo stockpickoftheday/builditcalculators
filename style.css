@@ -236,6 +236,12 @@ li { margin-bottom: 8px; }
   cursor: pointer;
 }
 
+/* Imperial / Metric units toggle (radio group at the top of each calculator). */
+.units-toggle { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 18px; }
+.units-toggle .units-label { font-weight: 700; font-size: 0.98rem; }
+.units-toggle label.units-opt { display: inline-flex; align-items: center; gap: 6px; font-weight: 600; margin-bottom: 0; cursor: pointer; }
+.units-toggle input[type="radio"] { width: 18px; height: 18px; margin: 0; accent-color: var(--green-700); cursor: pointer; }
+
 button.example-btn {
   background: #fff;
   color: var(--green-700);

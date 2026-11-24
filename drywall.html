@@ -100,20 +100,25 @@
       <section class="calc-box" id="calculator" aria-label="Drywall calculator">
         <h2>Your room</h2>
         <p class="sub">Fill in your numbers — the answer updates as you type.</p>
+        <div class="field units-toggle" role="radiogroup" aria-label="Units">
+          <span class="units-label">Units:</span>
+          <label class="units-opt"><input type="radio" name="units" value="imperial" checked> Imperial (US)</label>
+          <label class="units-opt"><input type="radio" name="units" value="metric"> Metric</label>
+        </div>
         <div class="field-row">
           <div class="field">
-            <label for="dry-length">Room length (feet)</label>
-            <input type="number" id="dry-length" value="12" min="0" step="0.5" inputmode="decimal">
+            <label for="dry-length" data-imp="Room length (feet)" data-met="Room length (metres)">Room length (feet)</label>
+            <input type="number" id="dry-length" value="12" min="0" step="0.5" inputmode="decimal" data-dim="length">
           </div>
           <div class="field">
-            <label for="dry-width">Room width (feet)</label>
-            <input type="number" id="dry-width" value="12" min="0" step="0.5" inputmode="decimal">
+            <label for="dry-width" data-imp="Room width (feet)" data-met="Room width (metres)">Room width (feet)</label>
+            <input type="number" id="dry-width" value="12" min="0" step="0.5" inputmode="decimal" data-dim="length">
           </div>
         </div>
         <div class="field-row">
           <div class="field">
-            <label for="dry-height">Ceiling height (feet)</label>
-            <input type="number" id="dry-height" value="8" min="0" step="0.5" inputmode="decimal">
+            <label for="dry-height" data-imp="Ceiling height (feet)" data-met="Ceiling height (metres)">Ceiling height (feet)</label>
+            <input type="number" id="dry-height" value="8" min="0" step="0.5" inputmode="decimal" data-dim="length">
           </div>
           <div class="field">
             <label for="dry-sheet">Sheet size</label>
@@ -146,6 +151,11 @@
             <label class="check"><input type="checkbox" id="dry-ceiling" checked> Include the ceiling</label>
           </div>
         </div>
+
+        <div class="field">
+          <label for="dry-cost">Cost per sheet ($) (optional)</label>
+          <input type="number" id="dry-cost" value="" min="0" step="0.01" inputmode="decimal" placeholder="e.g. 150">
+        </div>
       </section>
 
       <div class="results-col">
@@ -166,12 +176,15 @@
               <dt>Joint tape</dt>
               <dd id="dry-tape">—</dd>
             </div>
+
+            <div class="row" id="dry-cost-row" style="display:none">
+              <dt>Estimated material cost</dt>
+              <dd id="dry-cost-total">—</dd>
+            </div>
           </dl>
         </div>
       </div>
     </div>
-
-    <div class="sticky-bar" id="dry-sticky-bar" style="display:none"><span>You need</span><strong id="dry-sticky">—</strong></div>
 
 <div class="ad-slot" data-ad-slot="in-content"><!-- Future AdSense slot - code goes here when approved --></div>
 

@@ -100,14 +100,19 @@
       <section class="calc-box" id="calculator" aria-label="Fence calculator">
         <h2>Your fence</h2>
         <p class="sub">Fill in your numbers — the answer updates as you type.</p>
+        <div class="field units-toggle" role="radiogroup" aria-label="Units">
+          <span class="units-label">Units:</span>
+          <label class="units-opt"><input type="radio" name="units" value="imperial" checked> Imperial (US)</label>
+          <label class="units-opt"><input type="radio" name="units" value="metric"> Metric</label>
+        </div>
         <div class="field-row">
           <div class="field">
-            <label for="fence-length">Fence length (feet)</label>
-            <input type="number" id="fence-length" value="100" min="0" step="1" inputmode="decimal">
+            <label for="fence-length" data-imp="Fence length (feet)" data-met="Fence length (metres)">Fence length (feet)</label>
+            <input type="number" id="fence-length" value="100" min="0" step="1" inputmode="decimal" data-dim="length">
           </div>
           <div class="field">
-            <label for="fence-height">Fence height (feet)</label>
-            <input type="number" id="fence-height" value="6" min="0" step="0.5" inputmode="decimal">
+            <label for="fence-height" data-imp="Fence height (feet)" data-met="Fence height (metres)">Fence height (feet)</label>
+            <input type="number" id="fence-height" value="6" min="0" step="0.5" inputmode="decimal" data-dim="length">
             <span class="hint">Check your local height limit — 6 feet is the usual maximum for a backyard fence.</span>
           </div>
         </div>
@@ -131,14 +136,19 @@
         </div>
         <div class="field-row">
           <div class="field">
-            <label for="fence-gap">Gap between pickets (inches)</label>
-            <input type="number" id="fence-gap" value="0" min="0" step="0.25" inputmode="decimal">
+            <label for="fence-gap" data-imp="Gap between pickets (inches)" data-met="Gap between pickets (cm)">Gap between pickets (inches)</label>
+            <input type="number" id="fence-gap" value="0" min="0" step="0.25" inputmode="decimal" data-dim="inch">
             <span class="hint">0 for a solid privacy fence; about 2.5 inches for a classic spaced picket look.</span>
           </div>
           <div class="field">
             <label for="fence-waste">Extra for waste (%)</label>
             <input type="number" id="fence-waste" value="10" min="0" step="1" inputmode="decimal">
           </div>
+        </div>
+
+        <div class="field">
+          <label for="fence-cost" data-imp="Cost per linear foot ($) (optional)" data-met="Cost per metre ($) (optional)">Cost per linear foot ($) (optional)</label>
+          <input type="number" id="fence-cost" value="" min="0" step="0.01" inputmode="decimal" placeholder="e.g. 150" data-dim="cost-ft">
         </div>
       </section>
 
@@ -160,12 +170,15 @@
               <dt>Concrete</dt>
               <dd id="fence-concrete">—</dd>
             </div>
+
+            <div class="row" id="fence-cost-row" style="display:none">
+              <dt>Estimated material cost</dt>
+              <dd id="fence-cost-total">—</dd>
+            </div>
           </dl>
         </div>
       </div>
     </div>
-
-    <div class="sticky-bar" id="fence-sticky-bar" style="display:none"><span>You need</span><strong id="fence-sticky">—</strong></div>
 
 <div class="ad-slot" data-ad-slot="in-content"><!-- Future AdSense slot - code goes here when approved --></div>
 

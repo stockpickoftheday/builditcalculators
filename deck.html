@@ -100,14 +100,19 @@
       <section class="calc-box" id="calculator" aria-label="Deck calculator">
         <h2>Your deck</h2>
         <p class="sub">Fill in your numbers — the answer updates as you type.</p>
+        <div class="field units-toggle" role="radiogroup" aria-label="Units">
+          <span class="units-label">Units:</span>
+          <label class="units-opt"><input type="radio" name="units" value="imperial" checked> Imperial (US)</label>
+          <label class="units-opt"><input type="radio" name="units" value="metric"> Metric</label>
+        </div>
         <div class="field-row">
           <div class="field">
-            <label for="deck-length">Deck length (feet)</label>
-            <input type="number" id="deck-length" value="16" min="0" step="0.5" inputmode="decimal">
+            <label for="deck-length" data-imp="Deck length (feet)" data-met="Deck length (metres)">Deck length (feet)</label>
+            <input type="number" id="deck-length" value="16" min="0" step="0.5" inputmode="decimal" data-dim="length">
           </div>
           <div class="field">
-            <label for="deck-width">Deck width (feet)</label>
-            <input type="number" id="deck-width" value="12" min="0" step="0.5" inputmode="decimal">
+            <label for="deck-width" data-imp="Deck width (feet)" data-met="Deck width (metres)">Deck width (feet)</label>
+            <input type="number" id="deck-width" value="12" min="0" step="0.5" inputmode="decimal" data-dim="length">
           </div>
         </div>
         <div class="field-row">
@@ -119,17 +124,22 @@
             </select>
           </div>
           <div class="field">
-            <label for="deck-gap">Gap between boards (inches)</label>
-            <input type="number" id="deck-gap" value="0.125" min="0" step="0.0625" inputmode="decimal">
+            <label for="deck-gap" data-imp="Gap between boards (inches)" data-met="Gap between boards (cm)">Gap between boards (inches)</label>
+            <input type="number" id="deck-gap" value="0.125" min="0" step="0.0625" inputmode="decimal" data-dim="inch">
             <span class="hint">⅛ inch is standard — it lets rain through and gives boards room to swell.</span>
           </div>
         </div>
         <div class="field">
-          <label for="deck-joist">Joist spacing (inches)</label>
+          <label for="deck-joist" data-imp="Joist spacing (inches)" data-met="Joist spacing (cm)">Joist spacing (inches)</label>
           <select id="deck-joist">
             <option value="16" selected>16 in on center — standard</option>
             <option value="12">12 in on center — stiffer, for diagonal boards</option>
           </select>
+        </div>
+
+        <div class="field">
+          <label for="deck-cost" data-imp="Cost per linear foot ($) (optional)" data-met="Cost per metre ($) (optional)">Cost per linear foot ($) (optional)</label>
+          <input type="number" id="deck-cost" value="" min="0" step="0.01" inputmode="decimal" placeholder="e.g. 150" data-dim="cost-ft">
         </div>
       </section>
 
@@ -147,12 +157,15 @@
               <dt>Screws</dt>
               <dd id="deck-screws">—</dd>
             </div>
+
+            <div class="row" id="deck-cost-row" style="display:none">
+              <dt>Estimated material cost</dt>
+              <dd id="deck-cost-total">—</dd>
+            </div>
           </dl>
         </div>
       </div>
     </div>
-
-    <div class="sticky-bar" id="deck-sticky-bar" style="display:none"><span>You need</span><strong id="deck-sticky">—</strong></div>
 
 <div class="ad-slot" data-ad-slot="in-content"><!-- Future AdSense slot - code goes here when approved --></div>
 
@@ -168,7 +181,7 @@
         <dt>Screws</dt>
         <dd><strong>672 screws</strong></dd>
         <dt>A 10 by 10 foot deck</dt>
-        <dd>213 linear feet of decking</dd>
+        <dd>214 linear feet of decking</dd>
       </dl>
     </section>
 

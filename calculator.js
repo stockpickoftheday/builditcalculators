@@ -311,178 +311,329 @@
 
   function money0(n) { return '$' + Math.round(n).toLocaleString('en-US'); }
 
+  /* ---------- unit system: Imperial (US) / Metric ---------- */
+  /* The pure functions above all work in US customary units. When the
+     Metric toggle is on, metric inputs are converted to imperial at the
+     boundary, the same pure functions run, and results are converted
+     back to metric for display. Factors are "imperial per one metric". */
+  var FT_PER_M = 3.28084;     // 1 m = 3.28084 ft
+  var IN_PER_CM = 0.393701;   // 1 cm = 0.393701 in
+  var YD_PER_M3 = 1.30795;    // 1 m3 = 1.30795 yd3
+  var GAL_PER_L = 0.264172;   // 1 L = 0.264172 gal
+  var SQFT_PER_M2 = 10.7639;  // 1 m2 = 10.7639 sq ft
+  var CUFT_PER_L = 0.0353147; // 1 L = 0.0353147 cu ft
+  var LB_PER_KG = 2.20462;    // 1 kg = 2.20462 lb
+  var TON_PER_TONNE = 1.10231;// 1 tonne = 1.10231 US tons
+  var M3_PER_CUFT = 0.0283168;// 1 cu ft = 0.0283168 m3
+
+  function isMetric() {
+    var sel = document.querySelector('input[name="units"]:checked');
+    return !!(sel && sel.value === 'metric');
+  }
+
+  /* Read an input and return its value in imperial units.
+     `factor` converts one metric unit to imperial; `impFallback` is the
+     fallback in imperial units. Works for number inputs and selects. */
+  function ival(id, impFallback, factor) {
+    var metric = isMetric();
+    var fb = metric ? impFallback / factor : impFallback;
+    var v = val(id, fb);
+    return metric ? v * factor : v;
+  }
+
+  /* Metric option sets for the selects whose choices are sizes.
+     Imperial options stay in the HTML; these replace them in Metric. */
+  var METRIC_SELECT_OPTIONS = {
+    'mulch-bag': [[60, '60 litre bags (most common)'], [40, '40 litre bags'], [80, '80 litre bags']],
+    'fence-spacing': [[2.4, '2.4 m — standard'], [1.8, '1.8 m — stronger, for wind or heavy boards']],
+    'fence-picket': [[14, '150 mm pickets (actually 14 cm wide)'], [9, '100 mm pickets (actually 9 cm wide)']],
+    'deck-board': [[14, '140 mm boards (actually 14 cm wide)'], [9, '90 mm boards (actually 9 cm wide)']],
+    'deck-joist': [[40, '40 cm on center — standard'], [30, '30 cm on center — stiffer, for diagonal boards']],
+    'dry-sheet': [[2.4, '1.2 × 2.4 m (2.9 m²)'], [3.0, '1.2 × 3.0 m (3.6 m²)'], [3.6, '1.2 × 3.6 m (4.3 m²)']]
+  };
+  var _impOptionsCache = {};
+
+  /* Swap every [data-imp]/[data-met] label or hint, and every sized
+     select, between Imperial and Metric text. */
+  function applyUnits() {
+    var metric = isMetric();
+    var els = document.querySelectorAll('[data-imp]');
+    for (var i = 0; i < els.length; i++) {
+      els[i].textContent = metric ? els[i].getAttribute('data-met') : els[i].getAttribute('data-imp');
+    }
+    Object.keys(METRIC_SELECT_OPTIONS).forEach(function (id) {
+      var sel = $(id);
+      if (!sel) return;
+      if (!_impOptionsCache[id]) {
+        _impOptionsCache[id] = [];
+        for (var j = 0; j < sel.options.length; j++) {
+          _impOptionsCache[id].push([sel.options[j].value, sel.options[j].text]);
+        }
+      }
+      var opts = metric ? METRIC_SELECT_OPTIONS[id] : _impOptionsCache[id];
+      var idx = sel.selectedIndex;
+      sel.innerHTML = '';
+      opts.forEach(function (o) {
+        var opt = document.createElement('option');
+        opt.value = o[0];
+        opt.text = o[1];
+        sel.appendChild(opt);
+      });
+      sel.selectedIndex = Math.min(idx < 0 ? 0 : idx, opts.length - 1);
+    });
+  }
+
+  /* Convert the number inputs' values when the toggle flips, so the
+     physical project stays the same size. data-dim names the dimension;
+     cost inputs (data-dim starting "cost-") convert the opposite way
+     because the price is per unit. Values are rounded to 2 decimals. */
+  var DIM_FACTOR = {
+    'length': FT_PER_M,
+    'inch': IN_PER_CM,
+    'area': SQFT_PER_M2,
+    'cuyd': YD_PER_M3,
+    'gal': GAL_PER_L,
+    'cost-cuyd': YD_PER_M3,
+    'cost-gal': GAL_PER_L,
+    'cost-ft': FT_PER_M
+  };
+  function convertInputValues(toMetric) {
+    var inputs = document.querySelectorAll('input[data-dim]');
+    for (var i = 0; i < inputs.length; i++) {
+      var el = inputs[i];
+      var dim = el.getAttribute('data-dim');
+      var f = DIM_FACTOR[dim];
+      if (!f) continue;
+      var v = parseFloat(el.value);
+      if (isNaN(v)) continue;
+      var isCost = dim.indexOf('cost-') === 0;
+      var nv = isCost
+        ? (toMetric ? v * f : v / f)
+        : (toMetric ? v / f : v * f);
+      el.value = Math.round(nv * 100) / 100;
+    }
+  }
+
+  /* Wire the units radios: convert the typed values, swap the labels,
+     then re-run this page's calculation. */
+  function wireUnits(update) {
+    var radios = document.querySelectorAll('input[name="units"]');
+    for (var i = 0; i < radios.length; i++) {
+      radios[i].addEventListener('change', function () {
+        var toMetric = isMetric();
+        convertInputValues(toMetric);
+        applyUnits();
+        update();
+      });
+    }
+  }
+
+  /* Total-cost row: qty is the main quantity in display units, price is
+     the cost per that unit. Hidden when the price is empty or 0. */
+  function showCost(rowId, totalId, qty, price) {
+    var p = num(price, 0);
+    if (p > 0 && qty > 0) {
+      setText(totalId, money0(qty * p));
+      show(rowId, true);
+    } else {
+      show(rowId, false);
+    }
+  }
+
   /* --- concrete page + featured calculator on the home page --- */
   function updateConcrete() {
+    var metric = isMetric();
     var mode = ($('conc-mode') && $('conc-mode').value) || 'slab';
     show('conc-slab-fields', mode === 'slab');
     show('conc-post-fields', mode === 'post');
     var waste = val('conc-waste', 10);
-    var r;
+    var r, qty, qtyUnit;
     if (mode === 'slab') {
-      r = concreteSlab(val('conc-length', 10), val('conc-width', 10), val('conc-depth', 4), waste);
-      setText('conc-big', fmt(r.cuYdWaste) + ' yd³');
-      setText('conc-cuft', fmt(r.cuFtWaste) + ' cu ft (with ' + waste + '% waste)');
-      setText('conc-net', fmt(r.cuYd) + ' yd³ before waste');
+      r = concreteSlab(ival('conc-length', 10, FT_PER_M), ival('conc-width', 10, FT_PER_M), ival('conc-depth', 4, IN_PER_CM), waste);
+      qty = metric ? r.cuYdWaste / YD_PER_M3 : r.cuYdWaste;
+      qtyUnit = metric ? 'm³' : 'yd³';
+      setText('conc-big', fmt(qty) + ' ' + qtyUnit);
+      setText('conc-cuft', fmt(metric ? r.cuFtWaste * M3_PER_CUFT : r.cuFtWaste) + (metric ? ' m³' : ' cu ft') + ' (with ' + waste + '% waste)');
+      setText('conc-net', fmt(metric ? r.cuYd / YD_PER_M3 : r.cuYd) + ' ' + qtyUnit + ' before waste');
     } else {
-      r = concretePostHoles(val('conc-hole-dia', 12), val('conc-hole-depth', 24), val('conc-holes', 4));
-      setText('conc-big', fmt(r.cuYd) + ' yd³');
-      setText('conc-cuft', fmt(r.cuFt) + ' cu ft total (' + fmt(r.cuFtPerHole) + ' cu ft per hole)');
+      r = concretePostHoles(ival('conc-hole-dia', 12, IN_PER_CM), ival('conc-hole-depth', 24, IN_PER_CM), val('conc-holes', 4));
+      qty = metric ? r.cuYd / YD_PER_M3 : r.cuYd;
+      qtyUnit = metric ? 'm³' : 'yd³';
+      setText('conc-big', fmt(qty) + ' ' + qtyUnit);
+      setText('conc-cuft', fmt(metric ? r.cuFt * M3_PER_CUFT : r.cuFt) + (metric ? ' m³' : ' cu ft') + ' total (' + fmt(metric ? r.cuFtPerHole * M3_PER_CUFT : r.cuFtPerHole) + (metric ? ' m³' : ' cu ft') + ' per hole)');
       setText('conc-net', val('conc-holes', 4) + ' holes');
     }
     setText('conc-bags80', fmtInt(r.bags80) + ' bags');
     setText('conc-bags60', fmtInt(r.bags60) + ' bags');
     setText('conc-bags40', fmtInt(r.bags40) + ' bags');
-    setText('conc-sticky', fmt(r.cuYdWaste !== undefined ? r.cuYdWaste : r.cuYd) + ' yd³');
-    show('conc-sticky-bar', true);
+    showCost('conc-cost-row', 'conc-cost-total', qty, val('conc-cost', 0));
   }
 
   /* --- paint page --- */
   function updatePaint() {
+    var metric = isMetric();
     var r = paintRoom(
-      val('paint-length', 12), val('paint-width', 12), val('paint-height', 8),
+      ival('paint-length', 12, FT_PER_M), ival('paint-width', 12, FT_PER_M), ival('paint-height', 8, FT_PER_M),
       val('paint-doors', 1), val('paint-windows', 2), val('paint-coats', 2),
       checked('paint-ceiling')
     );
-    setText('paint-big', fmt(r.gallonsToBuy) + ' gal');
-    setText('paint-area', fmtInt(r.paintable) + ' sq ft to paint');
-    setText('paint-exact', fmt(r.gallons) + ' gallons exactly');
-    setText('paint-whole', fmtInt(r.wholeGallons) + ' whole gallons');
-    setText('paint-sticky', fmt(r.gallonsToBuy) + ' gal');
-    show('paint-sticky-bar', true);
+    var gal = metric ? r.gallonsToBuy / GAL_PER_L : r.gallonsToBuy;
+    setText('paint-big', fmt(gal) + (metric ? ' L' : ' gal'));
+    setText('paint-area', fmtInt(metric ? r.paintable / SQFT_PER_M2 : r.paintable) + (metric ? ' m² to paint' : ' sq ft to paint'));
+    setText('paint-exact', fmt(metric ? r.gallons / GAL_PER_L : r.gallons) + (metric ? ' litres exactly' : ' gallons exactly'));
+    setText('paint-whole', fmtInt(metric ? Math.ceil(r.gallons / GAL_PER_L) : r.wholeGallons) + (metric ? ' whole litres' : ' whole gallons'));
+    showCost('paint-cost-row', 'paint-cost-total', gal, val('paint-cost', 0));
   }
 
   /* --- mulch page --- */
   function updateMulch() {
-    var area = val('mulch-length', 20) * val('mulch-width', 10);
-    var r = mulchCalc(area, val('mulch-depth', 3), val('mulch-bag', 2));
-    setText('mulch-big', fmt(r.cuYd) + ' yd³');
-    setText('mulch-cuft', fmt(r.cuFt) + ' cu ft');
+    var metric = isMetric();
+    var area = ival('mulch-length', 20, FT_PER_M) * ival('mulch-width', 10, FT_PER_M);
+    var r = mulchCalc(area, ival('mulch-depth', 3, IN_PER_CM), ival('mulch-bag', 2, CUFT_PER_L));
+    var qty = metric ? r.cuYd / YD_PER_M3 : r.cuYd;
+    setText('mulch-big', fmt(qty) + (metric ? ' m³' : ' yd³'));
+    setText('mulch-cuft', fmt(metric ? r.cuFt * M3_PER_CUFT : r.cuFt) + (metric ? ' m³' : ' cu ft'));
     setText('mulch-bags', fmtInt(r.bags) + ' bags');
-    setText('mulch-area', fmtInt(area) + ' sq ft at ' + val('mulch-depth', 3) + ' in deep');
-    setText('mulch-sticky', fmt(r.cuYd) + ' yd³');
-    show('mulch-sticky-bar', true);
+    setText('mulch-area', fmtInt(metric ? area / SQFT_PER_M2 : area) + (metric ? ' m² at ' : ' sq ft at ') + val('mulch-depth', 3) + (metric ? ' cm deep' : ' in deep'));
+    showCost('mulch-cost-row', 'mulch-cost-total', qty, val('mulch-cost', 0));
   }
 
   /* --- topsoil / gravel page --- */
   function updateTopsoil() {
-    var area = val('top-length', 10) * val('top-width', 10);
+    var metric = isMetric();
+    var area = ival('top-length', 10, FT_PER_M) * ival('top-width', 10, FT_PER_M);
     var material = ($('top-material') && $('top-material').value) || 'topsoil';
-    var r = bulkCalc(area, val('top-depth', 6), material);
+    var r = bulkCalc(area, ival('top-depth', 6, IN_PER_CM), material);
     var label = { topsoil: 'Topsoil', gravel: 'Gravel', sand: 'Sand', mulch: 'Mulch' }[material] || 'Material';
-    setText('top-big', fmt(r.cuYd) + ' yd³');
-    setText('top-weight', fmtInt(r.lb) + ' lb (' + fmt(r.tons) + ' tons)');
-    setText('top-cuft', fmt(r.cuFt) + ' cu ft of ' + label.toLowerCase());
-    setText('top-area', fmtInt(area) + ' sq ft at ' + val('top-depth', 6) + ' in deep');
-    setText('top-sticky', fmt(r.cuYd) + ' yd³ · ' + fmt(r.tons) + ' tons');
-    show('top-sticky-bar', true);
+    var qty = metric ? r.cuYd / YD_PER_M3 : r.cuYd;
+    setText('top-big', fmt(qty) + (metric ? ' m³' : ' yd³'));
+    setText('top-weight', fmtInt(metric ? r.lb / LB_PER_KG : r.lb) + (metric ? ' kg (' : ' lb (') + fmt(metric ? r.tons / TON_PER_TONNE : r.tons) + (metric ? ' tonnes)' : ' tons)'));
+    setText('top-cuft', fmt(metric ? r.cuFt * M3_PER_CUFT : r.cuFt) + (metric ? ' m³ of ' : ' cu ft of ') + label.toLowerCase());
+    setText('top-area', fmtInt(metric ? area / SQFT_PER_M2 : area) + (metric ? ' m² at ' : ' sq ft at ') + val('top-depth', 6) + (metric ? ' cm deep' : ' in deep'));
+    showCost('top-cost-row', 'top-cost-total', qty, val('top-cost', 0));
   }
 
   /* --- tile page --- */
   function updateTile() {
-    var area = val('tile-length', 10) * val('tile-width', 12);
-    var r = tileCalc(area, val('tile-w', 12), val('tile-l', 12), val('tile-waste', 10), val('tile-per-box', 10));
+    var metric = isMetric();
+    var area = ival('tile-length', 10, FT_PER_M) * ival('tile-width', 12, FT_PER_M);
+    var r = tileCalc(area, ival('tile-w', 12, IN_PER_CM), ival('tile-l', 12, IN_PER_CM), val('tile-waste', 10), val('tile-per-box', 10));
     setText('tile-big', fmtInt(r.boxes) + ' boxes');
     setText('tile-tiles', fmtInt(r.tilesWaste) + ' tiles (with waste)');
     setText('tile-net', fmtInt(r.tiles) + ' tiles before waste');
-    setText('tile-area', fmtInt(area) + ' sq ft floor');
-    setText('tile-sticky', fmtInt(r.boxes) + ' boxes');
-    show('tile-sticky-bar', true);
+    setText('tile-area', fmtInt(metric ? area / SQFT_PER_M2 : area) + (metric ? ' m² floor' : ' sq ft floor'));
+    showCost('tile-cost-row', 'tile-cost-total', r.boxes, val('tile-cost', 0));
   }
 
   /* --- drywall page --- */
   function updateDrywall() {
+    var metric = isMetric();
     var room = drywallRoom(
-      val('dry-length', 12), val('dry-width', 12), val('dry-height', 8),
+      ival('dry-length', 12, FT_PER_M), ival('dry-width', 12, FT_PER_M), ival('dry-height', 8, FT_PER_M),
       val('dry-doors', 1), val('dry-windows', 2), checked('dry-ceiling')
     );
-    var sheetW = 4;
-    var sheetL = parseFloat(($('dry-sheet') && $('dry-sheet').value) || '8');
+    var sheetW = metric ? 1.2 * FT_PER_M : 4;
+    var sheetL = ival('dry-sheet', 8, FT_PER_M);
     var r = drywallCalc(room.wallArea, room.ceilingArea, sheetW, sheetL, val('dry-waste', 10));
     setText('dry-big', fmtInt(r.sheets) + ' sheets');
-    setText('dry-area', fmtInt(r.totalArea) + ' sq ft of board');
+    setText('dry-area', fmtInt(metric ? r.totalArea / SQFT_PER_M2 : r.totalArea) + (metric ? ' m² of board' : ' sq ft of board'));
     setText('dry-screws', fmtInt(r.screws) + ' screws');
-    setText('dry-compound', fmtInt(r.compoundGal) + ' gallons');
-    setText('dry-tape', fmtInt(r.tapeFt) + ' ft of tape');
-    setText('dry-sticky', fmtInt(r.sheets) + ' sheets');
-    show('dry-sticky-bar', true);
+    setText('dry-compound', fmtInt(metric ? r.compoundGal / GAL_PER_L : r.compoundGal) + (metric ? ' litres' : ' gallons'));
+    setText('dry-tape', fmtInt(metric ? r.tapeFt / FT_PER_M : r.tapeFt) + (metric ? ' m of tape' : ' ft of tape'));
+    showCost('dry-cost-row', 'dry-cost-total', r.sheets, val('dry-cost', 0));
   }
 
   /* --- fence page --- */
   function updateFence() {
+    var metric = isMetric();
+    var lengthFt = ival('fence-length', 100, FT_PER_M);
     var r = fenceCalc(
-      val('fence-length', 100), val('fence-height', 6), val('fence-spacing', 8),
-      val('fence-picket', 5.5), val('fence-gap', 0), val('fence-waste', 10)
+      lengthFt, ival('fence-height', 6, FT_PER_M), ival('fence-spacing', 8, FT_PER_M),
+      ival('fence-picket', 5.5, IN_PER_CM), ival('fence-gap', 0, IN_PER_CM), val('fence-waste', 10)
     );
     setText('fence-big', fmtInt(r.posts) + ' posts');
     setText('fence-pickets', fmtInt(r.pickets) + ' pickets');
     setText('fence-rails', fmtInt(r.rails) + ' rails (' + r.railsPerSection + ' per section)');
     setText('fence-concrete', fmtInt(r.concreteBags80) + ' × 80 lb bags');
     setText('fence-sections', fmtInt(r.sections) + ' sections');
-    setText('fence-sticky', fmtInt(r.posts) + ' posts · ' + fmtInt(r.pickets) + ' pickets');
-    show('fence-sticky-bar', true);
+    var lenDisplay = metric ? lengthFt / FT_PER_M : lengthFt;
+    showCost('fence-cost-row', 'fence-cost-total', lenDisplay, val('fence-cost', 0));
   }
 
   /* --- deck page --- */
   function updateDeck() {
+    var metric = isMetric();
     var r = deckCalc(
-      val('deck-length', 16), val('deck-width', 12),
-      val('deck-board', 5.5), val('deck-gap', 0.125), val('deck-joist', 16)
+      ival('deck-length', 16, FT_PER_M), ival('deck-width', 12, FT_PER_M),
+      ival('deck-board', 5.5, IN_PER_CM), ival('deck-gap', 0.125, IN_PER_CM), ival('deck-joist', 16, IN_PER_CM)
     );
-    setText('deck-big', fmtInt(Math.ceil(r.linearFt)) + ' ft');
-    setText('deck-area', fmtInt(r.area) + ' sq ft deck');
-    setText('deck-joists', fmtInt(r.joistCount) + ' joists (' + fmtInt(r.joistLinearFt) + ' linear ft)');
+    var linDisplay = metric ? Math.ceil(r.linearFt / FT_PER_M) : Math.ceil(r.linearFt);
+    setText('deck-big', fmtInt(linDisplay) + (metric ? ' m' : ' ft'));
+    setText('deck-area', fmtInt(metric ? r.area / SQFT_PER_M2 : r.area) + (metric ? ' m² deck' : ' sq ft deck'));
+    setText('deck-joists', fmtInt(r.joistCount) + ' joists (' + fmtInt(metric ? r.joistLinearFt / FT_PER_M : r.joistLinearFt) + (metric ? ' m' : ' linear ft') + ')');
     setText('deck-screws', fmtInt(r.screws) + ' screws');
-    setText('deck-sticky', fmtInt(Math.ceil(r.linearFt)) + ' ft of decking');
-    show('deck-sticky-bar', true);
+    showCost('deck-cost-row', 'deck-cost-total', linDisplay, val('deck-cost', 0));
   }
 
   /* --- flooring page --- */
   var FLOOR_COVERAGE = { laminate: 20, vinyl: 24, hardwood: 20, engineered: 22 };
+  var FLOOR_COVERAGE_M = { laminate: 1.86, vinyl: 2.23, hardwood: 1.86, engineered: 2.04 };
   function updateFlooring() {
-    var area = val('floor-length', 12) * val('floor-width', 15);
-    var r = flooringCalc(area, val('floor-per-box', 20), val('floor-waste', 10));
-    var orderText = (r.order % 1 === 0 ? fmtInt(r.order) : fmt(r.order)) + ' sq ft';
+    var metric = isMetric();
+    var area = ival('floor-length', 12, FT_PER_M) * ival('floor-width', 15, FT_PER_M);
+    var r = flooringCalc(area, ival('floor-per-box', 20, SQFT_PER_M2), val('floor-waste', 10));
+    var orderDisplay = metric ? r.order / SQFT_PER_M2 : r.order;
+    var orderText = (orderDisplay % 1 === 0 ? fmtInt(orderDisplay) : fmt(orderDisplay)) + (metric ? ' m²' : ' sq ft');
     setText('floor-big', fmtInt(r.boxes) + ' boxes');
     setText('floor-area', orderText + ' to order');
     setText('floor-order', orderText);
-    setText('floor-underlayment', fmtInt(r.underlayment) + ' rolls (100 sq ft each)');
-    setText('floor-sticky', fmtInt(r.boxes) + ' boxes');
-    show('floor-sticky-bar', true);
+    setText('floor-underlayment', fmtInt(r.underlayment) + ' rolls (' + (metric ? '9.3 m²' : '100 sq ft') + ' each)');
+    showCost('floor-cost-row', 'floor-cost-total', r.boxes, val('floor-cost', 0));
   }
 
   document.addEventListener('DOMContentLoaded', function () {
     /* Keep the current page's nav pill visible in the scrolling nav. */
     var cur = document.querySelector('nav.main a.current');
     if (cur) cur.scrollIntoView({ inline: 'center', block: 'nearest' });
+    applyUnits();
     if ($('conc-length')) {
-      wire(['conc-mode', 'conc-length', 'conc-width', 'conc-depth', 'conc-hole-dia', 'conc-hole-depth', 'conc-holes', 'conc-waste'], updateConcrete);
+      wire(['conc-mode', 'conc-length', 'conc-width', 'conc-depth', 'conc-hole-dia', 'conc-hole-depth', 'conc-holes', 'conc-waste', 'conc-cost'], updateConcrete);
+      wireUnits(updateConcrete);
     }
     if ($('paint-length')) {
-      wire(['paint-length', 'paint-width', 'paint-height', 'paint-doors', 'paint-windows', 'paint-coats', 'paint-ceiling'], updatePaint);
+      wire(['paint-length', 'paint-width', 'paint-height', 'paint-doors', 'paint-windows', 'paint-coats', 'paint-ceiling', 'paint-cost'], updatePaint);
+      wireUnits(updatePaint);
     }
     if ($('mulch-length')) {
-      wire(['mulch-length', 'mulch-width', 'mulch-depth', 'mulch-bag'], updateMulch);
+      wire(['mulch-length', 'mulch-width', 'mulch-depth', 'mulch-bag', 'mulch-cost'], updateMulch);
+      wireUnits(updateMulch);
     }
     if ($('top-length')) {
-      wire(['top-length', 'top-width', 'top-depth', 'top-material'], updateTopsoil);
+      wire(['top-length', 'top-width', 'top-depth', 'top-material', 'top-cost'], updateTopsoil);
+      wireUnits(updateTopsoil);
     }
     if ($('tile-length')) {
-      wire(['tile-length', 'tile-width', 'tile-w', 'tile-l', 'tile-waste', 'tile-per-box'], updateTile);
+      wire(['tile-length', 'tile-width', 'tile-w', 'tile-l', 'tile-waste', 'tile-per-box', 'tile-cost'], updateTile);
+      wireUnits(updateTile);
     }
     if ($('dry-length')) {
-      wire(['dry-length', 'dry-width', 'dry-height', 'dry-doors', 'dry-windows', 'dry-ceiling', 'dry-sheet', 'dry-waste'], updateDrywall);
+      wire(['dry-length', 'dry-width', 'dry-height', 'dry-doors', 'dry-windows', 'dry-ceiling', 'dry-sheet', 'dry-waste', 'dry-cost'], updateDrywall);
+      wireUnits(updateDrywall);
     }
     if ($('fence-length')) {
-      wire(['fence-length', 'fence-height', 'fence-spacing', 'fence-picket', 'fence-gap', 'fence-waste'], updateFence);
+      wire(['fence-length', 'fence-height', 'fence-spacing', 'fence-picket', 'fence-gap', 'fence-waste', 'fence-cost'], updateFence);
+      wireUnits(updateFence);
     }
     if ($('deck-length')) {
-      wire(['deck-length', 'deck-width', 'deck-board', 'deck-gap', 'deck-joist'], updateDeck);
+      wire(['deck-length', 'deck-width', 'deck-board', 'deck-gap', 'deck-joist', 'deck-cost'], updateDeck);
+      wireUnits(updateDeck);
     }
     if ($('floor-length')) {
-      wire(['floor-length', 'floor-width', 'floor-type', 'floor-per-box', 'floor-waste'], updateFlooring);
+      wire(['floor-length', 'floor-width', 'floor-type', 'floor-per-box', 'floor-waste', 'floor-cost'], updateFlooring);
+      wireUnits(updateFlooring);
       var floorType = $('floor-type');
       if (floorType) floorType.addEventListener('change', function () {
-        var c = FLOOR_COVERAGE[floorType.value];
+        var c = isMetric() ? FLOOR_COVERAGE_M[floorType.value] : FLOOR_COVERAGE[floorType.value];
         if (c) { var pb = $('floor-per-box'); if (pb) pb.value = c; }
         updateFlooring();
       });

@@ -100,21 +100,26 @@
       <section class="calc-box" id="calculator" aria-label="Mulch calculator">
         <h2>Your bed</h2>
         <p class="sub">Fill in your numbers — the answer updates as you type.</p>
+        <div class="field units-toggle" role="radiogroup" aria-label="Units">
+          <span class="units-label">Units:</span>
+          <label class="units-opt"><input type="radio" name="units" value="imperial" checked> Imperial (US)</label>
+          <label class="units-opt"><input type="radio" name="units" value="metric"> Metric</label>
+        </div>
         <div class="field-row">
           <div class="field">
-            <label for="mulch-length">Bed length (feet)</label>
-            <input type="number" id="mulch-length" value="20" min="0" step="0.5" inputmode="decimal">
+            <label for="mulch-length" data-imp="Bed length (feet)" data-met="Bed length (metres)">Bed length (feet)</label>
+            <input type="number" id="mulch-length" value="20" min="0" step="0.5" inputmode="decimal" data-dim="length">
           </div>
           <div class="field">
-            <label for="mulch-width">Bed width (feet)</label>
-            <input type="number" id="mulch-width" value="10" min="0" step="0.5" inputmode="decimal">
+            <label for="mulch-width" data-imp="Bed width (feet)" data-met="Bed width (metres)">Bed width (feet)</label>
+            <input type="number" id="mulch-width" value="10" min="0" step="0.5" inputmode="decimal" data-dim="length">
           </div>
         </div>
         <div class="field-row">
           <div class="field">
-            <label for="mulch-depth">Depth (inches)</label>
-            <input type="number" id="mulch-depth" value="3" min="0" step="0.5" inputmode="decimal">
-            <span class="hint">2 to 3 inches for most beds; 4 inches for a deep barrier around trees.</span>
+            <label for="mulch-depth" data-imp="Depth (inches)" data-met="Depth (cm)">Depth (inches)</label>
+            <input type="number" id="mulch-depth" value="3" min="0" step="0.5" inputmode="decimal" data-dim="inch">
+            <span class="hint" data-imp="2 to 3 inches for most beds; 4 inches for a deep barrier around trees." data-met="5 to 8 cm for most beds; 10 cm for a deep barrier around trees.">2 to 3 inches for most beds; 4 inches for a deep barrier around trees.</span>
           </div>
           <div class="field">
             <label for="mulch-bag">Bag size</label>
@@ -124,6 +129,11 @@
               <option value="3">3 cu ft bags</option>
             </select>
           </div>
+        </div>
+
+        <div class="field">
+          <label for="mulch-cost" data-imp="Cost per cubic yard ($) (optional)" data-met="Cost per cubic metre ($) (optional)">Cost per cubic yard ($) (optional)</label>
+          <input type="number" id="mulch-cost" value="" min="0" step="0.01" inputmode="decimal" placeholder="e.g. 150" data-dim="cost-cuyd">
         </div>
       </section>
 
@@ -141,12 +151,15 @@
               <dt>Bags</dt>
               <dd id="mulch-bags">—</dd>
             </div>
+
+            <div class="row" id="mulch-cost-row" style="display:none">
+              <dt>Estimated material cost</dt>
+              <dd id="mulch-cost-total">—</dd>
+            </div>
           </dl>
         </div>
       </div>
     </div>
-
-    <div class="sticky-bar" id="mulch-sticky-bar" style="display:none"><span>You need</span><strong id="mulch-sticky">—</strong></div>
 
 <div class="ad-slot" data-ad-slot="in-content"><!-- Future AdSense slot - code goes here when approved --></div>
 

@@ -100,20 +100,25 @@
       <section class="calc-box" id="calculator" aria-label="Paint calculator">
         <h2>Your room</h2>
         <p class="sub">Fill in your numbers — the answer updates as you type.</p>
+        <div class="field units-toggle" role="radiogroup" aria-label="Units">
+          <span class="units-label">Units:</span>
+          <label class="units-opt"><input type="radio" name="units" value="imperial" checked> Imperial (US)</label>
+          <label class="units-opt"><input type="radio" name="units" value="metric"> Metric</label>
+        </div>
         <div class="field-row">
           <div class="field">
-            <label for="paint-length">Room length (feet)</label>
-            <input type="number" id="paint-length" value="12" min="0" step="0.5" inputmode="decimal">
+            <label for="paint-length" data-imp="Room length (feet)" data-met="Room length (metres)">Room length (feet)</label>
+            <input type="number" id="paint-length" value="12" min="0" step="0.5" inputmode="decimal" data-dim="length">
           </div>
           <div class="field">
-            <label for="paint-width">Room width (feet)</label>
-            <input type="number" id="paint-width" value="12" min="0" step="0.5" inputmode="decimal">
+            <label for="paint-width" data-imp="Room width (feet)" data-met="Room width (metres)">Room width (feet)</label>
+            <input type="number" id="paint-width" value="12" min="0" step="0.5" inputmode="decimal" data-dim="length">
           </div>
         </div>
         <div class="field-row">
           <div class="field">
-            <label for="paint-height">Ceiling height (feet)</label>
-            <input type="number" id="paint-height" value="8" min="0" step="0.5" inputmode="decimal">
+            <label for="paint-height" data-imp="Ceiling height (feet)" data-met="Ceiling height (metres)">Ceiling height (feet)</label>
+            <input type="number" id="paint-height" value="8" min="0" step="0.5" inputmode="decimal" data-dim="length">
           </div>
           <div class="field">
             <label for="paint-coats">Coats</label>
@@ -125,17 +130,22 @@
           <div class="field">
             <label for="paint-doors">Doors</label>
             <input type="number" id="paint-doors" value="1" min="0" step="1" inputmode="decimal">
-            <span class="hint">Each door counts as 21 sq ft (3 × 7 ft).</span>
+            <span class="hint" data-imp="Each door counts as 21 sq ft (3 × 7 ft)." data-met="Each door counts as 1.95 m² (0.91 × 2.13 m).">Each door counts as 21 sq ft (3 × 7 ft).</span>
           </div>
           <div class="field">
             <label for="paint-windows">Windows</label>
             <input type="number" id="paint-windows" value="2" min="0" step="1" inputmode="decimal">
-            <span class="hint">Each window counts as 15 sq ft (3 × 5 ft).</span>
+            <span class="hint" data-imp="Each window counts as 15 sq ft (3 × 5 ft)." data-met="Each window counts as 1.39 m² (0.91 × 1.52 m).">Each window counts as 15 sq ft (3 × 5 ft).</span>
           </div>
         </div>
         <div class="field">
           <label class="check"><input type="checkbox" id="paint-ceiling"> Include the ceiling</label>
           <span class="hint">Ceilings take about the same paint as the walls of a small room — and they are usually painted flat white.</span>
+        </div>
+
+        <div class="field">
+          <label for="paint-cost" data-imp="Cost per gallon ($) (optional)" data-met="Cost per litre ($) (optional)">Cost per gallon ($) (optional)</label>
+          <input type="number" id="paint-cost" value="" min="0" step="0.01" inputmode="decimal" placeholder="e.g. 150" data-dim="cost-gal">
         </div>
       </section>
 
@@ -153,12 +163,15 @@
               <dt>Whole gallons</dt>
               <dd id="paint-whole">—</dd>
             </div>
+
+            <div class="row" id="paint-cost-row" style="display:none">
+              <dt>Estimated material cost</dt>
+              <dd id="paint-cost-total">—</dd>
+            </div>
           </dl>
         </div>
       </div>
     </div>
-
-    <div class="sticky-bar" id="paint-sticky-bar" style="display:none"><span>Buy</span><strong id="paint-sticky">—</strong></div>
 
 <div class="ad-slot" data-ad-slot="in-content"><!-- Future AdSense slot - code goes here when approved --></div>
 
