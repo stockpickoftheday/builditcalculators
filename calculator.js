@@ -254,6 +254,33 @@
     };
   }
 
+  /* ---------- power station ---------- */
+  /* A portable power station gives back less than the Wh on its label:
+     the inverter and conversion lose about 15%, so we use 85% of the
+     rated capacity. In the cold, lithium batteries give up about
+     another 20% of usable capacity. Daily use = sum of running watts
+     x hours per day over the devices ticked. Days of backup = usable
+     energy / daily use. Per-device hours = usable energy / watts. */
+  function powerStationCalc(wh, devices, cold) {
+    var usable = num(wh) * 0.85;
+    if (cold) usable *= 0.8;
+    var daily = 0;
+    var perDevice = [];
+    devices.forEach(function (d) {
+      if (!d.checked) return;
+      var watts = num(d.watts);
+      var use = watts * num(d.hours);
+      daily += use;
+      perDevice.push({ name: d.name, watts: watts, hours: watts > 0 ? usable / watts : 0 });
+    });
+    return {
+      usable: usable,
+      daily: daily,
+      days: daily > 0 ? usable / daily : 0,
+      perDevice: perDevice
+    };
+  }
+
   /* ---------- shared exports (Node tests) ---------- */
   var api = {
     concreteSlab: concreteSlab,
@@ -268,6 +295,7 @@
     fenceCalc: fenceCalc,
     deckCalc: deckCalc,
     flooringCalc: flooringCalc,
+    powerStationCalc: powerStationCalc,
     BAG_YIELD: BAG_YIELD,
     PAINT_COVERAGE: PAINT_COVERAGE,
     MATERIAL_LB_PER_YD: MATERIAL_LB_PER_YD
@@ -591,6 +619,59 @@
     showCost('floor-cost-row', 'floor-cost-total', r.boxes, val('floor-cost', 0));
   }
 
+  /* --- power station page --- */
+  /* Device list: key + display name. Watts and hours are read from the
+     page inputs (ps-w-<key>, ps-h-<key>), so the buyer can change them. */
+  var PS_DEVICES = [
+    { key: 'phone', name: 'Phone charger' },
+    { key: 'laptop', name: 'Laptop' },
+    { key: 'router', name: 'Wi-Fi router' },
+    { key: 'light', name: 'LED light' },
+    { key: 'fan', name: 'Small fan' },
+    { key: 'minifridge', name: 'Mini fridge' },
+    { key: 'fridge', name: 'Full-size fridge' },
+    { key: 'tv', name: 'TV' },
+    { key: 'cpap', name: 'CPAP machine' },
+    { key: 'microwave', name: 'Microwave' },
+    { key: 'heater', name: 'Space heater' },
+    { key: 'kettle', name: 'Kettle' }
+  ];
+  function updatePowerStation() {
+    var devices = PS_DEVICES.map(function (d) {
+      return {
+        name: d.name,
+        watts: val('ps-w-' + d.key, 0),
+        hours: val('ps-h-' + d.key, 0),
+        checked: checked('ps-on-' + d.key)
+      };
+    });
+    var r = powerStationCalc(val('ps-wh', 1024), devices, checked('ps-cold'));
+    var body = $('ps-per-device');
+    if (r.daily <= 0) {
+      setText('ps-big', '—');
+      setText('ps-big-sub', 'Tick at least one device above to see how long your station lasts.');
+      setText('ps-usable', '—');
+      setText('ps-daily', '—');
+      setText('ps-needed', '—');
+      if (body) body.innerHTML = '<tr><td colspan="2">No devices ticked yet.</td></tr>';
+      return;
+    }
+    var days = r.days;
+    setText('ps-big', fmt(days, 1) + ' days');
+    setText('ps-big-sub', 'about ' + Math.round(days * 24) + ' hours');
+    setText('ps-usable', fmtInt(r.usable) + ' Wh');
+    setText('ps-daily', fmtInt(r.daily) + ' Wh per day');
+    var want = val('ps-days', 1);
+    setText('ps-needed', String(Math.ceil(r.daily * want / 0.85)) + ' Wh');
+    if (body) {
+      var html = '';
+      r.perDevice.forEach(function (d) {
+        html += '<tr><td>' + d.name + '</td><td>' + fmt(d.hours, 1) + ' hours</td></tr>';
+      });
+      body.innerHTML = html;
+    }
+  }
+
   document.addEventListener('DOMContentLoaded', function () {
     /* Keep the current page's nav pill visible in the scrolling nav. */
     var cur = document.querySelector('nav.main a.current');
@@ -637,6 +718,13 @@
         if (c) { var pb = $('floor-per-box'); if (pb) pb.value = c; }
         updateFlooring();
       });
+    }
+    if ($('ps-wh')) {
+      var psInputs = ['ps-wh', 'ps-cold', 'ps-days'];
+      PS_DEVICES.forEach(function (d) {
+        psInputs.push('ps-on-' + d.key, 'ps-w-' + d.key, 'ps-h-' + d.key);
+      });
+      wire(psInputs, updatePowerStation);
     }
   });
 })();

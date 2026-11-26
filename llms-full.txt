@@ -12,7 +12,7 @@ How much concrete do I need? How many gallons of paint? How many bags of mulch? 
 
  - ✓ Nothing leaves your browser
 
- - ✓ 9 calculators
+ - ✓ 10 calculators
 
 ## Featured: how much concrete do I need?
 
@@ -1704,3 +1704,99 @@ Screened loam with compost mixed in. Blueberries are the exception — they need
 1.85 cubic yards — 1.85 tons of topsoil, or 2.59 tons if you are ordering gravel.
 
 Figures verified November 2026 against supplier listings and several online calculators. These are estimates for planning only — confirm quantities with your supplier before you order.
+
+## Power Station Runtime Calculator — How Long Will a Power Station Last? (https://builditcalculators.com/power-station.html)
+
+Power station calculator
+
+# How long will a power station last?
+
+A power station's label says watt-hours, but you only get about 85% of that out — the inverter takes the rest. Tick the devices you would run, say how many hours a day each one runs, and the calculator tells you how many days your station lasts, and how long each device runs on its own.
+
+## Your station and your devices
+
+Battery size (watt-hours)
+
+1024 Wh is a mid-size station (EcoFlow Delta 2). Check the Wh on the station's label or spec sheet.
+
+Devices (tick to include; watts are typical running watts):
+
+ - Phone charger: 10 W, 3 hours a day
+ - Laptop: 60 W, 4 hours a day
+ - Wi-Fi router: 10 W, 24 hours a day
+ - LED light: 10 W, 5 hours a day
+ - Small fan: 50 W, 8 hours a day
+ - Mini fridge: 60 W, 8 hours a day
+ - Full-size fridge: 150 W, 8 hours a day
+ - TV: 100 W, 4 hours a day
+ - CPAP machine: 40 W, 8 hours a day
+ - Microwave: 1000 W, 0.25 hours a day
+ - Space heater: 1500 W, 0 hours a day
+ - Kettle: 1500 W, 0.1 hours a day
+
+Watts are typical running watts from manufacturer specs. A fridge cycles on and off, so 8 hours a day is the running equivalent, not 8 hours plugged in. Your own devices may differ — check the label.
+
+Below freezing (0°C / 32°F): lithium batteries give up about 20% of their usable capacity in the cold, and most stations will not charge below freezing.
+
+Days of backup you want: 1
+
+## Your station lasts
+
+0.9 days (about 22 hours) for a 1024 Wh station on the example load.
+
+Usable energy: 870 Wh. Your devices use per day: 960 Wh. Station size you need: 1130 Wh.
+
+How long each device runs alone: phone charger 87.0 hours, laptop 14.5 hours, Wi-Fi router 87.0 hours, LED light 87.0 hours, small fan 17.4 hours.
+
+## Worked example
+
+A 1024 Wh station, running a phone, laptop, router, light and fan: 960 Wh per day. Usable energy (85% of the label): 870 Wh. Days of backup: 0.9 days (about 22 hours). Full-size fridge alone: 5.8 hours. Laptop alone: 14.5 hours. Phone alone: 87 hours. Station size needed for 1 day on this load: 1130 Wh.
+
+## How the maths works
+
+### Usable energy: the label minus 15%
+
+A station's watt-hour rating is measured at the battery's own voltage. Running 120 V devices through the inverter loses about 15%, so the energy you can actually use is the label times 0.85. A 1024 Wh station gives 1024 × 0.85 = 870 Wh.
+
+### Daily use: watts × hours, added up
+
+Each device uses its running watts times the hours it runs each day. Phone 10 × 3 = 30 Wh, laptop 60 × 4 = 240 Wh, router 10 × 24 = 240 Wh, light 10 × 5 = 50 Wh, fan 50 × 8 = 400 Wh. Add them up: 30 + 240 + 240 + 50 + 400 = 960 Wh per day.
+
+### Days of backup: usable ÷ daily
+
+Divide the usable energy by the daily use. 870 ÷ 960 = 0.9 days — about 22 hours. If the answer is under a day, your load is too big for the station, or you need a bigger station.
+
+### Station size needed: daily × days ÷ 0.85
+
+Work backwards from the load: daily use times the days you want, divided by 0.85 to cover the inverter loss. 960 × 1 ÷ 0.85 = 1130 Wh for one full day on the example load.
+
+### Common station sizes on the example load (960 Wh per day)
+
+ - 256 Wh: 218 Wh usable, 0.2 days
+ - 512 Wh: 435 Wh usable, 0.5 days
+ - 1024 Wh: 870 Wh usable, 0.9 days
+ - 2048 Wh: 1741 Wh usable, 1.8 days
+
+### Cold weather: take off another 20%
+
+Lithium batteries give up about 20% of their usable capacity below freezing, and most stations will not charge at all below 0°C (32°F). On the example load, a 1024 Wh station in the cold gives 870 × 0.8 = 696 Wh, which lasts 0.7 days instead of 0.9. Keep the station somewhere warm — inside, in the car, or in an insulated bag — and charge it indoors.
+
+## Common questions
+
+### How long will a 1000 Wh power station run a fridge?
+
+About 5 to 6 hours running flat out. A 1000 Wh station gives about 850 Wh of usable energy, and a full-size fridge draws about 150 watts while it runs, so 850 divided by 150 is about 5.7 hours. In real use a fridge cycles on and off, so it stretches to most of a day.
+
+### Why does my power station run out faster than the label says?
+
+Three reasons. First, the inverter takes about 15% — a 1000 Wh station gives about 850 Wh. Second, the Wh on the label is measured at the battery's own voltage; running 120 V devices through the inverter loses a little more. Third, cold weather cuts capacity by about 20% below freezing. The calculator builds the first and third in.
+
+### What size power station do I need for a day without power?
+
+Add up what you would run: watts times hours for each device. Divide the total by 0.85. The example load on this page — phone, laptop, router, light and fan — uses 960 Wh a day, so it needs a station of about 1130 Wh for one full day.
+
+### Can I charge it while I use it?
+
+Most stations allow pass-through charging — you can plug them into the wall or a solar panel while they power your devices. Charging is slower while the station is also running devices, and a few small stations pause charging when the load is heavy. Check your station's manual.
+
+Figures verified November 2026 against manufacturer spec sheets (EcoFlow, Jackery, Bluetti). Typical running watts only — check your own devices' labels. This page is an estimate for planning, not buying advice.

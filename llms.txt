@@ -13,6 +13,7 @@
 - [Drywall Calculator](https://builditcalculators.com/drywall.html): How many 4x8 sheets, screws, joint compound and tape for a room.
 - [Fence Calculator](https://builditcalculators.com/fence.html): Posts, pickets, rails and bags of concrete for a wood fence.
 - [Deck Calculator](https://builditcalculators.com/deck.html): Decking boards, joists and screws for a wood deck.
+- [Power Station Calculator](https://builditcalculators.com/power-station.html): How long a portable power station lasts running a fridge, laptop, lights and phone — usable energy, days of backup, and how long each device runs alone. Includes cold-weather capacity loss.
 
 ## How-to guides
 
@@ -34,6 +35,7 @@
 - Gravel weighs about 1.4 tons per cubic yard. Crusher run is the cheapest gravel at $20–$40 a ton delivered; pea gravel costs $30–$60.
 - Concrete pours best at 50–90°F. Below 40°F it sets very slowly and can be damaged by frost; above 95°F it is outside the industry standard.
 - Flooring: laminate is about 20 sq ft per box, vinyl plank about 24, hardwood about 20. Add 10% waste for a straight lay, 15% for diagonal, 20% for herringbone.
+- A power station gives about 85% of its labelled watt-hours; in the cold it loses about another 20%.
 
 ## Optional
 

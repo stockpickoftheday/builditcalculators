@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Power Station Runtime Calculator — How Long Will a Power Station Last?</title>
+<meta name="description" content="Power station runtime calculator: how long a portable power station lasts running a fridge, laptop, lights and phone, in watt-hours, with inverter losses and cold weather built in.">
+<link rel="canonical" href="https://builditcalculators.com/power-station.html">
+<meta property="og:title" content="Power Station Runtime Calculator — How Long Will a Power Station Last?">
+<meta property="og:description" content="Power station runtime calculator: how long a portable power station lasts running a fridge, laptop, lights and phone, in watt-hours, with inverter losses and cold weather built in.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://builditcalculators.com/power-station.html">
+<link rel="stylesheet" href="style.css">
+<style>
+.device-table input[type="number"] { width: 100%; min-width: 70px; min-height: 44px; padding: 8px 10px; font-size: 16px; border: 1.5px solid #cbd5cf; border-radius: 10px; background: #fff; }
+.device-table input[type="checkbox"] { width: 22px; height: 22px; accent-color: var(--green-700); cursor: pointer; }
+.device-table th, .device-table td { vertical-align: middle; }
+.results .per-device { width: 100%; border-collapse: collapse; background: transparent; }
+.results .per-device th, .results .per-device td { color: #e6f3ea; padding: 7px 0; border-bottom: 1px solid rgba(255,255,255,.18); }
+.results .per-device th:last-child, .results .per-device td:last-child { text-align: right; }
+.results .per-device td:last-child { font-weight: 700; color: #fff; white-space: nowrap; }
+</style>
+<script src="calculator.js" defer></script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Power Station Runtime Calculator",
+  "url": "https://builditcalculators.com/power-station.html",
+  "description": "Power station runtime calculator: how long a portable power station lasts running a fridge, laptop, lights and phone, in watt-hours, with inverter losses and cold weather built in.",
+  "applicationCategory": "BusinessApplication",
+  "operatingSystem": "Any",
+  "browserRequirements": "Requires JavaScript",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How long will a 1000 Wh power station run a fridge?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "About 5 to 6 hours running flat out. A 1000 Wh station gives about 850 Wh of usable energy, and a full-size fridge draws about 150 watts while it runs, so 850 divided by 150 is about 5.7 hours. In real use a fridge cycles on and off, so it stretches to most of a day."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why does my power station run out faster than the label says?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Three reasons. First, the inverter takes about 15% — a 1000 Wh station gives about 850 Wh. Second, the Wh on the label is measured at the battery's own voltage; running 120 V devices through the inverter loses a little more. Third, cold weather cuts capacity by about 20% below freezing. The calculator builds the first and third in."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What size power station do I need for a day without power?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Add up what you would run: watts times hours for each device. Divide the total by 0.85. The example load on this page — phone, laptop, router, light and fan — uses 960 Wh a day, so it needs a station of about 1130 Wh for one full day."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I charge it while I use it?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Most stations allow pass-through charging — you can plug them into the wall or a solar panel while they power your devices. Charging is slower while the station is also running devices, and a few small stations pause charging when the load is heavy. Check your station's manual."
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<header class="site">
+  <div class="wrap">
+    <p class="site-title"><a href="index.html">Home &amp; Garden Calculators</a></p>
+    <p class="tagline">Plain-English calculators for American homeowners. No sign-up, no sales pitch.</p>
+    <nav class="main" aria-label="Main navigation">
+      <a href="index.html">Calculators</a>
+      <a href="concrete.html">Concrete</a>
+      <a href="paint.html">Paint</a>
+      <a href="mulch.html">Mulch</a>
+      <a href="topsoil.html">Topsoil & Gravel</a>
+      <a href="tile.html">Tile</a>
+      <a href="flooring.html">Flooring</a>
+      <a href="drywall.html">Drywall</a>
+      <a href="fence.html">Fence</a>
+      <a href="deck.html">Deck</a>
+      <a href="power-station.html" class="current">Power Station</a>
+      <a href="about.html">About</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<div class="ad-slot" data-ad-slot="leaderboard"><!-- Future AdSense slot - code goes here when approved --></div>
+
+<main>
+  <div class="wrap">
+
+    <section class="page-hero">
+      <p class="eyebrow">Power station calculator</p>
+      <h1>How long will a power station last?</h1>
+      <p class="lede">A power station's label says watt-hours, but you only get about 85% of that out — the inverter takes the rest. Tick the devices you would run, say how many hours a day each one runs, and the calculator tells you how many days your station lasts, and how long each device runs on its own.</p>
+    </section>
+
+    <div class="calc-layout">
+      <section class="calc-box" id="calculator" aria-label="Power station runtime calculator">
+        <h2>Your station and your devices</h2>
+        <p class="sub">Fill in your numbers — the answer updates as you type.</p>
+        <div class="field">
+          <label for="ps-wh">Battery size (watt-hours)</label>
+          <input type="number" id="ps-wh" value="1024" min="0" step="1" inputmode="decimal">
+          <span class="hint">1024 Wh is a mid-size station (EcoFlow Delta 2). Check the Wh on the station's label or spec sheet.</span>
+        </div>
+
+        <div class="table-scroll"><table class="device-table">
+          <tr><th>Device</th><th>Running watts (typical)</th><th>Hours per day</th></tr>
+          <tr>
+            <td><label class="check"><input type="checkbox" id="ps-on-phone" checked> Phone charger</label></td>
+            <td><input type="number" id="ps-w-phone" value="10" min="0" step="1" inputmode="decimal" aria-label="Phone charger watts"></td>
+            <td><input type="number" id="ps-h-phone" value="3" min="0" step="0.25" inputmode="decimal" aria-label="Phone charger hours per day"></td>
+          </tr>
+          <tr>
+            <td><label class="check"><input type="checkbox" id="ps-on-laptop" checked> Laptop</label></td>
+            <td><input type="number" id="ps-w-laptop" value="60" min="0" step="1" inputmode="decimal" aria-label="Laptop watts"></td>
+            <td><input type="number" id="ps-h-laptop" value="4" min="0" step="0.25" inputmode="decimal" aria-label="Laptop hours per day"></td>
+          </tr>
+          <tr>
+            <td><label class="check"><input type="checkbox" id="ps-on-router" checked> Wi-Fi router</label></td>
+            <td><input type="number" id="ps-w-router" value="10" min="0" step="1" inputmode="decimal" aria-label="Wi-Fi router watts"></td>
+            <td><input type="number" id="ps-h-router" value="24" min="0" step="0.25" inputmode="decimal" aria-label="Wi-Fi router hours per day"></td>
+          </tr>
+          <tr>
+            <td><label class="check"><input type="checkbox" id="ps-on-light" checked> LED light</label></td>
+            <td><input type="number" id="ps-w-light" value="10" min="0" step="1" inputmode="decimal" aria-label="LED light watts"></td>
+            <td><input type="number" id="ps-h-light" value="5" min="0" step="0.25" inputmode="decimal" aria-label="LED light hours per day"></td>
+          </tr>
+          <tr>
+            <td><label class="check"><input type="checkbox" id="ps-on-fan" checked> Small fan</label></td>
+            <td><input type="number" id="ps-w-fan" value="50" min="0" step="1" inputmode="decimal" aria-label="Small fan watts"></td>
+            <td><input type="number" id="ps-h-fan" value="8" min="0" step="0.25" inputmode="decimal" aria-label="Small fan hours per day"></td>
+          </tr>
+          <tr>
+            <td><label class="check"><input type="checkbox" id="ps-on-minifridge"> Mini fridge</label></td>
+            <td><input type="number" id="ps-w-minifridge" value="60" min="0" step="1" inputmode="decimal" aria-label="Mini fridge watts"></td>
+            <td><input type="number" id="ps-h-minifridge" value="8" min="0" step="0.25" inputmode="decimal" aria-label="Mini fridge hours per day"></td>
+          </tr>
+          <tr>
+            <td><label class="check"><input type="checkbox" id="ps-on-fridge"> Full-size fridge</label></td>
+            <td><input type="number" id="ps-w-fridge" value="150" min="0" step="1" inputmode="decimal" aria-label="Full-size fridge watts"></td>
+            <td><input type="number" id="ps-h-fridge" value="8" min="0" step="0.25" inputmode="decimal" aria-label="Full-size fridge hours per day"></td>
+          </tr>
+          <tr>
+            <td><label class="check"><input type="checkbox" id="ps-on-tv"> TV</label></td>
+            <td><input type="number" id="ps-w-tv" value="100" min="0" step="1" inputmode="decimal" aria-label="TV watts"></td>
+            <td><input type="number" id="ps-h-tv" value="4" min="0" step="0.25" inputmode="decimal" aria-label="TV hours per day"></td>
+          </tr>
+          <tr>
+            <td><label class="check"><input type="checkbox" id="ps-on-cpap"> CPAP machine</label></td>
+            <td><input type="number" id="ps-w-cpap" value="40" min="0" step="1" inputmode="decimal" aria-label="CPAP machine watts"></td>
+            <td><input type="number" id="ps-h-cpap" value="8" min="0" step="0.25" inputmode="decimal" aria-label="CPAP machine hours per day"></td>
+          </tr>
+          <tr>
+            <td><label class="check"><input type="checkbox" id="ps-on-microwave"> Microwave</label></td>
+            <td><input type="number" id="ps-w-microwave" value="1000" min="0" step="1" inputmode="decimal" aria-label="Microwave watts"></td>
+            <td><input type="number" id="ps-h-microwave" value="0.25" min="0" step="0.25" inputmode="decimal" aria-label="Microwave hours per day"></td>
+          </tr>
+          <tr>
+            <td><label class="check"><input type="checkbox" id="ps-on-heater"> Space heater</label></td>
+            <td><input type="number" id="ps-w-heater" value="1500" min="0" step="1" inputmode="decimal" aria-label="Space heater watts"></td>
+            <td><input type="number" id="ps-h-heater" value="0" min="0" step="0.25" inputmode="decimal" aria-label="Space heater hours per day"></td>
+          </tr>
+          <tr>
+            <td><label class="check"><input type="checkbox" id="ps-on-kettle"> Kettle</label></td>
+            <td><input type="number" id="ps-w-kettle" value="1500" min="0" step="1" inputmode="decimal" aria-label="Kettle watts"></td>
+            <td><input type="number" id="ps-h-kettle" value="0.1" min="0" step="0.25" inputmode="decimal" aria-label="Kettle hours per day"></td>
+          </tr>
+        </table></div>
+        <p class="hint">Watts are typical running watts from manufacturer specs. A fridge cycles on and off, so 8 hours a day is the running equivalent, not 8 hours plugged in. Your own devices may differ — check the label.</p>
+
+        <div class="field">
+          <label class="check"><input type="checkbox" id="ps-cold"> Below freezing (0&deg;C / 32&deg;F)</label>
+          <span class="hint">Lithium batteries give up about 20% of their usable capacity in the cold, and most stations will not charge below freezing.</span>
+        </div>
+
+        <div class="field">
+          <label for="ps-days">Days of backup you want</label>
+          <input type="number" id="ps-days" value="1" min="0" step="0.5" inputmode="decimal">
+          <span class="hint">How many days you want the station to last on this load — the calculator tells you what size station that takes.</span>
+        </div>
+      </section>
+
+      <div class="results-col">
+        <div class="results" id="results">
+          <p class="big-label">Your station lasts</p>
+          <p class="big" id="ps-big">—</p>
+          <p class="big-sub" id="ps-big-sub">—</p>
+          <dl>
+            <div class="row">
+              <dt>Usable energy</dt>
+              <dd id="ps-usable">—</dd>
+            </div>
+            <div class="row">
+              <dt>Your devices use per day</dt>
+              <dd id="ps-daily">—</dd>
+            </div>
+            <div class="row">
+              <dt>Station size you need</dt>
+              <dd id="ps-needed">—</dd>
+            </div>
+          </dl>
+          <h3>How long each device runs alone</h3>
+          <table class="per-device">
+            <tr><th>Device</th><th>Hours alone</th></tr>
+            <tbody id="ps-per-device">
+              <tr><td colspan="2">No devices ticked yet.</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+<div class="ad-slot" data-ad-slot="in-content"><!-- Future AdSense slot - code goes here when approved --></div>
+
+    <section class="example" aria-label="Worked example">
+      <h3>Worked example</h3>
+      <dl>
+        <dt>A 1024 Wh station, running a phone, laptop, router, light and fan</dt>
+        <dd><strong>960 Wh per day</strong></dd>
+        <dt>Usable energy (85% of the label)</dt>
+        <dd><strong>870 Wh</strong></dd>
+        <dt>Days of backup</dt>
+        <dd><strong>0.9 days (about 22 hours)</strong></dd>
+        <dt>Full-size fridge alone</dt>
+        <dd><strong>5.8 hours</strong></dd>
+        <dt>Laptop alone</dt>
+        <dd><strong>14.5 hours</strong></dd>
+        <dt>Phone alone</dt>
+        <dd><strong>87 hours</strong></dd>
+        <dt>Station size needed for 1 day on this load</dt>
+        <dd><strong>1130 Wh</strong></dd>
+      </dl>
+    </section>
+
+    <h2>How the maths works</h2>
+    <h3>Usable energy: the label minus 15%</h3>
+    <p>A station's watt-hour rating is measured at the battery's own voltage. Running 120 V devices through the inverter loses about 15%, so the energy you can actually use is the label times 0.85. A 1024 Wh station gives 1024 × 0.85 = 870 Wh.</p>
+    <h3>Daily use: watts × hours, added up</h3>
+    <p>Each device uses its running watts times the hours it runs each day. Phone 10 × 3 = 30 Wh, laptop 60 × 4 = 240 Wh, router 10 × 24 = 240 Wh, light 10 × 5 = 50 Wh, fan 50 × 8 = 400 Wh. Add them up: 30 + 240 + 240 + 50 + 400 = 960 Wh per day.</p>
+    <h3>Days of backup: usable ÷ daily</h3>
+    <p>Divide the usable energy by the daily use. 870 ÷ 960 = 0.9 days — about 22 hours. If the answer is under a day, your load is too big for the station, or you need a bigger station.</p>
+    <h3>Station size needed: daily × days ÷ 0.85</h3>
+    <p>Work backwards from the load: daily use times the days you want, divided by 0.85 to cover the inverter loss. 960 × 1 ÷ 0.85 = 1130 Wh for one full day on the example load.</p>
+    <h3>Common station sizes on the example load (960 Wh per day)</h3>
+    <div class="table-scroll"><table>
+      <tr><th>Station size</th><th class="num">Usable energy</th><th class="num">Days of backup</th></tr>
+      <tr><td>256 Wh</td><td class="num">218 Wh</td><td class="num">0.2 days</td></tr>
+      <tr><td>512 Wh</td><td class="num">435 Wh</td><td class="num">0.5 days</td></tr>
+      <tr><td>1024 Wh</td><td class="num">870 Wh</td><td class="num">0.9 days</td></tr>
+      <tr><td>2048 Wh</td><td class="num">1741 Wh</td><td class="num">1.8 days</td></tr>
+    </table></div>
+    <h3>Cold weather: take off another 20%</h3>
+    <p>Lithium batteries give up about 20% of their usable capacity below freezing, and most stations will not charge at all below 0°C (32°F). On the example load, a 1024 Wh station in the cold gives 870 × 0.8 = 696 Wh, which lasts 0.7 days instead of 0.9. Keep the station somewhere warm — inside, in the car, or in an insulated bag — and charge it indoors.</p>
+
+    <h2>Common questions</h2>
+    <h3>How long will a 1000 Wh power station run a fridge?</h3>
+    <p>About 5 to 6 hours running flat out. A 1000 Wh station gives about 850 Wh of usable energy, and a full-size fridge draws about 150 watts while it runs, so 850 ÷ 150 is about 5.7 hours. In real use a fridge cycles on and off, so it stretches to most of a day.</p>
+    <h3>Why does my power station run out faster than the label says?</h3>
+    <p>Three reasons. First, the inverter takes about 15% — a 1000 Wh station gives about 850 Wh. Second, the Wh on the label is measured at the battery's own voltage; running 120 V devices through the inverter loses a little more. Third, cold weather cuts capacity by about 20% below freezing. The calculator builds the first and third in.</p>
+    <h3>What size power station do I need for a day without power?</h3>
+    <p>Add up what you would run: watts × hours for each device. Divide the total by 0.85. The example load on this page — phone, laptop, router, light and fan — uses 960 Wh a day, so it needs a station of about 1130 Wh for one full day.</p>
+    <h3>Can I charge it while I use it?</h3>
+    <p>Most stations allow pass-through charging — you can plug them into the wall or a solar panel while they power your devices. Charging is slower while the station is also running devices, and a few small stations pause charging when the load is heavy. Check your station's manual.</p>
+    <p class="note">Figures verified November 2026 against manufacturer spec sheets (EcoFlow, Jackery, Bluetti). Typical running watts only — check your own devices' labels. This page is an estimate for planning, not buying advice.</p>
+
+  </div>
+</main>
+
+<div class="ad-slot" data-ad-slot="footer"><!-- Future AdSense slot - code goes here when approved --></div>
+
+<footer class="site">
+  <div class="wrap">
+    <nav aria-label="Footer navigation">
+      <a href="index.html">Calculators</a>
+      <a href="concrete.html">Concrete</a>
+      <a href="paint.html">Paint</a>
+      <a href="mulch.html">Mulch</a>
+      <a href="topsoil.html">Topsoil & Gravel</a>
+      <a href="tile.html">Tile</a>
+      <a href="flooring.html">Flooring</a>
+      <a href="drywall.html">Drywall</a>
+      <a href="fence.html">Fence</a>
+      <a href="deck.html">Deck</a>
+      <a href="power-station.html">Power Station</a>
+      <a href="how-much-concrete-do-i-need.html">Concrete Guide</a>
+      <a href="how-much-paint-do-i-need.html">Paint Guide</a>
+      <a href="how-much-mulch-do-i-need.html">Mulch Guide</a>
+      <a href="how-much-topsoil-or-gravel-do-i-need.html">Topsoil Guide</a>
+      <a href="how-much-tile-do-i-need.html">Tile Guide</a>
+      <a href="how-much-flooring-do-i-need.html">Flooring Guide</a>
+      <a href="how-much-drywall-do-i-need.html">Drywall Guide</a>
+      <a href="how-many-fence-pickets-and-posts-do-i-need.html">Fence Guide</a>
+      <a href="how-many-deck-boards-do-i-need.html">Deck Guide</a>
+      <a href="about.html">About</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <p>Home &amp; Garden Calculators — an educational calculator site, not professional advice. Figures verified November 2026; prices and local rules change, so confirm them with your supplier or contractor before you buy.</p>
+  </div>
+</footer>
+</body>
+</html>
